@@ -1,0 +1,108 @@
+const parameters = {
+              "steps": [
+                  {
+                  "title": "Admins Crud",
+                  "parameters": {
+                      "fields": [
+                      {
+                          "name": "admins",
+                          "type": "section",
+                          "title": "Admins CRUD",
+                          "hideInCreateForm": false,
+                          "visible": false, 
+                          "required": false,
+                          "disabled": false,
+                          "validations": "",
+                          "dependancyCheck": false,
+                          "isPrefilled": false,
+                          "source": "req.body",
+                          "title": "Admins",
+                          "childFields": [
+                                {
+                                  "name": "admins_id",
+                                  "label": "id",
+                                  "title": "",
+                                  "type": "textField",
+                                  "required": false,
+                                  "hideInCreateForm": true,
+                                  "visible": true,
+                                  "disabled": false,
+                                  "dependancyCheck": false,
+                                  "isPrefilled": false,
+                                  "source": "req.query",
+                                  "min": "",
+                                  "max": "",
+                                  "selectServer": false,
+                                  "dynamicKey": "admins_id"
+                                },
+                               {
+                                  "name": "actionPerformerURDD",
+                                  "label": "actionPerformerURDD",
+                                  "title": "",
+                                  "type": "textField",
+                                  "required": false,
+                                  "hideInCreateForm": false,
+                                  "visible": true,
+                                  "disabled": false,
+                                  "dependancyCheck": false,
+                                  "isPrefilled": false,
+                                  "source": "req.body",
+                                  "min": "",
+                                  "max": "",
+                                  "selectServer": false,
+                                  "dynamicKey": "actionPerformerURDD",
+                                  "alias" : "actionPerformerURDD",
+                                },
+                              
+                                  {
+                                  "name": "admin_type",
+                                  "label": "Admin Type",
+                                  "title": "",
+                                  "type": "textField",
+                                  "required": false,
+                                  "hideInCreateForm": false,
+                                  "visible": true,
+                                  "disabled": false,
+                                  "dependancyCheck": false,
+                                  "isPrefilled": false,
+                                  "source": "req.body",
+                                  "min": "",
+                                  "max": "",
+                                  "selectServer": false,
+                                  "dynamicKey": "admins_adminType",
+                                  "alias" : "admins.admin_type",
+                                  },
+                                  {
+                                  "name": "user_role_id",
+                                  "label": "User Role Id",
+                                  "title": "",
+                                  "type": "textField",
+                                  "required": false,
+                                  "hideInCreateForm": false,
+                                  "visible": true,
+                                  "disabled": false,
+                                  "dependancyCheck": false,
+                                  "isPrefilled": false,
+                                  "source": "req.body",
+                                  "min": "",
+                                  "max": "",
+                                  "selectServer": false,
+                                  "dynamicKey": "admins_userRoleId",
+                                  "alias" : "admins.user_role_id",
+                                  },
+                                  
+                          ]
+                      }
+                      ]
+                  },
+                  "buttons": [
+                      {
+                      "type": "submit",
+                      "label": "Submit"
+                      }
+                  ]
+                  }
+              ],
+              "colMapper": "{ 'admins_adminId' : 'admin_id',  'admins_adminType' : 'admin_type',  'admins_userRoleId' : 'user_role_id'}"
+              };
+              module.exports = parameters;
