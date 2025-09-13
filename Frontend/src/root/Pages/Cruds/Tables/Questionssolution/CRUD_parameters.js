@@ -88,6 +88,29 @@
           
             
         
+                ,
+                {
+                    "name": "questionId",
+                    "label": "Question Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "questionssolution_questionId",
+                    "selectServerUrl": "/questions/dropdown?version=1.0",
+                    "alias" : "questionssolution.question_id"
+                }
+                
           
           
                 ,

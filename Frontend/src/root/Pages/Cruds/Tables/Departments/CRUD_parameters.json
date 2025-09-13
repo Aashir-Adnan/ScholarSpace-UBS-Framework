@@ -86,6 +86,29 @@
           
             
         
+                ,
+                {
+                    "name": "employeeId",
+                    "label": "Employee Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "departments_employeeId",
+                    "selectServerUrl": "/employees/dropdown?version=1.0",
+                    "alias" : "departments.employee_id"
+                }
+                
           
           
                 ,

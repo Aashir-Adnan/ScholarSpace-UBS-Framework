@@ -175,6 +175,75 @@
             }  
             
         
+                ,
+                {
+                    "name": "designationId",
+                    "label": "Designation Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "rolesDesignationsDepartment_designationId",
+                    "selectServerUrl": "/designations/dropdown?version=1.0",
+                    "alias" : "roles_designations_department.designation_id"
+                }
+                
+                ,
+                {
+                    "name": "roleId",
+                    "label": "Role Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "rolesDesignationsDepartment_roleId",
+                    "selectServerUrl": "/roles/dropdown?version=1.0",
+                    "alias" : "roles_designations_department.role_id"
+                }
+                
+                ,
+                {
+                    "name": "departmentId",
+                    "label": "Department Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "rolesDesignationsDepartment_departmentId",
+                    "selectServerUrl": "/departments/dropdown?version=1.0",
+                    "alias" : "roles_designations_department.department_id"
+                }
+                
           
           
                 ,

@@ -200,6 +200,75 @@
             }  
             
         
+                ,
+                {
+                    "name": "cloid",
+                    "label": "Cloid",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "questions_cloid",
+                    "selectServerUrl": "/clo/dropdown?version=1.0",
+                    "alias" : "questions.cloid"
+                }
+                
+                ,
+                {
+                    "name": "subComponentId",
+                    "label": "Sub Component Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "questions_subComponentId",
+                    "selectServerUrl": "/subcomponents/dropdown?version=1.0",
+                    "alias" : "questions.sub_component_id"
+                }
+                
+                ,
+                {
+                    "name": "lecturesTopicId",
+                    "label": "Lectures Topic Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "questions_lecturesTopicId",
+                    "selectServerUrl": "/lecturetopics/dropdown?version=1.0",
+                    "alias" : "questions.lectures_topic_id"
+                }
+                
           
           
                 ,

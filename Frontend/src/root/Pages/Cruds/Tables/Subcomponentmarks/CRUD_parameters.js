@@ -156,6 +156,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "subComponentId",
+                    "label": "Sub Component Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "subcomponentmarks_subComponentId",
+                    "selectServerUrl": "/subcomponents/dropdown?version=1.0",
+                    "alias" : "subcomponentmarks.sub_component_id"
+                }
+                
+                ,
+                {
+                    "name": "enrollmentId",
+                    "label": "Enrollment Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "subcomponentmarks_enrollmentId",
+                    "selectServerUrl": "/enrollements/dropdown?version=1.0",
+                    "alias" : "subcomponentmarks.enrollment_id"
+                }
+                
           
           
                 ,

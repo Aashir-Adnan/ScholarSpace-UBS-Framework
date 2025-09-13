@@ -220,29 +220,6 @@
                 "alias" : "plannedcourses.course_objective",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "image",
-                "label": "Image",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/attachments/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_image",
-                "alias" : "plannedcourses.image",
-                "options": []
-
             }  
         
             ,
@@ -291,6 +268,77 @@
             }  
             
         
+                ,
+                {
+                    "name": "semesterId",
+                    "label": "Semester Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "plannedcourses_semesterId",
+                    "selectServerUrl": "/semesters/dropdown?version=1.0",
+                    "alias" : "plannedcourses.semester_id"
+                }
+                
+                ,
+                {
+                    "name": "domainId",
+                    "label": "Domain Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "plannedcourses_domainId",
+                    "selectServerUrl": "/domains/dropdown?version=1.0",
+                    "alias" : "plannedcourses.domain_id"
+                }
+                
+                ,
+                {
+                  "name": "attachmentId",
+                  "label": "Attachment",
+                  "title": "",
+                  "type": "file",
+                  "required": false,
+                  "isMultiple" : false,
+                  "hideInCreateForm": false,
+                  "hideInViewForm": false,
+                  "fetchSubmitUrl": "/get/file/url/local?step=1",
+                  "getFileUrl": "/get/file?step=1&token=",
+                  "visible": true,
+                  "disabled": false,
+                  "dependancyCheck": false,
+                  "isPrefilled": false,
+                  "source": "req.body",
+                  "min": "",
+                  "max": "",
+                  "validations": [],
+                  "dynamicKey" : "plannedcourses_image",
+                  "selectServer": false,
+                  "alias" : "plannedcourses.image"
+                }
+                
           
           
                 ,

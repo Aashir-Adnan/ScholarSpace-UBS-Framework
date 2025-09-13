@@ -156,6 +156,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "urddId",
+                    "label": "Urdd Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "students_urddId",
+                    "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                    "alias" : "students.urdd_id"
+                }
+                
+                ,
+                {
+                    "name": "programId",
+                    "label": "Program Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "students_programId",
+                    "selectServerUrl": "/programs/dropdown?version=1.0",
+                    "alias" : "students.program_id"
+                }
+                
           
           
                 ,

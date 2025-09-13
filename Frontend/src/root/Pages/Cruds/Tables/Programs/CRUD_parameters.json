@@ -176,6 +176,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "departmentId",
+                    "label": "Department Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "programs_departmentId",
+                    "selectServerUrl": "/departments/dropdown?version=1.0",
+                    "alias" : "programs.department_id"
+                }
+                
+                ,
+                {
+                    "name": "domainId",
+                    "label": "Domain Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "programs_domainId",
+                    "selectServerUrl": "/domains/dropdown?version=1.0",
+                    "alias" : "programs.domain_id"
+                }
+                
           
           
                 ,

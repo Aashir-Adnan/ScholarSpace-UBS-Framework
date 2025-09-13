@@ -132,6 +132,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "instituteId",
+                    "label": "Institute Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "instituteDomains_instituteId",
+                    "selectServerUrl": "/institutes/dropdown?version=1.0",
+                    "alias" : "institute_domains.institute_id"
+                }
+                
+                ,
+                {
+                    "name": "domainId",
+                    "label": "Domain Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "instituteDomains_domainId",
+                    "selectServerUrl": "/domains/dropdown?version=1.0",
+                    "alias" : "institute_domains.domain_id"
+                }
+                
           
             
 

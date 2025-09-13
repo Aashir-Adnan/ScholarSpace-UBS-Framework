@@ -132,6 +132,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "plannedCourseId",
+                    "label": "Planned Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "prereqs_plannedCourseId",
+                    "selectServerUrl": "/plannedcourses/dropdown?version=1.0",
+                    "alias" : "prereqs.planned_course_id"
+                }
+                
+                ,
+                {
+                    "name": "preReqCourseId",
+                    "label": "Pre Req Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "prereqs_preReqCourseId",
+                    "selectServerUrl": "/plannedcourses/dropdown?version=1.0",
+                    "alias" : "prereqs.pre_req_course_id"
+                }
+                
           
           
                 ,

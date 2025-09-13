@@ -111,6 +111,29 @@
           
             
         
+                ,
+                {
+                    "name": "courseId",
+                    "label": "Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "books_courseId",
+                    "selectServerUrl": "/courses/dropdown?version=1.0",
+                    "alias" : "books.course_id"
+                }
+                
           
           
                 ,

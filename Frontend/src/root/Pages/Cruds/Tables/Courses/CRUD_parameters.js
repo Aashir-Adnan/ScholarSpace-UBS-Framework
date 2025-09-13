@@ -179,6 +179,98 @@
             }  
             
         
+                ,
+                {
+                    "name": "plannedCourseId",
+                    "label": "Planned Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "courses_plannedCourseId",
+                    "selectServerUrl": "/plannedcourses/dropdown?version=1.0",
+                    "alias" : "courses.planned_course_id"
+                }
+                
+                ,
+                {
+                    "name": "cloid",
+                    "label": "Cloid",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "courses_cloid",
+                    "selectServerUrl": "/clo/dropdown?version=1.0",
+                    "alias" : "courses.cloid"
+                }
+                
+                ,
+                {
+                    "name": "teacherEmployeeId",
+                    "label": "Teacher Employee Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "courses_teacherEmployeeId",
+                    "selectServerUrl": "/employees/dropdown?version=1.0",
+                    "alias" : "courses.teacher_employee_id"
+                }
+                
+                ,
+                {
+                    "name": "tassistEmployeeId",
+                    "label": "Tassist Employee Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "courses_tassistEmployeeId",
+                    "selectServerUrl": "/employees/dropdown?version=1.0",
+                    "alias" : "courses.tassist_employee_id"
+                }
+                
           
           
                 ,

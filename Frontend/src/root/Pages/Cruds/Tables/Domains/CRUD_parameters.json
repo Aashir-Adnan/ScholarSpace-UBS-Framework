@@ -86,6 +86,29 @@
           
             
         
+                ,
+                {
+                    "name": "domainLeaderId",
+                    "label": "Domain Leader Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "domains_domainLeaderId",
+                    "selectServerUrl": "/employees/dropdown?version=1.0",
+                    "alias" : "domains.domain_leader_id"
+                }
+                
           
           
                 ,

@@ -131,6 +131,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "roleDesignationDepartmentId",
+                    "label": "Role Designation Department Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "userRolesDesignationsDepartment_roleDesignationDepartmentId",
+                    "selectServerUrl": "/roles_designations_department/dropdown?version=1.0",
+                    "alias" : "user_roles_designations_department.role_designation_department_id"
+                }
+                
+                ,
+                {
+                    "name": "userId",
+                    "label": "User Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "userRolesDesignationsDepartment_userId",
+                    "selectServerUrl": "/users/dropdown?version=1.0",
+                    "alias" : "user_roles_designations_department.user_id"
+                }
+                
         
           ,
           {

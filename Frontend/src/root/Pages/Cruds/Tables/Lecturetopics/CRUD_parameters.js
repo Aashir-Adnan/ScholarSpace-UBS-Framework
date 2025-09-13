@@ -156,6 +156,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "subComponentId",
+                    "label": "Sub Component Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "lecturetopics_subComponentId",
+                    "selectServerUrl": "/subcomponents/dropdown?version=1.0",
+                    "alias" : "lecturetopics.sub_component_id"
+                }
+                
+                ,
+                {
+                    "name": "bookId",
+                    "label": "Book Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "lecturetopics_bookId",
+                    "selectServerUrl": "/books/dropdown?version=1.0",
+                    "alias" : "lecturetopics.book_id"
+                }
+                
           
           
                 ,

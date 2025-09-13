@@ -131,6 +131,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "enrollementId",
+                    "label": "Enrollement Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "lecturesattendance_enrollementId",
+                    "selectServerUrl": "/enrollements/dropdown?version=1.0",
+                    "alias" : "lecturesattendance.enrollement_id"
+                }
+                
+                ,
+                {
+                    "name": "subComponentId",
+                    "label": "Sub Component Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "lecturesattendance_subComponentId",
+                    "selectServerUrl": "/subcomponents/dropdown?version=1.0",
+                    "alias" : "lecturesattendance.sub_component_id"
+                }
+                
         
           ,
           {

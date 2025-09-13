@@ -131,6 +131,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "versionId",
+                    "label": "Version Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "platformVersions_versionId",
+                    "selectServerUrl": "/versions/dropdown?version=1.0",
+                    "alias" : "platform_versions.version_id"
+                }
+                
+                ,
+                {
+                    "name": "platformId",
+                    "label": "Platform Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "platformVersions_platformId",
+                    "selectServerUrl": "/platforms/dropdown?version=1.0",
+                    "alias" : "platform_versions.platform_id"
+                }
+                
           
           
                 ,

@@ -88,6 +88,52 @@
           
             
         
+                ,
+                {
+                    "name": "courseId",
+                    "label": "Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "courseRequests_courseId",
+                    "selectServerUrl": "/courses/dropdown?version=1.0",
+                    "alias" : "course_requests.course_id"
+                }
+                
+                ,
+                {
+                    "name": "studentUrddId",
+                    "label": "Student Urdd Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "courseRequests_studentUrddId",
+                    "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                    "alias" : "course_requests.student_urdd_id"
+                }
+                
           
             
 

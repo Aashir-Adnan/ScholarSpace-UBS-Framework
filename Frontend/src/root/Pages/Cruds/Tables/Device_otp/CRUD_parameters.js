@@ -133,6 +133,29 @@
             }  
             
         
+                ,
+                {
+                    "name": "userDeviceId",
+                    "label": "User Device Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "deviceOtp_userDeviceId",
+                    "selectServerUrl": "/user_devices/dropdown?version=1.0",
+                    "alias" : "device_otp.user_device_id"
+                }
+                
           
           
                 ,

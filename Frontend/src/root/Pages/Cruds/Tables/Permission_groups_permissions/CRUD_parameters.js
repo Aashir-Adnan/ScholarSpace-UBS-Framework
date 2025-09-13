@@ -132,6 +132,52 @@
             }  
             
         
+                ,
+                {
+                    "name": "groupId",
+                    "label": "Group Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "permissionGroupsPermissions_groupId",
+                    "selectServerUrl": "/permission_groups/dropdown?version=1.0",
+                    "alias" : "permission_groups_permissions.group_id"
+                }
+                
+                ,
+                {
+                    "name": "permissionId",
+                    "label": "Permission Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "permissionGroupsPermissions_permissionId",
+                    "selectServerUrl": "/permissions/dropdown?version=1.0",
+                    "alias" : "permission_groups_permissions.permission_id"
+                }
+                
           
           
                 ,

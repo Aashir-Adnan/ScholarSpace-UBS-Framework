@@ -722,7 +722,7 @@ function genCrudParameters(table, columns, allColumns, analysis, apiUrl) {
                 )?.COLUMN_NAME,
               ].includes(col.COLUMN_NAME) &&
               col.DATA_TYPE?.toLowerCase() != "datetime" &&
-              !col.NAME_COLUMN
+              !col.NAME_COLUMN && !(col.REFERENCED_TABLE_NAME == "attachments")
           )
           .map(
             (col) => `
@@ -900,7 +900,7 @@ function genCrudParameters(table, columns, allColumns, analysis, apiUrl) {
                     col.COLUMN_KEY === "PRI"
                 )?.COLUMN_NAME,
               ].includes(col.COLUMN_NAME) &&
-              col.REFERENCED_TABLE_NAME &&
+              col.REFERENCED_TABLE_NAME ||
               table == "tasks"
           )
           .map((col) => {
@@ -3027,7 +3027,6 @@ const groupedTemplates = {
                 `${table}.${currentTableColumn} = ${includedTable}.${includedTableColumn}`
             )
             .join(" OR ");
-          console.log("conditions are", conditions);
           joinClauses.push(`LEFT JOIN ${table} ON (${conditions})`);
         }
 
