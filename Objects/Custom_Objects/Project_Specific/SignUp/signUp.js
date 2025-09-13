@@ -4,7 +4,9 @@ const { signUpVerif } = require("../../../../UtilityFunctions/PreProcessingFunct
 async function insertEntries(req, decryptedPayload) {
 
     const signUpPayload = decryptedPayload["signUpVerif"];
-
+    if (global.isValidDomain(signUpPayload) !== true) {
+        throw new Error("Domain not allowed");
+    }
     let user_id = (await executeQuery(`INSERT INTO users (email, username, first_name, last_name, phone_no, created_by, updated_by) VALUES ('${signUpPayload.email}', '${signUpPayload.name}', '${signUpPayload.first_name}', '${signUpPayload.last_name}', '${decryptedPayload.phone_no}', 1,1)`, [])).insertId
 
     let designation_id = await executeQuery(`SELECT designation_id FROM designations WHERE designation_name = 'User'`, []);

@@ -73,42 +73,6 @@ const parameters = {
                                   "alias" : "user_role_designation_permissions.user_role_designation_department_id",
                                   },
                                   {
-                                  "name": "user_role_designation_department_id",
-                                  "label": "User Role Designation Department Id",
-                                  "title": "",
-                                  "type": "textField",
-                                  "required": false,
-                                  "hideInCreateForm": false,
-                                  "visible": true,
-                                  "disabled": false,
-                                  "dependancyCheck": false,
-                                  "isPrefilled": false,
-                                  "source": "req.body",
-                                  "min": "",
-                                  "max": "",
-                                  "selectServer": false,
-                                  "dynamicKey": "userRoleDesignationPermissions_userRoleDesignationDepartmentId",
-                                  "alias" : "user_role_designation_permissions.user_role_designation_department_id",
-                                  },
-                                  {
-                                  "name": "permission_id",
-                                  "label": "Permission Id",
-                                  "title": "",
-                                  "type": "textField",
-                                  "required": false,
-                                  "hideInCreateForm": false,
-                                  "visible": true,
-                                  "disabled": false,
-                                  "dependancyCheck": false,
-                                  "isPrefilled": false,
-                                  "source": "req.body",
-                                  "min": "",
-                                  "max": "",
-                                  "selectServer": false,
-                                  "dynamicKey": "userRoleDesignationPermissions_permissionId",
-                                  "alias" : "user_role_designation_permissions.permission_id",
-                                  },
-                                  {
                                   "name": "permission_id",
                                   "label": "Permission Id",
                                   "title": "",
@@ -175,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'user_role_designation_permissions_userRoleDesignationPermissionId' : 'user_role_designation_permission_id',  'user_role_designation_permissions_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_role_designation_permissions_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_role_designation_permissions_permissionId' : 'permission_id',  'user_role_designation_permissions_permissionId' : 'permission_id',  'user_role_designation_permissions_excludedId' : 'excluded_id',  'user_role_designation_permissions_includedId' : 'included_id',  'user_role_designation_permissions_status' : 'status',  'user_role_designation_permissions_createdBy' : 'created_by',  'user_role_designation_permissions_updatedBy' : 'updated_by',  'user_role_designation_permissions_createdAt' : 'created_at',  'user_role_designation_permissions_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'user_role_designation_permissions_userRoleDesignationPermissionId' : 'user_role_designation_permission_id',  'user_role_designation_permissions_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_role_designation_permissions_permissionId' : 'permission_id',  'user_role_designation_permissions_excludedId' : 'excluded_id',  'user_role_designation_permissions_includedId' : 'included_id',  'user_role_designation_permissions_status' : 'status',  'user_role_designation_permissions_createdBy' : 'created_by',  'user_role_designation_permissions_updatedBy' : 'updated_by',  'user_role_designation_permissions_createdAt' : 'created_at',  'user_role_designation_permissions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

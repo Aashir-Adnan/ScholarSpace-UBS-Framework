@@ -91,7 +91,7 @@
                     },
                   "options": {
                       "filterBy": [
-                          "roles_designations_department_roleDesignationDepartmentId", "roles_designations_department_designationId", "roles_designations_department_designationId", "roles_designations_department_roleId", "roles_designations_department_roleId", "roles_designations_department_departmentId", "roles_designations_department_departmentId", "roles_designations_department_createdBy", "roles_designations_department_updatedBy", "roles_designations_department_status", "roles_designations_department_createdAt", "roles_designations_department_updatedAt"
+                          "roles_designations_department_roleDesignationDepartmentId", "roles_designations_department_designationId", "roles_designations_department_roleId", "roles_designations_department_departmentId", "roles_designations_department_createdBy", "roles_designations_department_updatedBy", "roles_designations_department_status", "roles_designations_department_createdAt", "roles_designations_department_updatedAt"
                       ],
                       "statusOptions": ["active", "inactive"]
                   },

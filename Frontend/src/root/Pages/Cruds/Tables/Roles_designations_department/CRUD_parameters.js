@@ -44,29 +44,6 @@
                 "name": "designationId",
                 "label": "Designation Id",
                 "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "rolesDesignationsDepartment_designationId",
-                "alias" : "roles_designations_department.designation_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "designationId",
-                "label": "Designation Id",
-                "title": "",
                 "type": "select",
                 "required": false,
                 "hideInCreateForm": false,
@@ -90,29 +67,6 @@
                 "name": "roleId",
                 "label": "Role Id",
                 "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "rolesDesignationsDepartment_roleId",
-                "alias" : "roles_designations_department.role_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "roleId",
-                "label": "Role Id",
-                "title": "",
                 "type": "select",
                 "required": false,
                 "hideInCreateForm": false,
@@ -128,29 +82,6 @@
                 "selectServerUrl":"/roles/dropdown?version=1.0",
                 "dynamicKey": "rolesDesignationsDepartment_roleId",
                 "alias" : "roles_designations_department.role_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "departmentId",
-                "label": "Department Id",
-                "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "rolesDesignationsDepartment_departmentId",
-                "alias" : "roles_designations_department.department_id",
                 "options": []
 
             }
@@ -329,5 +260,5 @@
                     ]
                     }
                 ],
-                "colMapper": "{ 'rolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'rolesDesignationsDepartment_designationId' : 'designation_id',  'rolesDesignationsDepartment_designationId' : 'designation_id',  'rolesDesignationsDepartment_roleId' : 'role_id',  'rolesDesignationsDepartment_roleId' : 'role_id',  'rolesDesignationsDepartment_departmentId' : 'department_id',  'rolesDesignationsDepartment_departmentId' : 'department_id',  'rolesDesignationsDepartment_createdBy' : 'created_by',  'rolesDesignationsDepartment_updatedBy' : 'updated_by',  'rolesDesignationsDepartment_status' : 'status',  'rolesDesignationsDepartment_createdAt' : 'created_at',  'rolesDesignationsDepartment_updatedAt' : 'updated_at',  'rolesDesignationsDepartment_designationName' : 'designation_name',  'rolesDesignationsDepartment_roleName' : 'role_name',  'rolesDesignationsDepartment_departmentName' : 'department_name'}"
+                "colMapper": "{ 'rolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'rolesDesignationsDepartment_designationId' : 'designation_id',  'rolesDesignationsDepartment_roleId' : 'role_id',  'rolesDesignationsDepartment_departmentId' : 'department_id',  'rolesDesignationsDepartment_createdBy' : 'created_by',  'rolesDesignationsDepartment_updatedBy' : 'updated_by',  'rolesDesignationsDepartment_status' : 'status',  'rolesDesignationsDepartment_createdAt' : 'created_at',  'rolesDesignationsDepartment_updatedAt' : 'updated_at',  'rolesDesignationsDepartment_designationName' : 'designation_name',  'rolesDesignationsDepartment_roleName' : 'role_name',  'rolesDesignationsDepartment_departmentName' : 'department_name'}"
                 };

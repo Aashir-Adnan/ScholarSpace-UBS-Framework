@@ -6,7 +6,7 @@ const argon2 = require('argon2');
 const {projectDB} = require("../Database/projectDb");
 
 
-async function isValidPassword(req, res, plaintextPassword) {
+async function isValidPassword(req,  plaintextPassword) {
   const email = req.body.email || req.query.email; // Extract email from request
   const query = "SELECT user_id, Password FROM users WHERE email = ?";
   const values = [email];
@@ -36,7 +36,7 @@ async function isValidEmailFormat(email) {
   return emailRegex.test(email); // Returns true or false
 }
 
-async function isValidEmail(req, res, email) {
+async function isValidEmail(req,  email) {
   const decryptedEmail = await decryptData(email);
   const requestedPath = req.path.replace('/api/', '');
   const pathParts = requestedPath.split('/');
@@ -62,7 +62,7 @@ async function isValidEmail(req, res, email) {
   }
 }
 
-async function isValidName(req, res, namesObject) {
+async function isValidName(req,  namesObject) {
   namesObject = await decryptObject(namesObject); // Assuming you have a function to decrypt the namesObject
   const validationResults = {};
   const specialCharacterRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/; // Define a regex for special characters excluding space
@@ -86,7 +86,7 @@ async function isValidName(req, res, namesObject) {
   return validationResults;
 }
 
-async function isValidId(req, res, idObject) {
+async function isValidId(req,  idObject) {
   const tableName = req.body.tableName || req.query.tableName; // Extract table name from request
   const validationResults = {};
 
@@ -114,7 +114,7 @@ async function isValidId(req, res, idObject) {
   return validationResults;
 }
 
-async function isValidDate(req, res, dateString) {
+async function isValidDate(req,  dateString) {
   const allowFuture = req.body.allowFuture || req.query.allowFuture; // Extract allowFuture from request
   const allowPast = req.body.allowPast || req.query.allowPast; // Extract allowPast from request
   const optional = req.body.optional || req.query.optional; // Extract optional from request
@@ -152,7 +152,7 @@ async function isValidDate(req, res, dateString) {
   return true;
 }
 
-async function isPasswordComplex(req, res, password) {
+async function isPasswordComplex(req,  password) {
   const uppercaseRegex = /[A-Z]/;
   const specialCharacterRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
 
@@ -162,7 +162,7 @@ async function isPasswordComplex(req, res, password) {
     return { error: "Weak Password" };
   }
 }
-async function validateMarks(req, res, obtainedMarks) {
+async function validateMarks(req,  obtainedMarks) {
   const outOfMarks = req.body.outOfMarks || req.query.outOfMarks; // Extract outOfMarks from request
   obtainedMarks = await decryptData(obtainedMarks);
   const decryptedOutOfMarks = await decryptData(outOfMarks);
@@ -178,7 +178,7 @@ async function validateMarks(req, res, obtainedMarks) {
 
 
 
-async function isValidNumber(req, res, value) {
+async function isValidNumber(req,  value) {
   const allowFloat = req.body.allowFloat || req.query.allowFloat; // Extract allowFloat from request
   const semester = req.body.semester || req.query.semester; // Extract semester from request
   const totalMarks = req.body.totalMarks || req.query.totalMarks; // Extract totalMarks from request
@@ -196,7 +196,7 @@ async function isValidNumber(req, res, value) {
   return true;
 }
 
-async function isValidWeightage(req, res, value) {
+async function isValidWeightage(req,  value) {
   value = await decryptData(value);
   const num = parseFloat(value);
   if (isNaN(num) || num < 0 || num > 100) {
@@ -205,7 +205,7 @@ async function isValidWeightage(req, res, value) {
   return true;
 }
 
-async function isValidSalary(req, res, value) {
+async function isValidSalary(req,  value) {
   value = await decryptData(value);
   const num = parseFloat(value);
   if (isNaN(num) || num < 0) {
@@ -214,7 +214,7 @@ async function isValidSalary(req, res, value) {
   return true;
 }
 
-async function isValidStatus(req, res, status) {
+async function isValidStatus(req,  status) {
   status = await decryptData(status);
   const validStatuses = [
     "Active", "Inactive", "Unsubmitted", "In Progress", 
@@ -228,7 +228,7 @@ async function isValidStatus(req, res, status) {
   return { error: "Invalid Status" };
 }
 
-async function isValidCNIC(req, res, cnic) {
+async function isValidCNIC(req,  cnic) {
   cnic = await decryptData(cnic);
   // Regular expression to match a valid CNIC number (e.g., 12345-6789123-4)
   const cnicRegex = /^\d{5}-\d{7}-\d{1}$/;
@@ -246,7 +246,7 @@ async function isValidCNIC(req, res, cnic) {
   return true;
 }
 
-async function isValidPhoneNumber(req, res, phoneNumber) {
+async function isValidPhoneNumber(req,  phoneNumber) {
   phoneNumber = await decryptData(phoneNumber);
   const phoneRegex = /^0\d{2,3}-?\d{7,8}$/;
   if (!phoneRegex.test(phoneNumber)) {
@@ -255,7 +255,7 @@ async function isValidPhoneNumber(req, res, phoneNumber) {
   return true;
 }
 
-async function isValidYear(req, res, year) {
+async function isValidYear(req,  year) {
   year = await decryptData(year);
   const numericYear = parseInt(year);
   const currentYear = new Date().getFullYear();
@@ -271,7 +271,7 @@ async function isValidYear(req, res, year) {
   return true;
 }
 
-async function isValidBloodGroup(req, res, bloodGroup) {
+async function isValidBloodGroup(req,  bloodGroup) {
   bloodGroup = await decryptData(bloodGroup);
   const recognizedBloodGroups = [
     "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"
@@ -282,7 +282,7 @@ async function isValidBloodGroup(req, res, bloodGroup) {
   return true;
 }
 
-async function isValidText(req, res, text, allowSpecial = true, optional = false) {
+async function isValidText(req,  text, allowSpecial = true, optional = false) {
   // Decrypt the text
   text = await decryptData(text);
 
@@ -308,7 +308,7 @@ async function isValidText(req, res, text, allowSpecial = true, optional = false
   return { error: "Invalid Text" };
 }
 
-async function isValidComponentType(req, res, componentType) {
+async function isValidComponentType(req,  componentType) {
   componentType = await decryptData(componentType);
   const tempType = componentType?.toLowerCase();
   if (tempType === "graded" || tempType === "not graded") {
@@ -317,7 +317,7 @@ async function isValidComponentType(req, res, componentType) {
   return { error: "Invalid Component Type" };
 }
 
-async function isValidCourseType(req, res, type) {
+async function isValidCourseType(req,  type) {
   type = await decryptData(type);
   const tempType = type?.toLowerCase();
   if (!["theory", "lab", "physical education", "internship"].includes(tempType)) {
@@ -326,7 +326,7 @@ async function isValidCourseType(req, res, type) {
   return true;
 }
 
-async function isValidCreditHours(req, res, cr) {
+async function isValidCreditHours(req,  cr) {
   cr = await decryptData(cr);
   const parsedValue = parseFloat(cr);
 
@@ -337,7 +337,7 @@ async function isValidCreditHours(req, res, cr) {
   return true;
 }
 
-async function isValidLectures(req, res, lec) {
+async function isValidLectures(req,  lec) {
   lec = await decryptData(lec);
   const numLec = Number(lec);
 
@@ -347,7 +347,7 @@ async function isValidLectures(req, res, lec) {
   return { error: "Invalid Lectures" };
 }
 
-async function isValidIBN(req, res, ibn) {
+async function isValidIBN(req,  ibn) {
   ibn = await decryptData(ibn);
   // Regular expression to match only digits
   const digitRegex = /^[0-9]+$/;
@@ -366,7 +366,7 @@ async function isValidIBN(req, res, ibn) {
   }
 }
 
-async function isValidGender(req, res, gender) {
+async function isValidGender(req,  gender) {
   gender = await decryptData(gender);
   const validGenders = ["Male", "Female", "Other"]; // Add other valid gender options if needed
 
@@ -376,7 +376,7 @@ async function isValidGender(req, res, gender) {
 
   return true; // Valid gender
 }
-async function isValidAddress(req, res, address) {
+async function isValidAddress(req,  address) {
   address = await decryptData(address);
   // Regular expression to match valid characters in the address (alphabets, numbers, and comma)
   const addressRegex = /^[a-zA-Z0-9, ]*$/;
@@ -388,7 +388,7 @@ async function isValidAddress(req, res, address) {
   return true; // Valid address 
 }
 
-async function isValidGrade(req, res, grade) {
+async function isValidGrade(req,  grade) {
   grade = await decryptData(grade);
   const validGrades = ['A+', 'A', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'F', 'I', 'W'];
   if (validGrades.includes(grade)) {
@@ -398,7 +398,7 @@ async function isValidGrade(req, res, grade) {
   }
 }
 
-async function isValidTime(req, res, timeStr, optional = false) {
+async function isValidTime(req,  timeStr, optional = false) {
   // Handle optional cases
   if (optional && (timeStr === "" || timeStr === null || timeStr === undefined)) {
     return true; // No validation required for empty or undefined strings
@@ -415,25 +415,25 @@ async function isValidTime(req, res, timeStr, optional = false) {
   return { error: "Time is Invalid" };
 }
 
-async function isValidDay(req, res, day) {
+async function isValidDay(req,  day) {
   day = await decryptData(day);
   const lowercaseDay = day?.toLowerCase();
   const validDays = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   return validDays.includes(lowercaseDay) ? true : { error: "Invalid Day" };
 }
 
-async function isValidBool(req, res, value) {
+async function isValidBool(req,  value) {
   value = await decryptData(value);
   return typeof value === 'boolean' ? true : { error: "Invalid Boolean Value" };
 }
 
-async function isValidIsPresent(req, res, value) {
+async function isValidIsPresent(req,  value) {
   value = await decryptData(value);
   const isValid = value === 0 || value === 1;
   return isValid ? true : { error: "Invalid Present Status" };
 }
 
-async function isValidAttachments(req, res, files) {
+async function isValidAttachments(req,  files) {
   const fileCount = 10;
   if (files.length > fileCount) {
     return { error: `Maximum ${fileCount} Attachments Allowed` };
@@ -441,7 +441,7 @@ async function isValidAttachments(req, res, files) {
   return true;
 }
 
-async function isValidRole(req, res, email, role) {
+async function isValidRole(req,  email, role) {
   const query = `
   SELECT
     r.RoleName, r.RoleId
@@ -464,12 +464,24 @@ async function isValidRole(req, res, email, role) {
   return { error: "You don't have permission to perform this action" };
 }
 
-async function isValidCloMappingLevel(req, res, level) {
+async function isValidCloMappingLevel(req,  level) {
   level = await decryptData(level);
   if (level >= 1 && level <= 6) {
     return true;
   }
   return { error: "Invalid Level" };
+}
+
+
+async function isValidDomain(req){
+  let domains = await executeQuery("SELECT domain_name FROM domains", []);
+  domains = domains.map(d => d.domain_name);
+  let email = req.body.email || req.query.email;
+  let domain = email.split('@')[1];
+  if(domains.includes(domain)){
+    return true;
+  }
+  return {error: "Domain not allowed"}
 }
 
 
@@ -506,3 +518,4 @@ global.isValidIsPresent = isValidIsPresent;
 global.isValidAttachments = isValidAttachments;
 global.isValidCloMappingLevel = isValidCloMappingLevel;
 global.isValidWeightage = isValidWeightage;
+global.isValidDomain = isValidDomain;
