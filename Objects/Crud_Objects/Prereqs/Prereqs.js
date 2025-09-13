@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_prereqs", View: "view_prereqs", Update: "update_prereqs", Delete: "delete_prereqs", List: "list_prereqs" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

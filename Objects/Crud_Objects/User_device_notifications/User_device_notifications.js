@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_user_device_notifications", View: "view_user_device_notifications", Update: "update_user_device_notifications", Delete: "delete_user_device_notifications", List: "list_user_device_notifications" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_chat", View: "view_chat", Update: "update_chat", Delete: "delete_chat", List: "list_chat" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

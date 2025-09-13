@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_employeedomain", View: "view_employeedomain", Update: "update_employeedomain", Delete: "delete_employeedomain", List: "list_employeedomain" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

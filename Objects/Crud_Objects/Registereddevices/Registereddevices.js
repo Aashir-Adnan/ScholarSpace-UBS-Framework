@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_registereddevices", View: "view_registereddevices", Update: "update_registereddevices", Delete: "delete_registereddevices", List: "list_registereddevices" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

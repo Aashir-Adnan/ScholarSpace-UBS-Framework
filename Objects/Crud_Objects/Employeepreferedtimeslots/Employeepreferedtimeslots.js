@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_employeepreferedtimeslots", View: "view_employeepreferedtimeslots", Update: "update_employeepreferedtimeslots", Delete: "delete_employeepreferedtimeslots", List: "list_employeepreferedtimeslots" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

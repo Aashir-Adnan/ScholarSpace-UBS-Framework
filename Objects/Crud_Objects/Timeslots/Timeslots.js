@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_timeslots", View: "view_timeslots", Update: "update_timeslots", Delete: "delete_timeslots", List: "list_timeslots" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

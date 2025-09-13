@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_errorlog", View: "view_errorlog", Update: "update_errorlog", Delete: "delete_errorlog", List: "list_errorlog" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

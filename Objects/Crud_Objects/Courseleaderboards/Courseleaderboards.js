@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_courseleaderboards", View: "view_courseleaderboards", Update: "update_courseleaderboards", Delete: "delete_courseleaderboards", List: "list_courseleaderboards" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

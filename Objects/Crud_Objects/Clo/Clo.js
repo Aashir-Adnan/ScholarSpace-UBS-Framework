@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_clo", View: "view_clo", Update: "update_clo", Delete: "delete_clo", List: "list_clo" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

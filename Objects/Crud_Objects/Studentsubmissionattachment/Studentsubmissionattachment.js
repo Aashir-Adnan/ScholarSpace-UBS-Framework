@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_studentsubmissionattachment", View: "view_studentsubmissionattachment", Update: "update_studentsubmissionattachment", Delete: "delete_studentsubmissionattachment", List: "list_studentsubmissionattachment" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

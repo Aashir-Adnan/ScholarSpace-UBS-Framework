@@ -15,7 +15,9 @@ async function signUpVerif(req, decryptedPayload) {
                     email: payload.email,
                     name: payload.name,
                     picture: payload.picture,
-                    source: "Google"
+                    source: "Google",
+                    first_name: payload.given_name,
+                    last_name: payload.family_name
                 };
         }
         case "Facebook":

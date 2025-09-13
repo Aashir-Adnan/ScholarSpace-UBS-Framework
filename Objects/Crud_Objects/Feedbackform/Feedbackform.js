@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_feedbackform", View: "view_feedbackform", Update: "update_feedbackform", Delete: "delete_feedbackform", List: "list_feedbackform" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

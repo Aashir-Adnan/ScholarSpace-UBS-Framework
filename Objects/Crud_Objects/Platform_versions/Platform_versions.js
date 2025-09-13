@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_platform_versions", View: "view_platform_versions", Update: "update_platform_versions", Delete: "delete_platform_versions", List: "list_platform_versions" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

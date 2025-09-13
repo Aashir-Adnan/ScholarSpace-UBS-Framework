@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: null,
+                        permission: { Add: "add_domains", View: "view_domains", Update: "update_domains", Delete: "delete_domains", List: "list_domains" },
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },
