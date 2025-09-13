@@ -7,7 +7,8 @@ global.ErrorlogDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.ErrorlogDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {

@@ -1,7 +1,7 @@
 {
             "data": {
             "features": {
-                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"urddId","label":"Urdd Id","alias":"employees.urddId","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)","options":[]},
+                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"departmentId","label":"Department Id","alias":"employees.departmentId","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)","options":[]},
                 "parameters": "parameters",
                 "rowActions": {
                 "actions": [

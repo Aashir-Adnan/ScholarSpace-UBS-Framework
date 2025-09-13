@@ -7,7 +7,8 @@ global.TimeslotsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.TimeslotsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.TimeslotsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, time_slot_id as value FROM timeslots where timeslots.status!='inactive'",
+                          "queryPayload": "SELECT timeslots.time_slot_id as value, '' AS label FROM timeslots  where timeslots.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

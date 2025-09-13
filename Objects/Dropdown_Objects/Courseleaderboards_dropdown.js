@@ -7,7 +7,8 @@ global.CourseleaderboardsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.CourseleaderboardsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {

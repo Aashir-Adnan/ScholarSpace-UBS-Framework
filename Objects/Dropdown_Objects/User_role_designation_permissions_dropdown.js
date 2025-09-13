@@ -7,7 +7,8 @@ global.User_role_designation_permissionsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.User_role_designation_permissionsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {

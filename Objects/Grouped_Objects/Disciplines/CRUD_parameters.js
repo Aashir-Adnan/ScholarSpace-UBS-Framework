@@ -87,6 +87,23 @@ const parameters = {
                                                           "max": "",
                                                           "selectServer": false,
                                                           "dynamicKey": "disciplines_disciplinePrefix"
+                                                      },
+                                                      {
+                                                          "name": "regex",
+                                                          "label": "Regex",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "disciplines_regex"
                                                       }
                                           ]
                                       }
@@ -101,6 +118,6 @@ const parameters = {
                               "permission": "disciplines_view"
                           }
               ],
-              "colMapper": "{ 'disciplines_disciplineId' : 'discipline_id',  'disciplines_disciplineName' : 'discipline_name',  'disciplines_disciplinePrefix' : 'discipline_prefix'}"
+              "colMapper": "{ 'disciplines_disciplineId' : 'discipline_id',  'disciplines_disciplineName' : 'discipline_name',  'disciplines_disciplinePrefix' : 'discipline_prefix',  'disciplines_regex' : 'regex'}"
           };
           module.exports = parameters;

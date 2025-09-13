@@ -1,4 +1,6 @@
-import { parameters } from "./CRUD_parameters.js";
+/* Frontend Objects for table: employees */
+        
+            import { parameters } from "./CRUD_parameters.js";
             import generateFormProps  from "../../../../Components/DataLayout/constants/generateFormProps.js";
             import  serverCommunicationHelper from "../../../../Components/DataLayout/constants/serverCommunicationHelper.js";
             export const listing_crud_props = {
@@ -12,9 +14,9 @@ import { parameters } from "./CRUD_parameters.js";
                         color: "blue",
                         permission: 'update_employees',
                         onAction: () => console.log("Button pressed Edit"),
-                        form: generateFormProps({
+                        form: employees generateFormProps({
                             parameters: parameters,
-                            apiUrl: "/grouped/cruds/employees?version=1.0",
+                            apiUrl: "/crud/employees?version=1.0",
                             requestType: "PUT",
                             mode:"edit"
                         }),
@@ -25,7 +27,7 @@ import { parameters } from "./CRUD_parameters.js";
                         permission: 'delete_employees',
                         serverCommunication: serverCommunicationHelper({
                             parameters: parameters,
-                            apiUrl: "/grouped/cruds/employees?version=1.0",
+                            apiUrl:"/crud/employees?version=1.0",
                             requestType: "DELETE",
                         }),
                         onAction: () => console.log("Button pressed Delete"),
@@ -37,7 +39,7 @@ import { parameters } from "./CRUD_parameters.js";
                         onAction: () => console.log("Button pressed View"),
                         form: generateFormProps({
                             parameters: parameters,
-                            apiUrl: "/grouped/cruds/employees?version=1.0",
+                            apiUrl: "/crud/employees?version=1.0",
                             requestType: "GET",
                             mode:"view"
                         }),
@@ -49,13 +51,13 @@ import { parameters } from "./CRUD_parameters.js";
                         permission:'add_employees',
                         form: generateFormProps({
                         parameters: parameters,
-                        apiUrl: "/grouped/cruds/employees?version=1.0",
+                        apiUrl: "/crud/employees?version=1.0",
                         requestType: "POST",
                         mode:"create"
                         }),
                     },
                     },
-
+  
                     export: {
                       permission: 'export_employees',
                       serverCommunication: serverCommunicationHelper({
@@ -67,7 +69,7 @@ import { parameters } from "./CRUD_parameters.js";
                     }),
                     onAction: (e) => console.log("Export Action", e),
                     options: {
-                        formats: ["CSV", "PDF", "Excel"],
+                        formats: ["CSV", "PDF"],
                         includeHeaders: true,
                         icon: "",
                     },
@@ -111,7 +113,7 @@ import { parameters } from "./CRUD_parameters.js";
                     permission:'list_employees',
                     serverCommunication: serverCommunicationHelper({
                         parameters: parameters,
-                        apiUrl: "/grouped/cruds/employees?version=1.0",
+                        apiUrl:  "/crud/employees?version=1.0",
                         apiActionType: "",
                         requestType: "GET",
                         reduxActionType: "",
@@ -135,22 +137,22 @@ import { parameters } from "./CRUD_parameters.js";
                     actionButtonEnable: true,
                     },
                     pagination: {
-                      parameters: null,
-                      permission: false,
-                      serverCommunication: serverCommunicationHelper({
-                          parameters: parameters,
-                          apiUrl: "/crud/employees?version=1.0",
-                          apiActionType: "employees_view",
-                          requestType: "GET",
-                          reduxActionType: "employees_view",
-                      }),
-                      options: {
-                          pageSize: 10,
-                          pageSizeOptions: [10, 20, 30 , 50, { label: "All", value: -1 }],
-                      },
-                      onAction: (e) => {
-                          console.log("Pagination Action", e);
-                      },
+                    parameters: null,
+                    permission: true,
+                    serverCommunication: serverCommunicationHelper({
+                        parameters: parameters,
+                        apiUrl: "/crud/employees?version=1.0",
+                        apiActionType: "employees_view",
+                        requestType: "GET",
+                        reduxActionType: "employees_view",
+                    }),
+                    options: {
+                        pageSize: 10,
+                        pageSizeOptions: [4, 5, 10, 20, { label: "All", value: -1 }],
+                    },
+                    onAction: (e) => {
+                        console.log("Pagination Action", e);
+                    },
                     },
                 },
                 },
@@ -173,60 +175,60 @@ import { parameters } from "./CRUD_parameters.js";
                     parameters: { enable: true, operationalMode: "local" },
                 },
                 },
-  appearance: {
-        light: {
-          grid: {
-            image: {
-              borderColor: "#7479ed",
-            },
-            actionButtons: {
-              color: "#7b7a8c",
-            },
-            button: {
-              buttonColor: "#818093",
-              buttonVarient: "contained",
-              buttonTextColor: "#ffffff",
-            },
-            header: {
-              headColor: "#e5e5e5",
-              headTextColor: "#260143",
-            },
-            cardFont: {
-              headingSize: 15,
-              headingWeight: 650,
-              textSize: 13,
-              textWeight: 500,
-              heading: "#260143",
-              color: "#5a5897",
-            },
-          },
-        },
-        dark: {
-          grid: {
-            image: {
-              borderColor: "#6C63FF",
-            },
-            actionButtons: {
-              color: "#a5a4c4",
-            },
-            button: {
-              buttonColor: "#6C63FF",
-              buttonVarient: "contained",
-              buttonTextColor: "#ffffff",
-            },
-            header: {
-              headColor: "#2d2d3d",
-              headTextColor: "#c7c6ff",
-            },
-            cardFont: {
-              headingSize: 15,
-              headingWeight: 650,
-              textSize: 13,
-              textWeight: 500,
-              heading: "#ffffff",
-              color: "#c7c6ff",
-            },
-          },
-        }
-      }
+          appearance: {
+                light: {
+                  grid: {
+                    image: {
+                      borderColor: "#7479ed",
+                    },
+                    actionButtons: {
+                      color: "#7b7a8c",
+                    },
+                    button: {
+                      buttonColor: "#818093",
+                      buttonVarient: "contained",
+                      buttonTextColor: "#ffffff",
+                    },
+                    header: {
+                      headColor: "#e5e5e5",
+                      headTextColor: "#260143",
+                    },
+                    cardFont: {
+                      headingSize: 15,
+                      headingWeight: 650,
+                      textSize: 13,
+                      textWeight: 500,
+                      heading: "#260143",
+                      color: "#5a5897",
+                    },
+                  },
+                },
+                dark: {
+                  grid: {
+                    image: {
+                      borderColor: "#6C63FF",
+                    },
+                    actionButtons: {
+                      color: "#a5a4c4",
+                    },
+                    button: {
+                      buttonColor: "#6C63FF",
+                      buttonVarient: "contained",
+                      buttonTextColor: "#ffffff",
+                    },
+                    header: {
+                      headColor: "#2d2d3d",
+                      headTextColor: "#c7c6ff",
+                    },
+                    cardFont: {
+                      headingSize: 15,
+                      headingWeight: 650,
+                      textSize: 13,
+                      textWeight: 500,
+                      heading: "#ffffff",
+                      color: "#c7c6ff",
+                    },
+                  },
+                }
+              }
             };

@@ -7,7 +7,8 @@ global.AdminsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.AdminsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.AdminsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, admin_id as value FROM admins where admins.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(admin_type, 10) as label, admin_id as value FROM admins where admins.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

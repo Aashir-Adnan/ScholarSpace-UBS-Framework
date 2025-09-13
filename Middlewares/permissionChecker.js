@@ -26,30 +26,33 @@ const buildQuery = (path, email, urdd_id, permission) => {
 
 async function getSubordinates(designation_id) {
   if (!designation_id) return [];
-  const query = 
-  `
+  const query =
+    `
     SELECT DISTINCT urdd.user_role_designation_department_id
     FROM user_roles_designations_department urdd
-      JOIN user_role_designation_permissions urdp ON urdd.user_role_designation_department_id = urdp.user_role_designation_department_id
-      JOIN permissions p ON urdp.permission_id = p.permission_id
       JOIN roles_designations_department rdd ON urdd.role_designation_department_id = rdd.role_designation_department_id
       JOIN designations d ON rdd.designation_id = d.designation_id
-      WHERE d.senior_designation_id = '${designation_id }'
+      WHERE d.senior_designation_id = '${designation_id}'
   `
-  return await executeQuery(query,[])
+  let sub_data = await executeQuery(query, [])
+  console.log("Subordinates Data: ", sub_data)
+  return sub_data.map(item => item.user_role_designation_department_id);
 }
 
-async function getDesignationId(urdd_id){
-  if (!urdd_id) return null;
-    const query = 
-  `
+async function getDesignationId(urdd_id) {
+  if (!urdd_id) { return null; }
+  console.log("URDD ID in getDesignationId: ", urdd_id)
+  const query =
+    `
     SELECT DISTINCT rdd.designation_id
     FROM user_roles_designations_department urdd
       JOIN roles_designations_department rdd ON urdd.role_designation_department_id = rdd.role_designation_department_id
       JOIN designations d ON rdd.designation_id = d.designation_id
-      WHERE d.senior_designation_id = '${urdd_id}'
+      WHERE urdd.user_role_designation_department_id = '${urdd_id}'
   `
-    return await executeQuery(query,[])
+  let user_data = (await executeQuery(query, []))
+  console.log(user_data)
+  return user_data[0].designation_id;
 
 
 }
@@ -88,7 +91,7 @@ const permissionChecker = async (
     // Checking Assigned Permissions AND Provided Permissions
     const permissions = Array.isArray(permission) ? permission : [permission];
     let permissionResults;
-    
+
     for (const p of permissions) {
       const query = buildQuery(requestedPath, email, urdd_id, p);
       const connection = await projectDB();
@@ -114,10 +117,13 @@ const permissionChecker = async (
       included: {},
       meta: { created_by: [urdd_id || 'NULL'] || [] },
     };
-    let designation_id = await getDesignationId(urdd_id)[0]?.designation_id
+    console.log("URDD ID: ", urdd_id)
+    let designation_id = await getDesignationId(urdd_id)
+    console.log("DESIGNATION ID: ", designation_id)
     let subs = await getSubordinates(designation_id)
+    console.log("SUBS: ", subs)
+    response.meta.created_by = subs.length > 0 ? [...response.meta.created_by, ...subs] : response.meta.created_by;
 
-    response.meta.created_by = subs.len > 0 ? [...response.meta.created_by, subs] : response.meta.created_by
     console.log("permissionResults: ", permissionResults);
     permissionResults.forEach((row) => {
       if (row.excluded_id != null && row.excluded_id != 0) {
@@ -132,10 +138,10 @@ const permissionChecker = async (
         });
       }
     });
-    
+
     const included_keys = Object.keys(response.included);
     console.log("INCLUDED KEYS: ", included_keys);
-    return req.method == "GET"? response : null
+    return req.method == "GET" ? response : null
   } catch (error) {
     console.error(error.message)
     throw new Error(error.message);

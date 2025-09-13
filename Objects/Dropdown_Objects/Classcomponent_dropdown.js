@@ -7,7 +7,8 @@ global.ClasscomponentDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.ClasscomponentDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.ClasscomponentDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(component_name, 10) as label, component_id as value FROM classcomponent where classcomponent.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(component_type, 10) as label, component_id as value FROM classcomponent where classcomponent.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

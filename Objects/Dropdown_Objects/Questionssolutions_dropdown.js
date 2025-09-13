@@ -7,7 +7,8 @@ global.QuestionssolutionsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.QuestionssolutionsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.QuestionssolutionsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, questions_help_guide_id as value FROM questionssolutions where questionssolutions.status!='inactive'",
+                          "queryPayload": "SELECT questionssolutions.questions_help_guide_id as value, '' AS label FROM questionssolutions  where questionssolutions.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

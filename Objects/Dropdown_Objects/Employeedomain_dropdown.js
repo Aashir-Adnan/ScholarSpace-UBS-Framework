@@ -7,7 +7,8 @@ global.EmployeedomainDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.EmployeedomainDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.EmployeedomainDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, employee_domain_id as value FROM employeedomain where employeedomain.status!='inactive'",
+                          "queryPayload": "SELECT employeedomain.employee_domain_id as value, '' AS label FROM employeedomain  where employeedomain.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

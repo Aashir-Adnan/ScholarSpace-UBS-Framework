@@ -7,7 +7,8 @@ global.QuestionevaluationsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.QuestionevaluationsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.QuestionevaluationsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, question_evaluation_id as value FROM questionevaluations where questionevaluations.status!='inactive'",
+                          "queryPayload": "SELECT questionevaluations.question_evaluation_id as value, '' AS label FROM questionevaluations  where questionevaluations.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

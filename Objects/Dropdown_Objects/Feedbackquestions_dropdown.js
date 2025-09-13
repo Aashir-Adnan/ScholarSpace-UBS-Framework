@@ -7,7 +7,8 @@ global.FeedbackquestionsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.FeedbackquestionsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.FeedbackquestionsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, questions_id as value FROM feedbackquestions where feedbackquestions.status!='inactive'",
+                          "queryPayload": "SELECT feedbackquestions.questions_id as value, '' AS label FROM feedbackquestions  where feedbackquestions.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

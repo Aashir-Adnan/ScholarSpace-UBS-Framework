@@ -7,7 +7,8 @@ global.EmployeepreferedtimeslotsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.EmployeepreferedtimeslotsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.EmployeepreferedtimeslotsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, employee_prefered_time_slots_id as value FROM employeepreferedtimeslots where employeepreferedtimeslots.status!='inactive'",
+                          "queryPayload": "SELECT employeepreferedtimeslots.employee_prefered_time_slots_id as value, '' AS label FROM employeepreferedtimeslots  where employeepreferedtimeslots.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

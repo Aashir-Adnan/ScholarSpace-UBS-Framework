@@ -7,7 +7,8 @@ global.CoursefeedbackformDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.CoursefeedbackformDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.CoursefeedbackformDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, course_feed_back_form_id as value FROM coursefeedbackform where coursefeedbackform.status!='inactive'",
+                          "queryPayload": "SELECT coursefeedbackform.course_feed_back_form_id as value, '' AS label FROM coursefeedbackform  where coursefeedbackform.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

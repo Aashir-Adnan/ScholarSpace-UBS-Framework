@@ -7,7 +7,8 @@ global.StudentsemestersDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.StudentsemestersDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.StudentsemestersDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, student_semester_id as value FROM studentsemesters where studentsemesters.status!='inactive'",
+                          "queryPayload": "SELECT studentsemesters.student_semester_id as value, '' AS label FROM studentsemesters  where studentsemesters.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

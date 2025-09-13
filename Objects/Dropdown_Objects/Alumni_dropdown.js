@@ -7,7 +7,8 @@ global.AlumniDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.AlumniDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.AlumniDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, alumni_id as value FROM alumni where alumni.status!='inactive'",
+                          "queryPayload": "SELECT alumni.alumni_id as value, '' AS label FROM alumni  where alumni.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

@@ -7,7 +7,8 @@ global.PrereqsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.PrereqsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.PrereqsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT prereqs.pre_reqs_id as value, CONCAT_WS(' ', LEFT(plannedcourses.course_name, 10), LEFT(plannedcourses.course_name, 10)) AS label FROM prereqs LEFT JOIN plannedcourses ON prereqs.planned_course_id = plannedcourses.planned_course_id LEFT JOIN plannedcourses ON prereqs.pre_req_course_id = plannedcourses.planned_course_id where prereqs.status!='inactive'",
+                          "queryPayload": "SELECT prereqs.pre_reqs_id as value, CONCAT_WS(' ', LEFT(plannedcourses.course_name, 10), LEFT(plannedcourses.course_name, 10)) AS label FROM prereqs LEFT JOIN plannedcourses ON prereqs.planned_course_id = plannedcourses.planned_course_id where prereqs.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

@@ -7,7 +7,8 @@ global.SubcomponentsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.SubcomponentsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.SubcomponentsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, sub_component_id as value FROM subcomponents where subcomponents.status!='inactive'",
+                          "queryPayload": "SELECT subcomponents.sub_component_id as value, '' AS label FROM subcomponents  where subcomponents.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

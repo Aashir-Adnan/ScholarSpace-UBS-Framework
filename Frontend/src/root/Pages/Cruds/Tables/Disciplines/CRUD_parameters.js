@@ -65,7 +65,7 @@ export const parameters = {
                                                     "label": "Discipline Prefix",
                                                     "title": "",
                                                     "type": "textField",
-                                                    "required": true,
+                                                    "required": false,
                                                     "hideInCreateForm": false,
                                                     "visible": true,
                                                     "disabled": false,
@@ -78,6 +78,28 @@ export const parameters = {
                                                     "selectServer": false,
                                                     "dynamicKey": "disciplines_disciplinePrefix",
                                                     "alias" : "disciplines.discipline_prefix",
+                                                    "options": "[]"
+  
+                                                },
+                                                ,
+                                                {
+                                                    "name": "regex",
+                                                    "label": "Regex",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "disciplines_regex",
+                                                    "alias" : "disciplines.regex",
                                                     "options": "[]"
   
                                                 }
@@ -128,5 +150,5 @@ export const parameters = {
                             "permission": "view_disciplines"
                         }
                   ],
-                  "colMapper": { 'disciplines_disciplineId' : 'discipline_id',  'disciplines_disciplineName' : 'discipline_name',  'disciplines_disciplinePrefix' : 'discipline_prefix'}
+                  "colMapper": { 'disciplines_disciplineId' : 'discipline_id',  'disciplines_disciplineName' : 'discipline_name',  'disciplines_disciplinePrefix' : 'discipline_prefix',  'disciplines_regex' : 'regex'}
               };

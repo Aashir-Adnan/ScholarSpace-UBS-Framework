@@ -7,7 +7,8 @@ global.ChatDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.ChatDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.ChatDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, chat_id as value FROM chat where chat.status!='inactive'",
+                          "queryPayload": "SELECT chat.chat_id as value, '' AS label FROM chat  where chat.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

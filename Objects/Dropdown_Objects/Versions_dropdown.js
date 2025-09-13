@@ -7,7 +7,8 @@ global.VersionsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.VersionsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.VersionsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, version_id as value FROM versions where versions.status!='inactive'",
+                          "queryPayload": "SELECT versions.version_id as value, '' AS label FROM versions  where versions.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

@@ -7,7 +7,8 @@ global.Device_otpDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.Device_otpDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.Device_otpDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, device_otp_id as value FROM device_otp where device_otp.status!='inactive'",
+                          "queryPayload": "SELECT device_otp.device_otp_id as value, CONCAT_WS(' ', LEFT(user_devices.device_name, 10)) AS label FROM device_otp LEFT JOIN user_devices ON device_otp.user_device_id = user_devices.user_device_id where device_otp.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

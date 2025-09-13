@@ -42,7 +42,7 @@
                 "name": "departmentId",
                 "label": "Department Id",
                 "title": "",
-                "type": "number",
+                "type": "select",
                 "required": false,
                 "hideInCreateForm": false,
                 "visible": true,
@@ -53,8 +53,8 @@
                 "min": "",
                 "max": "",
                 "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
+                "selectServer": true,
+                "selectServerUrl":"/departments/dropdown?version=1.0",
                 "dynamicKey": "employees_departmentId",
                 "alias" : "employees.department_id",
                 "options": []
@@ -198,7 +198,29 @@
                 "options": []
 
             }  
-          
+        
+            ,
+            {
+                "name": "departmentName",
+                "label": "Department Name",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": true,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "dynamicKey": "departments_departmentName",
+                "alias" : "departments.department_name",
+                "options": [ ""]
+
+            }  
             
         
           

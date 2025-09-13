@@ -105,7 +105,7 @@ const objectResolver = async (
           });
 
           if (conditions.length > 0) {
-            completeQuery += ` OR (${conditions.join(" OR ")})`;
+            completeQuery += ` AND (${conditions.join(" OR ")})`;
           }
           console.log("OBJECT RESOLVER || conditions: ", conditions);
         }

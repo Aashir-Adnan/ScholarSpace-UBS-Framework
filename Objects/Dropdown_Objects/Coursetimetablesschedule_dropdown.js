@@ -7,7 +7,8 @@ global.CoursetimetablesscheduleDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.CoursetimetablesscheduleDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.CoursetimetablesscheduleDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, course_lschedule_id as value FROM coursetimetablesschedule where coursetimetablesschedule.status!='inactive'",
+                          "queryPayload": "SELECT coursetimetablesschedule.course_lschedule_id as value, '' AS label FROM coursetimetablesschedule  where coursetimetablesschedule.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

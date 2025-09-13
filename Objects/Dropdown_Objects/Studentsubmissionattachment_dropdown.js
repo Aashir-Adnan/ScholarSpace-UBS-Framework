@@ -7,7 +7,8 @@ global.StudentsubmissionattachmentDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.StudentsubmissionattachmentDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.StudentsubmissionattachmentDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, student_submission_attachment_id as value FROM studentsubmissionattachment where studentsubmissionattachment.status!='inactive'",
+                          "queryPayload": "SELECT studentsubmissionattachment.student_submission_attachment_id as value, '' AS label FROM studentsubmissionattachment  where studentsubmissionattachment.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

@@ -84,7 +84,7 @@ import { parameters } from "./CRUD_parameters.js";
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "disciplines_disciplineId", "disciplines_disciplineName", "disciplines_disciplinePrefix"
+                            "disciplines_disciplineId", "disciplines_disciplineName", "disciplines_disciplinePrefix", "disciplines_regex"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

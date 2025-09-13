@@ -1,13 +1,13 @@
 const parameters = {
               "steps": [
                   {
-                  "title": "Disciplines Crud",
+                  "title": "Permission Groups Permissions Crud",
                   "parameters": {
                       "fields": [
                       {
-                          "name": "disciplines",
+                          "name": "permission_groups_permissions",
                           "type": "section",
-                          "title": "Disciplines CRUD",
+                          "title": "Permission Groups Permissions CRUD",
                           "hideInCreateForm": false,
                           "visible": false, 
                           "required": false,
@@ -16,10 +16,10 @@ const parameters = {
                           "dependancyCheck": false,
                           "isPrefilled": false,
                           "source": "req.body",
-                          "title": "Disciplines",
+                          "title": "Permission_groups_permissions",
                           "childFields": [
                                 {
-                                  "name": "disciplines_id",
+                                  "name": "permissionGroupsPermissions_id",
                                   "label": "id",
                                   "title": "",
                                   "type": "textField",
@@ -33,7 +33,7 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "disciplines_id"
+                                  "dynamicKey": "permissionGroupsPermissions_id"
                                 },
                                {
                                   "name": "actionPerformerURDD",
@@ -55,8 +55,8 @@ const parameters = {
                                 },
                               
                                   {
-                                  "name": "discipline_name",
-                                  "label": "Discipline Name",
+                                  "name": "permission_groups_permission_id",
+                                  "label": "Permission Groups Permission Id",
                                   "title": "",
                                   "type": "textField",
                                   "required": false,
@@ -69,12 +69,12 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "disciplines_disciplineName",
-                                  "alias" : "disciplines.discipline_name",
+                                  "dynamicKey": "permissionGroupsPermissions_permissionGroupsPermissionId",
+                                  "alias" : "permission_groups_permissions.permission_groups_permission_id",
                                   },
                                   {
-                                  "name": "discipline_prefix",
-                                  "label": "Discipline Prefix",
+                                  "name": "group_id",
+                                  "label": "Group Id",
                                   "title": "",
                                   "type": "textField",
                                   "required": false,
@@ -87,12 +87,12 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "disciplines_disciplinePrefix",
-                                  "alias" : "disciplines.discipline_prefix",
+                                  "dynamicKey": "permissionGroupsPermissions_groupId",
+                                  "alias" : "permission_groups_permissions.group_id",
                                   },
                                   {
-                                  "name": "regex",
-                                  "label": "Regex",
+                                  "name": "permission_id",
+                                  "label": "Permission Id",
                                   "title": "",
                                   "type": "textField",
                                   "required": false,
@@ -105,8 +105,8 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "disciplines_regex",
-                                  "alias" : "disciplines.regex",
+                                  "dynamicKey": "permissionGroupsPermissions_permissionId",
+                                  "alias" : "permission_groups_permissions.permission_id",
                                   },
                                   
                           ]
@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'disciplines_disciplineId' : 'discipline_id',  'disciplines_disciplineName' : 'discipline_name',  'disciplines_disciplinePrefix' : 'discipline_prefix',  'disciplines_regex' : 'regex'}"
+              "colMapper": "{ 'permission_groups_permissions_permissionGroupsPermissionId' : 'permission_groups_permission_id',  'permission_groups_permissions_groupId' : 'group_id',  'permission_groups_permissions_permissionId' : 'permission_id',  'permission_groups_permissions_status' : 'status',  'permission_groups_permissions_updatedBy' : 'updated_by',  'permission_groups_permissions_updatedAt' : 'updated_at',  'permission_groups_permissions_createdAt' : 'created_at',  'permission_groups_permissions_createdBy' : 'created_by'}"
               };
               module.exports = parameters;

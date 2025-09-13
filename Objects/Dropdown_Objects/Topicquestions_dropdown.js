@@ -7,7 +7,8 @@ global.TopicquestionsDropdown_object = {
                   {
                   platform:
                     [
-                      {                      
+                      { 
+                        platformIP : ['*'],                     
                         supported: ['*'],
                         config: {
                           features: {
@@ -18,6 +19,7 @@ global.TopicquestionsDropdown_object = {
                           communication: {
                             encryption: {
                               platformEncryption: true,
+                              accessToken: true
                             },
                           },
                           verification: {
@@ -33,7 +35,7 @@ global.TopicquestionsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(undefined, 10) as label, topic_question_id as value FROM topicquestions where topicquestions.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(question_type, 10) as label, topic_question_id as value FROM topicquestions where topicquestions.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
