@@ -281,28 +281,6 @@ export const parameters = {
                                                 },
                                                 ,
                                                 {
-                                                    "name": "dateOfBirth",
-                                                    "label": "Date Of Birth",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "users_dateOfBirth",
-                                                    "alias" : "users.date_of_birth",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "bloodGroup",
                                                     "label": "Blood Group",
                                                     "title": "",
@@ -376,6 +354,25 @@ export const parameters = {
 
 
  
+                                                ,
+                                              {
+                                                  "name": "dateOfBirth",
+                                                  "label": "Date Of Birth",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "users_dateOfBirth"
+                                              },
                                                 ,
                                               {
                                                   "name": "lastLogin",

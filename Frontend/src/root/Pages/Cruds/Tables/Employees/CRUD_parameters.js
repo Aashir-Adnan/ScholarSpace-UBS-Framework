@@ -153,52 +153,6 @@
                 "alias" : "employees.salary",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "startDate",
-                "label": "Start Date",
-                "title": "",
-                "type": "textField",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "employees_startDate",
-                "alias" : "employees.start_date",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "endDate",
-                "label": "End Date",
-                "title": "",
-                "type": "textField",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "employees_endDate",
-                "alias" : "employees.end_date",
-                "options": []
-
             }  
         
             ,
@@ -225,7 +179,45 @@
             }  
             
         
-          
+        
+          ,
+          {
+              "name": "startDate",
+              "label": "Start Date",
+              "title": "",
+              "type": "dateTime",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "employees_startDate"
+          }
+          ,
+          {
+              "name": "endDate",
+              "label": "End Date",
+              "title": "",
+              "type": "dateTime",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "employees_endDate"
+          }  
           
                 ,
                 {

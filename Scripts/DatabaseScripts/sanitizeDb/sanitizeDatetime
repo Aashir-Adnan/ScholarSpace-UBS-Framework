@@ -1,0 +1,52 @@
+const { projectDB } = require('../../../Database/projectDb');
+const { executeQuery } = require('../../../Database/queryExecution');
+
+async function convertDateToDateTime() {
+  try {
+    let connection = await projectDB();
+
+    // 1. Get all tables
+    const tables = await executeQuery("SHOW TABLES", [], connection, 0);
+    const tableKey = Object.keys(tables[0])[0]; // e.g. 'Tables_in_mydb'
+
+    for (const row of tables) {
+      const tableName = row[tableKey];
+
+      // 2. Get all columns of this table
+      const columns = await executeQuery(`SHOW COLUMNS FROM \`${tableName}\``, [], connection, 0);
+
+      for (const col of columns) {
+        // MySQL col.Type will look like: "date", "datetime", "int(11)", etc.
+        if (col.Type.toLowerCase() === "date") {
+          console.log(`Converting ${tableName}.${col.Field} from DATE -> DATETIME`);
+
+          // Preserve nullability, default, and extra
+          const nullPart = col.Null === 'NO' ? 'NOT NULL' : 'NULL';
+          const defaultPart =
+            col.Default !== null
+              ? `DEFAULT ${connection.escape(col.Default)}`
+              : '';
+          const extraPart = col.Extra || '';
+
+          // 3. Alter column type to DATETIME
+          await executeQuery(
+            `ALTER TABLE \`${tableName}\` 
+             MODIFY \`${col.Field}\` DATETIME ${nullPart} ${defaultPart} ${extraPart}`,
+            [],
+            connection,
+            0
+          );
+        }
+      }
+    }
+
+    await connection.release();
+    console.log("Date → DateTime conversion complete ✅");
+  } catch (err) {
+    console.error("Error converting dates:", err);
+  }
+}
+
+convertDateToDateTime();
+
+module.exports = { convertDateToDateTime };

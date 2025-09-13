@@ -127,28 +127,6 @@ export const parameters = {
                                                 },
                                                 ,
                                                 {
-                                                    "name": "date",
-                                                    "label": "Date",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "subcomponents_date",
-                                                    "alias" : "subcomponents.date",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "endTime",
                                                     "label": "End Time",
                                                     "title": "",
@@ -266,6 +244,25 @@ export const parameters = {
 
 
  
+                                                ,
+                                              {
+                                                  "name": "date",
+                                                  "label": "Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "subcomponents_date"
+                                              },
                                                 ,
                                               {
                                                   "name": "startTime",
@@ -961,28 +958,6 @@ export const parameters = {
                                             
                                                 ,
                                                 {
-                                                    "name": "date",
-                                                    "label": "Date",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "lecturesattendance_date",
-                                                    "alias" : "lecturesattendance.date",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "isPresent",
                                                     "label": "Is Present",
                                                     "title": "",
@@ -1122,6 +1097,25 @@ export const parameters = {
 
 
  
+                                                ,
+                                              {
+                                                  "name": "date",
+                                                  "label": "Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "lecturesattendance_date"
+                                              }
                                                 ]
                                               }
                                             

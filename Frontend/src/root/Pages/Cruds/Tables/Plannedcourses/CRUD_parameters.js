@@ -168,28 +168,6 @@ export const parameters = {
                                                     "alias" : "plannedcourses.course_objective",
                                                     "options": "[]"
   
-                                                },
-                                                ,
-                                                {
-                                                    "name": "image",
-                                                    "label": "Image",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_image",
-                                                    "alias" : "plannedcourses.image",
-                                                    "options": "[]"
-  
                                                 }
                                             
                                             ,
@@ -269,6 +247,31 @@ export const parameters = {
                                                         "dynamicKey": "plannedcourses_domainId",
                                                         "selectServerUrl": "/domains/dropdown?version=1.0",
                                                         "alias" : "plannedcourses.domain_id"
+                                                    }
+                                                    ,
+                                                    ,
+                                                    {
+                                                      "name": "attachmentId",
+                                                      "label": "Attachment",
+                                                      "title": "",
+                                                      "type": "file",
+                                                      "required": false,
+                                                      "isMultiple" : false,
+                                                      "hideInCreateForm": false,
+                                                      "hideInViewForm": false,
+                                                      "fetchSubmitUrl": "/get/file/url/local?step=1",
+                                                      "getFileUrl": "/get/file?step=1&token=",
+                                                      "visible": true,
+                                                      "disabled": false,
+                                                      "dependancyCheck": false,
+                                                      "isPrefilled": false,
+                                                      "source": "req.body",
+                                                      "min": "",
+                                                      "max": "",
+                                                      "validations": [],
+                                                      "dynamicKey" : "plannedcourses_image",
+                                                      "selectServer": false,
+                                                      "alias" : "plannedcourses.image"
                                                     }
                                                     
                                            

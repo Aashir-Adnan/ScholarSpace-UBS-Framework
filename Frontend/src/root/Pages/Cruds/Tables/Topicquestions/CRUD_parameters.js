@@ -127,28 +127,6 @@ export const parameters = {
                                                 },
                                                 ,
                                                 {
-                                                    "name": "createdAtDate",
-                                                    "label": "Created At Date",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "topicquestions_createdAtDate",
-                                                    "alias" : "topicquestions.created_at_date",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "createdAtTime",
                                                     "label": "Created At Time",
                                                     "title": "",
@@ -166,28 +144,6 @@ export const parameters = {
                                                     "selectServer": false,
                                                     "dynamicKey": "topicquestions_createdAtTime",
                                                     "alias" : "topicquestions.created_at_time",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
-                                                    "name": "updatedAtDate",
-                                                    "label": "Updated At Date",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "topicquestions_updatedAtDate",
-                                                    "alias" : "topicquestions.updated_at_date",
                                                     "options": "[]"
   
                                                 },
@@ -244,6 +200,44 @@ export const parameters = {
 
 
  
+                                                ,
+                                              {
+                                                  "name": "createdAtDate",
+                                                  "label": "Created At Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "topicquestions_createdAtDate"
+                                              },
+                                                ,
+                                              {
+                                                  "name": "updatedAtDate",
+                                                  "label": "Updated At Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "topicquestions_updatedAtDate"
+                                              }
                                                 ]
                                               }
                                             
