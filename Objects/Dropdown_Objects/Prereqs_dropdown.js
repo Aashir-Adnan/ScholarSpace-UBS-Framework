@@ -46,7 +46,7 @@ global.PrereqsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_prereqs",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

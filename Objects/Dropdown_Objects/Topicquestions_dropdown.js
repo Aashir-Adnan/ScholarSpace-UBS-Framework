@@ -35,7 +35,7 @@ global.TopicquestionsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(question_type, 10) as label, topic_question_id as value FROM topicquestions where topicquestions.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(question_type, 50) as label, topic_question_id as value FROM topicquestions where topicquestions.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.TopicquestionsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_topicquestions",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

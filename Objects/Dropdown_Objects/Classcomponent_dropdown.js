@@ -35,7 +35,7 @@ global.ClasscomponentDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(component_type, 10) as label, component_id as value FROM classcomponent where classcomponent.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(component_type, 50) as label, component_id as value FROM classcomponent where classcomponent.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.ClasscomponentDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_classcomponent",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

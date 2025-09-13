@@ -35,7 +35,7 @@ global.SemestersDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(semester_name, 10) as label, semester_id as value FROM semesters where semesters.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(semester_name, 50) as label, semester_id as value FROM semesters where semesters.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.SemestersDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_semesters",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

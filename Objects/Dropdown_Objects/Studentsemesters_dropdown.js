@@ -46,7 +46,7 @@ global.StudentsemestersDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_studentsemesters",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

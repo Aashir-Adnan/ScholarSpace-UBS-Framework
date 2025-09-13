@@ -46,7 +46,7 @@ global.User_roles_designations_departmentDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_user_roles_designations_department",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

@@ -35,7 +35,7 @@ global.PloDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(ploname, 10) as label, ploid as value FROM plo where plo.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(ploname, 50) as label, ploid as value FROM plo where plo.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.PloDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_plo",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

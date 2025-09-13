@@ -35,7 +35,7 @@ global.Permission_groupsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(group_name, 10) as label, permission_group_id as value FROM permission_groups where permission_groups.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(group_name, 50) as label, permission_group_id as value FROM permission_groups where permission_groups.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.Permission_groupsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_permission_groups",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

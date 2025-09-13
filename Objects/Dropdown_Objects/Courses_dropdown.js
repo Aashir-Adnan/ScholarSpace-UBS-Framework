@@ -46,7 +46,7 @@ global.CoursesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_courses",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

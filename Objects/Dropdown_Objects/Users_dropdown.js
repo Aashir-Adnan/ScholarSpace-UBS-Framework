@@ -35,7 +35,7 @@ global.UsersDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(username, 10) as label, user_id as value FROM users where users.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(username, 50) as label, user_id as value FROM users where users.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.UsersDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_users",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

@@ -46,7 +46,7 @@ global.SubcomponentmarksDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_subcomponentmarks",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

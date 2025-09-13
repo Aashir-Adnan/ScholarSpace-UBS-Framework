@@ -46,7 +46,7 @@ global.StudentsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_students",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

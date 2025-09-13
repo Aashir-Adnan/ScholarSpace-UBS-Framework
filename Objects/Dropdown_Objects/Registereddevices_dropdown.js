@@ -35,7 +35,7 @@ global.RegistereddevicesDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(device_name, 10) as label, device_id as value FROM registereddevices where registereddevices.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(device_name, 50) as label, device_id as value FROM registereddevices where registereddevices.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.RegistereddevicesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_registereddevices",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

@@ -46,7 +46,7 @@ global.FeedbacksDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_feedbacks",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

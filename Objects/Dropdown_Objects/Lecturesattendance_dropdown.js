@@ -46,7 +46,7 @@ global.LecturesattendanceDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_lecturesattendance",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

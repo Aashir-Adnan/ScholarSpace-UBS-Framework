@@ -46,7 +46,7 @@ global.EmployeepreferedtimeslotsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_employeepreferedtimeslots",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

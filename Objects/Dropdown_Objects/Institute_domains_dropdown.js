@@ -46,7 +46,7 @@ global.Institute_domainsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_institute_domains",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

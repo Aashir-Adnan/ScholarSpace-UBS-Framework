@@ -35,7 +35,7 @@ global.DisciplinesDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(discipline_name, 10) as label, discipline_id as value FROM disciplines where disciplines.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(discipline_name, 50) as label, discipline_id as value FROM disciplines where disciplines.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.DisciplinesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_disciplines",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

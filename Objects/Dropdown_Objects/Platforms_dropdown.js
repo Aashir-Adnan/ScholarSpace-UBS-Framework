@@ -35,7 +35,7 @@ global.PlatformsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(platform_name, 10) as label, platform_id as value FROM platforms where platforms.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(platform_name, 50) as label, platform_id as value FROM platforms where platforms.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.PlatformsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_platforms",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

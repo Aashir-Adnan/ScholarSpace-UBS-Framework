@@ -46,7 +46,7 @@ global.Platform_versionsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_platform_versions",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

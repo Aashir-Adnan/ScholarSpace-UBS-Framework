@@ -35,7 +35,7 @@ global.LecturetopicsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(topic_name, 10) as label, lectures_topic_id as value FROM lecturetopics where lecturetopics.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(topic_name, 50) as label, lectures_topic_id as value FROM lecturetopics where lecturetopics.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.LecturetopicsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_lecturetopics",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

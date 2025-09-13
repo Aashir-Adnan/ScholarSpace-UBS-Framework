@@ -46,7 +46,7 @@ global.TimeslotsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_timeslots",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

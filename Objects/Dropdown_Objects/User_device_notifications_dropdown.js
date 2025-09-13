@@ -46,7 +46,7 @@ global.User_device_notificationsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_user_device_notifications",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

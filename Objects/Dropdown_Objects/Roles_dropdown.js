@@ -35,7 +35,7 @@ global.RolesDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(role_name, 10) as label, role_id as value FROM roles where roles.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(role_name, 50) as label, role_id as value FROM roles where roles.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.RolesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_roles",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

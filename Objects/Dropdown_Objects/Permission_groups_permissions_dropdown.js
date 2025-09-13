@@ -46,7 +46,7 @@ global.Permission_groups_permissionsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_permission_groups_permissions",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

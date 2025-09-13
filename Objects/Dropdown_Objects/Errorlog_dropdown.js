@@ -35,7 +35,7 @@ global.ErrorlogDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(file_name, 10) as label, error_id as value FROM errorlog where errorlog.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(file_name, 50) as label, error_id as value FROM errorlog where errorlog.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.ErrorlogDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_errorlog",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

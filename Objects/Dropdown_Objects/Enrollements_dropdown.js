@@ -35,7 +35,7 @@ global.EnrollementsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(group_name, 10) as label, enrollement_id as value FROM enrollements where enrollements.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(group_name, 50) as label, enrollement_id as value FROM enrollements where enrollements.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.EnrollementsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_enrollements",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

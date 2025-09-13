@@ -35,7 +35,7 @@ global.NotificationsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(notification_title, 10) as label, notification_id as value FROM notifications where notifications.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(notification_title, 50) as label, notification_id as value FROM notifications where notifications.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.NotificationsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_notifications",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

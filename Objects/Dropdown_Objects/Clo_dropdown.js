@@ -35,7 +35,7 @@ global.CloDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(clodomain_name, 10) as label, cloid as value FROM clo where clo.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(clodomain_name, 50) as label, cloid as value FROM clo where clo.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.CloDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_clo",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

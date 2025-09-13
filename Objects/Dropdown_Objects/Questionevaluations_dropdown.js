@@ -46,7 +46,7 @@ global.QuestionevaluationsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_questionevaluations",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

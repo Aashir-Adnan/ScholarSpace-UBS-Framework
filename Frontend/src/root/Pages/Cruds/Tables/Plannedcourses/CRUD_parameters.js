@@ -671,50 +671,6 @@ export const parameters = {
                                                 },
                                                 ,
                                                 {
-                                                    "name": "startDate",
-                                                    "label": "Start Date",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "semesters_startDate",
-                                                    "alias" : "semesters.start_date",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
-                                                    "name": "endDate",
-                                                    "label": "End Date",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "semesters_endDate",
-                                                    "alias" : "semesters.end_date",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "semesterName",
                                                     "label": "Semester Name",
                                                     "title": "",
@@ -810,6 +766,44 @@ export const parameters = {
 
 
  
+                                                ,
+                                              {
+                                                  "name": "startDate",
+                                                  "label": "Start Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "semesters_startDate"
+                                              },
+                                                ,
+                                              {
+                                                  "name": "endDate",
+                                                  "label": "End Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "semesters_endDate"
+                                              }
                                                 ]
                                               }
                                             

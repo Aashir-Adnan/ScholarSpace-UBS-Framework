@@ -35,7 +35,7 @@ global.AttachmentsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(attachment_name, 10) as label, attachment_id as value FROM attachments where attachments.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(attachment_name, 50) as label, attachment_id as value FROM attachments where attachments.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.AttachmentsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_attachments",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

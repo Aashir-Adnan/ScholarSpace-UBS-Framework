@@ -46,7 +46,7 @@ global.Device_otpDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_device_otp",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

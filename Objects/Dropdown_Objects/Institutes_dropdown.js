@@ -35,7 +35,7 @@ global.InstitutesDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(institute_name, 10) as label, institute_id as value FROM institutes where institutes.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(institute_name, 50) as label, institute_id as value FROM institutes where institutes.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.InstitutesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_institutes",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

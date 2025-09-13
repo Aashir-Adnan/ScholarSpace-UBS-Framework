@@ -35,7 +35,7 @@ global.PlannedcoursesDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(course_name, 10) as label, planned_course_id as value FROM plannedcourses where plannedcourses.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(course_name, 50) as label, planned_course_id as value FROM plannedcourses where plannedcourses.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.PlannedcoursesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_plannedcourses",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

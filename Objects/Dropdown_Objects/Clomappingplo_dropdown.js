@@ -35,7 +35,7 @@ global.ClomappingploDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(clointensity_name, 10) as label, clomapping_ploid as value FROM clomappingplo where clomappingplo.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(clointensity_name, 50) as label, clomapping_ploid as value FROM clomappingplo where clomappingplo.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.ClomappingploDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_clomappingplo",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

@@ -35,7 +35,7 @@ global.QuestionsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(description, 10) as label, question_id as value FROM questions where questions.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(description, 50) as label, question_id as value FROM questions where questions.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.QuestionsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_questions",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

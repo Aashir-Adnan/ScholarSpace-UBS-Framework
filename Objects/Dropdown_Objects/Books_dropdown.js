@@ -35,7 +35,7 @@ global.BooksDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(book_name, 10) as label, book_id as value FROM books where books.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(book_name, 50) as label, book_id as value FROM books where books.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.BooksDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_books",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

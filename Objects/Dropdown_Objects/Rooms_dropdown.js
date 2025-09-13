@@ -35,7 +35,7 @@ global.RoomsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(room_name, 10) as label, room_id as value FROM rooms where rooms.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(room_name, 50) as label, room_id as value FROM rooms where rooms.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.RoomsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_rooms",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

@@ -46,7 +46,7 @@ global.SubcomponentsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_subcomponents",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

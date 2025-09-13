@@ -35,7 +35,7 @@ global.AdminsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(admin_type, 10) as label, admin_id as value FROM admins where admins.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(admin_type, 50) as label, admin_id as value FROM admins where admins.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.AdminsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_admins",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

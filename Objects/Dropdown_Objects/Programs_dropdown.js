@@ -35,7 +35,7 @@ global.ProgramsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(program_name, 10) as label, program_id as value FROM programs where programs.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(program_name, 50) as label, program_id as value FROM programs where programs.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.ProgramsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_programs",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

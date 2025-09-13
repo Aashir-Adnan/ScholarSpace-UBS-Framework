@@ -35,7 +35,7 @@ global.DomainsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(domain_name, 10) as label, domain_id as value FROM domains where domains.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(domain_name, 50) as label, domain_id as value FROM domains where domains.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.DomainsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_domains",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

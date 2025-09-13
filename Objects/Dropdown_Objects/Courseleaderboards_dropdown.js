@@ -35,7 +35,7 @@ global.CourseleaderboardsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(leaderboard_name, 10) as label, course_leaderboard_id as value FROM courseleaderboards where courseleaderboards.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(leaderboard_name, 50) as label, course_leaderboard_id as value FROM courseleaderboards where courseleaderboards.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.CourseleaderboardsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_courseleaderboards",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

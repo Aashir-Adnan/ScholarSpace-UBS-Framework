@@ -35,7 +35,7 @@ global.User_devicesDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(device_name, 10) as label, user_device_id as value FROM user_devices where user_devices.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(device_name, 50) as label, user_device_id as value FROM user_devices where user_devices.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.User_devicesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_user_devices",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

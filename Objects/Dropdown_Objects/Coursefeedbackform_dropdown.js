@@ -46,7 +46,7 @@ global.CoursefeedbackformDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_coursefeedbackform",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

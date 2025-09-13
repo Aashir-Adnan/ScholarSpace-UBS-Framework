@@ -46,7 +46,7 @@ global.EmployeesDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_employees",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

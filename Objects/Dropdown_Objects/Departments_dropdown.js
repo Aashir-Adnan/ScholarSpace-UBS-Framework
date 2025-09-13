@@ -35,7 +35,7 @@ global.DepartmentsDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(department_name, 10) as label, department_id as value FROM departments where departments.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(department_name, 50) as label, department_id as value FROM departments where departments.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {
@@ -46,7 +46,7 @@ global.DepartmentsDropdown_object = {
                       },
                       requestMetaData: {
                         requestMethod: "GET",
-                        permission: null,
+                        permission: "dropdown_departments",
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },
