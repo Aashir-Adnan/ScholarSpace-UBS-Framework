@@ -62,52 +62,6 @@
             }
             ,
             {
-                "name": "semesterId",
-                "label": "Semester Id",
-                "title": "",
-                "type": "select",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/semesters/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_semesterId",
-                "alias" : "plannedcourses.semester_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "domainId",
-                "label": "Domain Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/domains/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_domainId",
-                "alias" : "plannedcourses.domain_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "domainId",
                 "label": "Domain Id",
                 "title": "",
@@ -223,8 +177,8 @@
             }
             ,
             {
-                "name": "courseDesc",
-                "label": "Course Desc",
+                "name": "courseDescription",
+                "label": "Course Description",
                 "title": "",
                 "type": "textField",
                 "required": false,
@@ -239,15 +193,15 @@
                 "validations": [],
                 "selectServer": false,
                 "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_courseDesc",
-                "alias" : "plannedcourses.course_desc",
+                "dynamicKey": "plannedcourses_courseDescription",
+                "alias" : "plannedcourses.course_description",
                 "options": []
 
             }
             ,
             {
-                "name": "courseObj",
-                "label": "Course Obj",
+                "name": "courseObjective",
+                "label": "Course Objective",
                 "title": "",
                 "type": "textField",
                 "required": false,
@@ -262,8 +216,8 @@
                 "validations": [],
                 "selectServer": false,
                 "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_courseObj",
-                "alias" : "plannedcourses.course_obj",
+                "dynamicKey": "plannedcourses_courseObjective",
+                "alias" : "plannedcourses.course_objective",
                 "options": []
 
             }
@@ -310,50 +264,6 @@
                 "selectServer": false,
                 "dynamicKey": "semesters_semesterName",
                 "alias" : "semesters.semester_name",
-                "options": [ ""]
-
-            }
-            ,
-            {
-                "name": "semesterName",
-                "label": "Semester Name",
-                "title": "",
-                "type": "textField",
-                "required": false,
-                "hideInCreateForm": true,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "dynamicKey": "semesters_semesterName",
-                "alias" : "semesters.semester_name",
-                "options": [ ""]
-
-            }
-            ,
-            {
-                "name": "domainName",
-                "label": "Domain Name",
-                "title": "",
-                "type": "textField",
-                "required": false,
-                "hideInCreateForm": true,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "dynamicKey": "domains_domainName",
-                "alias" : "domains.domain_name",
                 "options": [ ""]
 
             }
@@ -464,6 +374,6 @@
               ]
               }
           ],
-          "colMapper": "{plannedcourses.planned_course_id as plannedcourses_plannedCourseId,plannedcourses.semester_id as plannedcourses_semesterId,plannedcourses.semester_id as plannedcourses_semesterId,plannedcourses.domain_id as plannedcourses_domainId,plannedcourses.domain_id as plannedcourses_domainId,plannedcourses.course_name as plannedcourses_courseName,plannedcourses.credit_hours as plannedcourses_creditHours,plannedcourses.type as plannedcourses_type,plannedcourses.required_lectures as plannedcourses_requiredLectures,plannedcourses.course_desc as plannedcourses_courseDesc,plannedcourses.course_obj as plannedcourses_courseObj,plannedcourses.image as plannedcourses_image,plannedcourses.status as plannedcourses_status,plannedcourses.created_by as plannedcourses_createdBy,plannedcourses.updated_by as plannedcourses_updatedBy,plannedcourses.created_at as plannedcourses_createdAt,plannedcourses.updated_at as plannedcourses_updatedAt}"
+          "colMapper": "{plannedcourses.planned_course_id as plannedcourses_plannedCourseId,plannedcourses.semester_id as plannedcourses_semesterId,plannedcourses.domain_id as plannedcourses_domainId,plannedcourses.course_name as plannedcourses_courseName,plannedcourses.credit_hours as plannedcourses_creditHours,plannedcourses.type as plannedcourses_type,plannedcourses.required_lectures as plannedcourses_requiredLectures,plannedcourses.course_description as plannedcourses_courseDescription,plannedcourses.course_objective as plannedcourses_courseObjective,plannedcourses.image as plannedcourses_image,plannedcourses.status as plannedcourses_status,plannedcourses.created_by as plannedcourses_createdBy,plannedcourses.updated_by as plannedcourses_updatedBy,plannedcourses.created_at as plannedcourses_createdAt,plannedcourses.updated_at as plannedcourses_updatedAt}"
           }
         

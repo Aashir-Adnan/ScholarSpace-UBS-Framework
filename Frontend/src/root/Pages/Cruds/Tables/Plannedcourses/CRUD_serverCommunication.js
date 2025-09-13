@@ -84,7 +84,7 @@ import { parameters } from "./CRUD_parameters.js";
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "plannedcourses_plannedCourseId", "plannedcourses_semesterId", "plannedcourses_semesterId", "plannedcourses_domainId", "plannedcourses_domainId", "plannedcourses_courseName", "plannedcourses_creditHours", "plannedcourses_type", "plannedcourses_requiredLectures", "plannedcourses_courseDesc", "plannedcourses_courseObj", "plannedcourses_image", "plannedcourses_status", "plannedcourses_createdBy", "plannedcourses_updatedBy", "plannedcourses_createdAt", "plannedcourses_updatedAt"
+                            "plannedcourses_plannedCourseId", "plannedcourses_semesterId", "plannedcourses_domainId", "plannedcourses_courseName", "plannedcourses_creditHours", "plannedcourses_type", "plannedcourses_requiredLectures", "plannedcourses_courseDescription", "plannedcourses_courseObjective", "plannedcourses_image", "plannedcourses_status", "plannedcourses_createdBy", "plannedcourses_updatedBy", "plannedcourses_createdAt", "plannedcourses_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },
