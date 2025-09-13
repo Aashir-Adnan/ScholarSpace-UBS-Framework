@@ -38,7 +38,7 @@ const parameters = require('./CRUD_parameters');
                             queryPayload: {
                               Add: async(req, decryptedPayload) => { return "INSERT INTO studentsubmissions (sub_component_id, enrollment_id , created_by, updated_by) VALUES ({{studentsubmissions_subComponentId}}, {{studentsubmissions_enrollmentId}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                               
-                              Update: async(req, decryptedPayload) => { return "UPDATE studentsubmissions SET sub_component_id = {{studentsubmissions_subComponentId}}, enrollment_id = {{studentsubmissions_enrollmentId}} WHERE student_submission_id = {{id}}"},
+                              Update: async(req, decryptedPayload) => { return "UPDATE studentsubmissions SET sub_component_id = {{studentsubmissions_subComponentId}}, enrollment_id = {{studentsubmissions_enrollmentId}}, created_by = {{studentsubmissions_createdBy}}, updated_by = {{studentsubmissions_updatedBy}} WHERE student_submission_id = {{id}}"},
                               
                               List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, student_submission_id as studentsubmissions_id,student_submission_id as id, studentsubmissions.sub_component_id as studentsubmissions_subComponentId, studentsubmissions.enrollment_id as studentsubmissions_enrollmentId  FROM studentsubmissions WHERE status != 'inactive'"},
                                 

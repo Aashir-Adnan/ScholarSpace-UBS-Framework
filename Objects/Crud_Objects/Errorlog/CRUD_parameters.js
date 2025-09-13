@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'errorlog_errorId' : 'error_id',  'errorlog_errorMessage' : 'error_message',  'errorlog_fileName' : 'file_name'}"
+              "colMapper": "{ 'errorlog_errorId' : 'error_id',  'errorlog_errorMessage' : 'error_message',  'errorlog_fileName' : 'file_name',  'errorlog_status' : 'status',  'errorlog_createdBy' : 'created_by',  'errorlog_updatedBy' : 'updated_by',  'errorlog_createdAt' : 'created_at',  'errorlog_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

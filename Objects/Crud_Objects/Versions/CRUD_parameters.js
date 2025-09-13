@@ -85,6 +85,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'versions_versionId' : 'version_id',  'versions_version' : 'version',  'versions_status' : 'status',  'versions_createdBy' : 'created_by',  'versions_updatedBy' : 'updated_by',  'versions_createdAt' : 'created_at',  'versions_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'versions_versionId' : 'version_id',  'versions_version' : 'version',  'versions_createdBy' : 'created_by',  'versions_updatedBy' : 'updated_by',  'versions_status' : 'status',  'versions_createdAt' : 'created_at',  'versions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

@@ -193,6 +193,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'employees_employeeId' : 'employee_id',  'employees_departmentId' : 'department_id',  'employees_personalDomainUrl' : 'personal_domain_url',  'employees_urddId' : 'urdd_id',  'employees_qualification' : 'qualification',  'employees_salary' : 'salary',  'employees_startDate' : 'start_date',  'employees_endDate' : 'end_date'}"
+              "colMapper": "{ 'employees_employeeId' : 'employee_id',  'employees_departmentId' : 'department_id',  'employees_personalDomainUrl' : 'personal_domain_url',  'employees_urddId' : 'urdd_id',  'employees_qualification' : 'qualification',  'employees_salary' : 'salary',  'employees_startDate' : 'start_date',  'employees_endDate' : 'end_date',  'employees_status' : 'status',  'employees_createdBy' : 'created_by',  'employees_updatedBy' : 'updated_by',  'employees_createdAt' : 'created_at',  'employees_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

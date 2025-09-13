@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'alumni_alumniId' : 'alumni_id',  'alumni_userRoleId' : 'user_role_id',  'alumni_graduatingYear' : 'graduating_year',  'alumni_employementDetail' : 'employement_detail'}"
+              "colMapper": "{ 'alumni_alumniId' : 'alumni_id',  'alumni_userRoleId' : 'user_role_id',  'alumni_graduatingYear' : 'graduating_year',  'alumni_employementDetail' : 'employement_detail',  'alumni_status' : 'status',  'alumni_createdBy' : 'created_by',  'alumni_updatedBy' : 'updated_by',  'alumni_createdAt' : 'created_at',  'alumni_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

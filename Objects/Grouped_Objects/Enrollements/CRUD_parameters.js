@@ -302,6 +302,156 @@ const parameters = {
                               "permission": "courses_view"
                           },
                           {
+                              "title": "User Roles Designations Department Grouped CRUD",
+                              "parameters": {
+                                  "fields": [
+                                      {
+                                          "name": "user_roles_designations_department",
+                                          "type": "section",
+                                          "hideInCreateForm": false,
+                                          "visible": false,
+                                          "required": false,
+                                          "disabled": false,
+                                          "validations": "",
+                                          "dependancyCheck": false,
+                                          "isPrefilled": false,
+                                          "source": "req.body",
+                                          "title": "Enrollements",
+                                          "childFields": [
+                                                  {
+                                                    "name": "userRolesDesignationsDepartment_id",
+                                                    "label": "id",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.query",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "selectServer": false,
+                                                    "dynamicKey": "userRolesDesignationsDepartment_id"
+                                                  },
+                                                  {
+                                                    "name": "actionPerformerURDD",
+                                                    "label": "actionPerformerURDD",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "selectServer": false,
+                                                    "dynamicKey": "actionPerformerURDD",
+                                                    "alias" : "actionPerformerURDD",
+                                                },
+                                              
+                                                      {
+                                                          "name": "roleDesignationDepartmentId",
+                                                          "label": "Role Designation Department Id",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "userRolesDesignationsDepartment_roleDesignationDepartmentId"
+                                                      },
+                                                      {
+                                                          "name": "userId",
+                                                          "label": "User Id",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "userRolesDesignationsDepartment_userId"
+                                                      },
+                                                      {
+                                                          "name": "specAttributes",
+                                                          "label": "Spec Attributes",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "userRolesDesignationsDepartment_specAttributes"
+                                                      },
+                                                      {
+                                                          "name": "startDate",
+                                                          "label": "Start Date",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "userRolesDesignationsDepartment_startDate"
+                                                      },
+                                                      {
+                                                          "name": "endDate",
+                                                          "label": "End Date",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "userRolesDesignationsDepartment_endDate"
+                                                      }
+                                          ]
+                                      }
+                                  ]
+                              },
+                              "buttons": [
+                                  {
+                                      "type": "submit",
+                                      "label": "Submit"
+                                  }
+                              ],
+                              "permission": "user_roles_designations_department_view"
+                          },
+                          {
                               "title": "Feedbacks Grouped CRUD",
                               "parameters": {
                                   "fields": [
@@ -684,6 +834,6 @@ const parameters = {
                               "permission": "subcomponentmarks_view"
                           }
               ],
-              "colMapper": "{ 'enrollements_enrollementId' : 'enrollement_id',  'enrollements_studentSemesterId' : 'student_semester_id',  'enrollements_grade' : 'grade',  'enrollements_groupName' : 'group_name',  'enrollements_enrolledDate' : 'enrolled_date',  'enrollements_courseId' : 'course_id',  'courses_courseId' : 'course_id',  'courses_courseSubDomainPrefix' : 'course_sub_domain_prefix',  'courses_plannedCourseId' : 'planned_course_id',  'courses_cloid' : 'cloid',  'courses_teacherEmployeeId' : 'teacher_employee_id',  'courses_tassistEmployeeId' : 'tassist_employee_id',  'feedbacks_feedbackId' : 'feedback_id',  'feedbacks_enrollementId' : 'enrollement_id',  'feedbacks_feedbackQuestionId' : 'feedback_question_id',  'feedbacks_feedbackText' : 'feedback_text',  'lecturesattendance_attendanceId' : 'attendance_id',  'lecturesattendance_enrollementId' : 'enrollement_id',  'lecturesattendance_date' : 'date',  'lecturesattendance_isPresent' : 'is_present',  'lecturesattendance_subComponentId' : 'sub_component_id',  'subcomponentmarks_subComponentMarkId' : 'sub_component_mark_id',  'subcomponentmarks_subComponentId' : 'sub_component_id',  'subcomponentmarks_enrollmentId' : 'enrollment_id',  'subcomponentmarks_obtainedMarks' : 'obtained_marks',  'subcomponentmarks_outOfMarks' : 'out_of_marks'}"
+              "colMapper": "{ 'enrollements_enrollementId' : 'enrollement_id',  'enrollements_studentSemesterId' : 'student_semester_id',  'enrollements_grade' : 'grade',  'enrollements_groupName' : 'group_name',  'enrollements_enrolledDate' : 'enrolled_date',  'enrollements_courseId' : 'course_id',  'enrollements_status' : 'status',  'enrollements_createdBy' : 'created_by',  'enrollements_updatedBy' : 'updated_by',  'enrollements_createdAt' : 'created_at',  'enrollements_updatedAt' : 'updated_at',  'courses_courseId' : 'course_id',  'courses_courseSubDomainPrefix' : 'course_sub_domain_prefix',  'courses_plannedCourseId' : 'planned_course_id',  'courses_cloid' : 'cloid',  'courses_teacherEmployeeId' : 'teacher_employee_id',  'courses_tassistEmployeeId' : 'tassist_employee_id',  'courses_status' : 'status',  'courses_createdBy' : 'created_by',  'courses_updatedBy' : 'updated_by',  'courses_createdAt' : 'created_at',  'courses_updatedAt' : 'updated_at',  'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at',  'feedbacks_feedbackId' : 'feedback_id',  'feedbacks_enrollementId' : 'enrollement_id',  'feedbacks_feedbackQuestionId' : 'feedback_question_id',  'feedbacks_feedbackText' : 'feedback_text',  'feedbacks_status' : 'status',  'feedbacks_createdBy' : 'created_by',  'feedbacks_updatedBy' : 'updated_by',  'feedbacks_createdAt' : 'created_at',  'feedbacks_updatedAt' : 'updated_at',  'lecturesattendance_attendanceId' : 'attendance_id',  'lecturesattendance_enrollementId' : 'enrollement_id',  'lecturesattendance_date' : 'date',  'lecturesattendance_isPresent' : 'is_present',  'lecturesattendance_subComponentId' : 'sub_component_id',  'lecturesattendance_status' : 'status',  'lecturesattendance_createdBy' : 'created_by',  'lecturesattendance_updatedBy' : 'updated_by',  'lecturesattendance_createdAt' : 'created_at',  'lecturesattendance_updatedAt' : 'updated_at',  'subcomponentmarks_subComponentMarkId' : 'sub_component_mark_id',  'subcomponentmarks_subComponentId' : 'sub_component_id',  'subcomponentmarks_enrollmentId' : 'enrollment_id',  'subcomponentmarks_obtainedMarks' : 'obtained_marks',  'subcomponentmarks_outOfMarks' : 'out_of_marks',  'subcomponentmarks_status' : 'status',  'subcomponentmarks_createdBy' : 'created_by',  'subcomponentmarks_updatedBy' : 'updated_by',  'subcomponentmarks_createdAt' : 'created_at',  'subcomponentmarks_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

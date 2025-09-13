@@ -85,6 +85,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'feedbackquestions_questionsId' : 'questions_id',  'feedbackquestions_question' : 'question'}"
+              "colMapper": "{ 'feedbackquestions_questionsId' : 'questions_id',  'feedbackquestions_question' : 'question',  'feedbackquestions_status' : 'status',  'feedbackquestions_createdBy' : 'created_by',  'feedbackquestions_updatedBy' : 'updated_by',  'feedbackquestions_createdAt' : 'created_at',  'feedbackquestions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

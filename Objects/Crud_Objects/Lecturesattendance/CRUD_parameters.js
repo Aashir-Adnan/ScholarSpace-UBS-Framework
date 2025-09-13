@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'lecturesattendance_attendanceId' : 'attendance_id',  'lecturesattendance_enrollementId' : 'enrollement_id',  'lecturesattendance_date' : 'date',  'lecturesattendance_isPresent' : 'is_present',  'lecturesattendance_subComponentId' : 'sub_component_id'}"
+              "colMapper": "{ 'lecturesattendance_attendanceId' : 'attendance_id',  'lecturesattendance_enrollementId' : 'enrollement_id',  'lecturesattendance_date' : 'date',  'lecturesattendance_isPresent' : 'is_present',  'lecturesattendance_subComponentId' : 'sub_component_id',  'lecturesattendance_status' : 'status',  'lecturesattendance_createdBy' : 'created_by',  'lecturesattendance_updatedBy' : 'updated_by',  'lecturesattendance_createdAt' : 'created_at',  'lecturesattendance_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

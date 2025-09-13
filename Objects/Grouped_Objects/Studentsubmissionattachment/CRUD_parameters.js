@@ -101,6 +101,6 @@ const parameters = {
                               "permission": "studentsubmissionattachment_view"
                           }
               ],
-              "colMapper": "{ 'studentsubmissionattachment_studentSubmissionAttachmentId' : 'student_submission_attachment_id',  'studentsubmissionattachment_studentSubmissionId' : 'student_submission_id',  'studentsubmissionattachment_attachementId' : 'attachement_id'}"
+              "colMapper": "{ 'studentsubmissionattachment_studentSubmissionAttachmentId' : 'student_submission_attachment_id',  'studentsubmissionattachment_studentSubmissionId' : 'student_submission_id',  'studentsubmissionattachment_attachementId' : 'attachement_id',  'studentsubmissionattachment_status' : 'status',  'studentsubmissionattachment_createdBy' : 'created_by',  'studentsubmissionattachment_updatedBy' : 'updated_by',  'studentsubmissionattachment_createdAt' : 'created_at',  'studentsubmissionattachment_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

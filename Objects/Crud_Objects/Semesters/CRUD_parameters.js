@@ -157,6 +157,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'semesters_semesterId' : 'semester_id',  'semesters_programId' : 'program_id',  'semesters_semesterNum' : 'semester_num',  'semesters_startDate' : 'start_date',  'semesters_endDate' : 'end_date',  'semesters_semesterName' : 'semester_name'}"
+              "colMapper": "{ 'semesters_semesterId' : 'semester_id',  'semesters_programId' : 'program_id',  'semesters_semesterNum' : 'semester_num',  'semesters_startDate' : 'start_date',  'semesters_endDate' : 'end_date',  'semesters_semesterName' : 'semester_name',  'semesters_status' : 'status',  'semesters_createdBy' : 'created_by',  'semesters_updatedBy' : 'updated_by',  'semesters_createdAt' : 'created_at',  'semesters_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

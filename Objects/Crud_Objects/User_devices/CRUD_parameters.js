@@ -157,6 +157,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'user_devices_userDeviceId' : 'user_device_id',  'user_devices_userId' : 'user_id',  'user_devices_deviceToken' : 'device_token',  'user_devices_deviceName' : 'device_name',  'user_devices_platformVersionId' : 'platform_version_id',  'user_devices_osVersion' : 'os_version',  'user_devices_status' : 'status',  'user_devices_createdBy' : 'created_by',  'user_devices_updatedBy' : 'updated_by',  'user_devices_createdAt' : 'created_at',  'user_devices_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'user_devices_userDeviceId' : 'user_device_id',  'user_devices_userId' : 'user_id',  'user_devices_deviceToken' : 'device_token',  'user_devices_deviceName' : 'device_name',  'user_devices_platformVersionId' : 'platform_version_id',  'user_devices_osVersion' : 'os_version',  'user_devices_createdBy' : 'created_by',  'user_devices_updatedBy' : 'updated_by',  'user_devices_status' : 'status',  'user_devices_createdAt' : 'created_at',  'user_devices_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

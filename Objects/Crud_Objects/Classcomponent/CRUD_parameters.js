@@ -157,6 +157,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'classcomponent_componentId' : 'component_id',  'classcomponent_courseId' : 'course_id',  'classcomponent_componentType' : 'component_type',  'classcomponent_componentName' : 'component_name',  'classcomponent_weightage' : 'weightage',  'classcomponent_componentPolicy' : 'component_policy'}"
+              "colMapper": "{ 'classcomponent_componentId' : 'component_id',  'classcomponent_courseId' : 'course_id',  'classcomponent_componentType' : 'component_type',  'classcomponent_componentName' : 'component_name',  'classcomponent_weightage' : 'weightage',  'classcomponent_componentPolicy' : 'component_policy',  'classcomponent_status' : 'status',  'classcomponent_createdBy' : 'created_by',  'classcomponent_updatedBy' : 'updated_by',  'classcomponent_createdAt' : 'created_at',  'classcomponent_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

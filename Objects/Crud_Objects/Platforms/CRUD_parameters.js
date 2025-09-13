@@ -85,6 +85,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'platforms_platformId' : 'platform_id',  'platforms_platformName' : 'platform_name',  'platforms_status' : 'status',  'platforms_createdBy' : 'created_by',  'platforms_updatedBy' : 'updated_by',  'platforms_createdAt' : 'created_at',  'platforms_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'platforms_platformId' : 'platform_id',  'platforms_platformName' : 'platform_name',  'platforms_createdBy' : 'created_by',  'platforms_updatedBy' : 'updated_by',  'platforms_status' : 'status',  'platforms_createdAt' : 'created_at',  'platforms_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'feedbacks_feedbackId' : 'feedback_id',  'feedbacks_enrollementId' : 'enrollement_id',  'feedbacks_feedbackQuestionId' : 'feedback_question_id',  'feedbacks_feedbackText' : 'feedback_text'}"
+              "colMapper": "{ 'feedbacks_feedbackId' : 'feedback_id',  'feedbacks_enrollementId' : 'enrollement_id',  'feedbacks_feedbackQuestionId' : 'feedback_question_id',  'feedbacks_feedbackText' : 'feedback_text',  'feedbacks_status' : 'status',  'feedbacks_createdBy' : 'created_by',  'feedbacks_updatedBy' : 'updated_by',  'feedbacks_createdAt' : 'created_at',  'feedbacks_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

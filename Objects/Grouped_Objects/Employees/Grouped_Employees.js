@@ -38,7 +38,7 @@ const parameters = require('./CRUD_parameters');
                             queryPayload: {
                               Add: async(req, decryptedPayload) => { return "INSERT INTO employees (department_id, personal_domain_url, urdd_id, qualification, salary, start_date, end_date , created_by, updated_by) VALUES ({{employees_departmentId}}, {{employees_personalDomainUrl}}, {{employees_urddId}}, {{employees_qualification}}, {{employees_salary}}, {{employees_startDate}}, {{employees_endDate}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                               
-                              Update: async(req, decryptedPayload) => { return "UPDATE employees SET department_id = {{employees_departmentId}}, personal_domain_url = {{employees_personalDomainUrl}}, urdd_id = {{employees_urddId}}, qualification = {{employees_qualification}}, salary = {{employees_salary}}, start_date = {{employees_startDate}}, end_date = {{employees_endDate}} WHERE employee_id = {{id}}"},
+                              Update: async(req, decryptedPayload) => { return "UPDATE employees SET department_id = {{employees_departmentId}}, personal_domain_url = {{employees_personalDomainUrl}}, urdd_id = {{employees_urddId}}, qualification = {{employees_qualification}}, salary = {{employees_salary}}, start_date = {{employees_startDate}}, end_date = {{employees_endDate}}, created_by = {{employees_createdBy}}, updated_by = {{employees_updatedBy}} WHERE employee_id = {{id}}"},
                               
                               List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, employee_id as employees_id,employee_id as id, employees.department_id as employees_departmentId, employees.personal_domain_url as employees_personalDomainUrl, employees.urdd_id as employees_urddId, employees.qualification as employees_qualification, employees.salary as employees_salary, employees.start_date as employees_startDate, employees.end_date as employees_endDate  FROM employees WHERE status != 'inactive'"},
                                 
@@ -192,7 +192,7 @@ const parameters = require('./CRUD_parameters');
                             queryPayload: {
                               Add: async(req, decryptedPayload) => { return "INSERT INTO courses (course_sub_domain_prefix, planned_course_id, cloid, teacher_employee_id, tassist_employee_id , created_by, updated_by) VALUES ({{courses_courseSubDomainPrefix}}, {{courses_plannedCourseId}}, {{courses_cloid}}, {{courses_teacherEmployeeId}}, {{courses_tassistEmployeeId}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                               
-                              Update: async(req, decryptedPayload) => { return "UPDATE courses SET course_sub_domain_prefix = {{courses_courseSubDomainPrefix}}, planned_course_id = {{courses_plannedCourseId}}, cloid = {{courses_cloid}}, teacher_employee_id = {{courses_teacherEmployeeId}}, tassist_employee_id = {{courses_tassistEmployeeId}} WHERE course_id = {{id}}"},
+                              Update: async(req, decryptedPayload) => { return "UPDATE courses SET course_sub_domain_prefix = {{courses_courseSubDomainPrefix}}, planned_course_id = {{courses_plannedCourseId}}, cloid = {{courses_cloid}}, teacher_employee_id = {{courses_teacherEmployeeId}}, tassist_employee_id = {{courses_tassistEmployeeId}}, created_by = {{courses_createdBy}}, updated_by = {{courses_updatedBy}} WHERE course_id = {{id}}"},
                               
                               List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, course_id as courses_id,course_id as id, courses.course_sub_domain_prefix as courses_courseSubDomainPrefix, courses.planned_course_id as courses_plannedCourseId, courses.cloid as courses_cloid, courses.teacher_employee_id as courses_teacherEmployeeId, courses.tassist_employee_id as courses_tassistEmployeeId  FROM courses WHERE status != 'inactive'"},
                                 
@@ -269,7 +269,7 @@ const parameters = require('./CRUD_parameters');
                             queryPayload: {
                               Add: async(req, decryptedPayload) => { return "INSERT INTO departments (department_name, employee_id , created_by, updated_by) VALUES ({{departments_departmentName}}, {{departments_employeeId}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                               
-                              Update: async(req, decryptedPayload) => { return "UPDATE departments SET department_name = {{departments_departmentName}}, employee_id = {{departments_employeeId}} WHERE department_id = {{id}}"},
+                              Update: async(req, decryptedPayload) => { return "UPDATE departments SET department_name = {{departments_departmentName}}, employee_id = {{departments_employeeId}}, created_by = {{departments_createdBy}}, updated_by = {{departments_updatedBy}} WHERE department_id = {{id}}"},
                               
                               List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, department_id as departments_id,department_id as id, departments.department_name as departments_departmentName, departments.employee_id as departments_employeeId  FROM departments WHERE status != 'inactive'"},
                                 
@@ -346,7 +346,7 @@ const parameters = require('./CRUD_parameters');
                             queryPayload: {
                               Add: async(req, decryptedPayload) => { return "INSERT INTO domains (domain_name, domain_leader_id , created_by, updated_by) VALUES ({{domains_domainName}}, {{domains_domainLeaderId}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                               
-                              Update: async(req, decryptedPayload) => { return "UPDATE domains SET domain_name = {{domains_domainName}}, domain_leader_id = {{domains_domainLeaderId}} WHERE domain_id = {{id}}"},
+                              Update: async(req, decryptedPayload) => { return "UPDATE domains SET domain_name = {{domains_domainName}}, domain_leader_id = {{domains_domainLeaderId}}, created_by = {{domains_createdBy}}, updated_by = {{domains_updatedBy}} WHERE domain_id = {{id}}"},
                               
                               List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, domain_id as domains_id,domain_id as id, domains.domain_name as domains_domainName, domains.domain_leader_id as domains_domainLeaderId  FROM domains WHERE status != 'inactive'"},
                                 

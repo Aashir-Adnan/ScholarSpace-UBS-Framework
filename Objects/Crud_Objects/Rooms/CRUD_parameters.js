@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'rooms_roomId' : 'room_id',  'rooms_roomName' : 'room_name',  'rooms_roomCapacity' : 'room_capacity',  'rooms_roomLocation' : 'room_location'}"
+              "colMapper": "{ 'rooms_roomId' : 'room_id',  'rooms_roomName' : 'room_name',  'rooms_roomCapacity' : 'room_capacity',  'rooms_roomLocation' : 'room_location',  'rooms_status' : 'status',  'rooms_createdBy' : 'created_by',  'rooms_updatedBy' : 'updated_by',  'rooms_createdAt' : 'created_at',  'rooms_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

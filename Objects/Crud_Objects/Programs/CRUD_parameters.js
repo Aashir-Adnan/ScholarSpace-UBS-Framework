@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'programs_programId' : 'program_id',  'programs_departmentId' : 'department_id',  'programs_domainId' : 'domain_id',  'programs_programName' : 'program_name',  'programs_programYear' : 'program_year'}"
+              "colMapper": "{ 'programs_programId' : 'program_id',  'programs_departmentId' : 'department_id',  'programs_domainId' : 'domain_id',  'programs_programName' : 'program_name',  'programs_programYear' : 'program_year',  'programs_status' : 'status',  'programs_createdBy' : 'created_by',  'programs_updatedBy' : 'updated_by',  'programs_createdAt' : 'created_at',  'programs_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

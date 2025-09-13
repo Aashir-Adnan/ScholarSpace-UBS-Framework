@@ -38,7 +38,7 @@ const parameters = require('./CRUD_parameters');
                             queryPayload: {
                               Add: async(req, decryptedPayload) => { return "INSERT INTO employeepreferedtimeslots (employee_id, time_slot_id , created_by, updated_by) VALUES ({{employeepreferedtimeslots_employeeId}}, {{employeepreferedtimeslots_timeSlotId}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                               
-                              Update: async(req, decryptedPayload) => { return "UPDATE employeepreferedtimeslots SET employee_id = {{employeepreferedtimeslots_employeeId}}, time_slot_id = {{employeepreferedtimeslots_timeSlotId}} WHERE employee_prefered_time_slots_id = {{id}}"},
+                              Update: async(req, decryptedPayload) => { return "UPDATE employeepreferedtimeslots SET employee_id = {{employeepreferedtimeslots_employeeId}}, time_slot_id = {{employeepreferedtimeslots_timeSlotId}}, created_by = {{employeepreferedtimeslots_createdBy}}, updated_by = {{employeepreferedtimeslots_updatedBy}} WHERE employee_prefered_time_slots_id = {{id}}"},
                               
                               List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, employee_prefered_time_slots_id as employeepreferedtimeslots_id,employee_prefered_time_slots_id as id, employeepreferedtimeslots.employee_id as employeepreferedtimeslots_employeeId, employeepreferedtimeslots.time_slot_id as employeepreferedtimeslots_timeSlotId  FROM employeepreferedtimeslots WHERE status != 'inactive'"},
                                 

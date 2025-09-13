@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'clomappingplo_clomappingPloid' : 'clomapping_ploid',  'clomappingplo_cloid' : 'cloid',  'clomappingplo_clointensityName' : 'clointensity_name',  'clomappingplo_ploid' : 'ploid'}"
+              "colMapper": "{ 'clomappingplo_clomappingPloid' : 'clomapping_ploid',  'clomappingplo_cloid' : 'cloid',  'clomappingplo_clointensityName' : 'clointensity_name',  'clomappingplo_ploid' : 'ploid',  'clomappingplo_status' : 'status',  'clomappingplo_createdBy' : 'created_by',  'clomappingplo_updatedBy' : 'updated_by',  'clomappingplo_createdAt' : 'created_at',  'clomappingplo_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

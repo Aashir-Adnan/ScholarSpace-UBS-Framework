@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'coursetimetablesschedule_courseLscheduleId' : 'course_lschedule_id',  'coursetimetablesschedule_courseId' : 'course_id',  'coursetimetablesschedule_employeePreferedTimeSlotsId' : 'employee_prefered_time_slots_id',  'coursetimetablesschedule_timeSlotId' : 'time_slot_id',  'coursetimetablesschedule_roomId' : 'room_id'}"
+              "colMapper": "{ 'coursetimetablesschedule_courseLscheduleId' : 'course_lschedule_id',  'coursetimetablesschedule_courseId' : 'course_id',  'coursetimetablesschedule_employeePreferedTimeSlotsId' : 'employee_prefered_time_slots_id',  'coursetimetablesschedule_timeSlotId' : 'time_slot_id',  'coursetimetablesschedule_roomId' : 'room_id',  'coursetimetablesschedule_status' : 'status',  'coursetimetablesschedule_createdBy' : 'created_by',  'coursetimetablesschedule_updatedBy' : 'updated_by',  'coursetimetablesschedule_createdAt' : 'created_at',  'coursetimetablesschedule_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

@@ -157,6 +157,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'enrollements_enrollementId' : 'enrollement_id',  'enrollements_studentSemesterId' : 'student_semester_id',  'enrollements_grade' : 'grade',  'enrollements_groupName' : 'group_name',  'enrollements_enrolledDate' : 'enrolled_date',  'enrollements_courseId' : 'course_id'}"
+              "colMapper": "{ 'enrollements_enrollementId' : 'enrollement_id',  'enrollements_studentSemesterId' : 'student_semester_id',  'enrollements_grade' : 'grade',  'enrollements_groupName' : 'group_name',  'enrollements_enrolledDate' : 'enrolled_date',  'enrollements_courseId' : 'course_id',  'enrollements_status' : 'status',  'enrollements_createdBy' : 'created_by',  'enrollements_updatedBy' : 'updated_by',  'enrollements_createdAt' : 'created_at',  'enrollements_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

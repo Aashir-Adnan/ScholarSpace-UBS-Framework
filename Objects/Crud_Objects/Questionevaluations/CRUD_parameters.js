@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'questionevaluations_questionEvaluationId' : 'question_evaluation_id',  'questionevaluations_enrollementId' : 'enrollement_id',  'questionevaluations_questionId' : 'question_id',  'questionevaluations_studentAnswer' : 'student_answer',  'questionevaluations_obtainedMarks' : 'obtained_marks'}"
+              "colMapper": "{ 'questionevaluations_questionEvaluationId' : 'question_evaluation_id',  'questionevaluations_enrollementId' : 'enrollement_id',  'questionevaluations_questionId' : 'question_id',  'questionevaluations_studentAnswer' : 'student_answer',  'questionevaluations_obtainedMarks' : 'obtained_marks',  'questionevaluations_status' : 'status',  'questionevaluations_createdBy' : 'created_by',  'questionevaluations_updatedBy' : 'updated_by',  'questionevaluations_createdAt' : 'created_at',  'questionevaluations_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

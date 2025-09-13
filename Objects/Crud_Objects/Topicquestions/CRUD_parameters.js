@@ -211,6 +211,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'topicquestions_topicQuestionId' : 'topic_question_id',  'topicquestions_lectureTopicId' : 'lecture_topic_id',  'topicquestions_questionType' : 'question_type',  'topicquestions_question' : 'question',  'topicquestions_isDone' : 'is_done',  'topicquestions_createdAtDate' : 'created_at_date',  'topicquestions_createdAtTime' : 'created_at_time',  'topicquestions_updatedAtDate' : 'updated_at_date',  'topicquestions_updatedAtTime' : 'updated_at_time'}"
+              "colMapper": "{ 'topicquestions_topicQuestionId' : 'topic_question_id',  'topicquestions_lectureTopicId' : 'lecture_topic_id',  'topicquestions_questionType' : 'question_type',  'topicquestions_question' : 'question',  'topicquestions_isDone' : 'is_done',  'topicquestions_createdAtDate' : 'created_at_date',  'topicquestions_createdAtTime' : 'created_at_time',  'topicquestions_updatedAtDate' : 'updated_at_date',  'topicquestions_updatedAtTime' : 'updated_at_time',  'topicquestions_status' : 'status',  'topicquestions_createdBy' : 'created_by',  'topicquestions_updatedBy' : 'updated_by',  'topicquestions_createdAt' : 'created_at',  'topicquestions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

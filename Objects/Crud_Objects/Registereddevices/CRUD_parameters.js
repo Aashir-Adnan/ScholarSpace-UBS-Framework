@@ -193,6 +193,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'registereddevices_deviceId' : 'device_id',  'registereddevices_deviceName' : 'device_name',  'registereddevices_deviceToken' : 'device_token',  'registereddevices_deviceType' : 'device_type',  'registereddevices_accessToken' : 'access_token',  'registereddevices_tokenExpiry' : 'token_expiry',  'registereddevices_deviceOs' : 'device_os',  'registereddevices_make' : 'make'}"
+              "colMapper": "{ 'registereddevices_deviceId' : 'device_id',  'registereddevices_deviceName' : 'device_name',  'registereddevices_deviceToken' : 'device_token',  'registereddevices_deviceType' : 'device_type',  'registereddevices_accessToken' : 'access_token',  'registereddevices_tokenExpiry' : 'token_expiry',  'registereddevices_deviceOs' : 'device_os',  'registereddevices_make' : 'make',  'registereddevices_status' : 'status',  'registereddevices_createdBy' : 'created_by',  'registereddevices_updatedBy' : 'updated_by',  'registereddevices_createdAt' : 'created_at',  'registereddevices_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

@@ -265,6 +265,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDesc' : 'course_desc',  'plannedcourses_courseObj' : 'course_obj',  'plannedcourses_image' : 'image'}"
+              "colMapper": "{ 'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDesc' : 'course_desc',  'plannedcourses_courseObj' : 'course_obj',  'plannedcourses_image' : 'image',  'plannedcourses_status' : 'status',  'plannedcourses_createdBy' : 'created_by',  'plannedcourses_updatedBy' : 'updated_by',  'plannedcourses_createdAt' : 'created_at',  'plannedcourses_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

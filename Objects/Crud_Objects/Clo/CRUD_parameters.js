@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'clo_cloid' : 'cloid',  'clo_clonum' : 'clonum',  'clo_clodomainName' : 'clodomain_name',  'clo_description' : 'description'}"
+              "colMapper": "{ 'clo_cloid' : 'cloid',  'clo_clonum' : 'clonum',  'clo_clodomainName' : 'clodomain_name',  'clo_description' : 'description',  'clo_status' : 'status',  'clo_createdBy' : 'created_by',  'clo_updatedBy' : 'updated_by',  'clo_createdAt' : 'created_at',  'clo_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

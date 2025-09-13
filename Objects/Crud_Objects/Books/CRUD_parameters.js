@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'books_bookId' : 'book_id',  'books_courseId' : 'course_id',  'books_bookIbn' : 'book_ibn',  'books_bookName' : 'book_name'}"
+              "colMapper": "{ 'books_bookId' : 'book_id',  'books_courseId' : 'course_id',  'books_bookIbn' : 'book_ibn',  'books_bookName' : 'book_name',  'books_status' : 'status',  'books_createdBy' : 'created_by',  'books_updatedBy' : 'updated_by',  'books_createdAt' : 'created_at',  'books_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

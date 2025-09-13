@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id'}"
+              "colMapper": "{ 'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id',  'questionssolution_status' : 'status',  'questionssolution_createdBy' : 'created_by',  'questionssolution_updatedBy' : 'updated_by',  'questionssolution_createdAt' : 'created_at',  'questionssolution_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

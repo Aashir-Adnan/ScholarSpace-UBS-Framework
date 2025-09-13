@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'plo_ploid' : 'ploid',  'plo_programId' : 'program_id',  'plo_ploname' : 'ploname',  'plo_plonum' : 'plonum'}"
+              "colMapper": "{ 'plo_ploid' : 'ploid',  'plo_programId' : 'program_id',  'plo_ploname' : 'ploname',  'plo_plonum' : 'plonum',  'plo_status' : 'status',  'plo_createdBy' : 'created_by',  'plo_updatedBy' : 'updated_by',  'plo_createdAt' : 'created_at',  'plo_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

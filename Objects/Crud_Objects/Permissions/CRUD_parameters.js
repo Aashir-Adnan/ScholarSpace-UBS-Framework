@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'permissions_permissionId' : 'permission_id',  'permissions_permissionName' : 'permission_name',  'permissions_permissionName' : 'permission_name',  'permissions_status' : 'status',  'permissions_createdBy' : 'created_by',  'permissions_updatedBy' : 'updated_by',  'permissions_createdAt' : 'created_at',  'permissions_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'permissions_permissionId' : 'permission_id',  'permissions_permissionName' : 'permission_name',  'permissions_permissionName' : 'permission_name',  'permissions_createdBy' : 'created_by',  'permissions_updatedBy' : 'updated_by',  'permissions_status' : 'status',  'permissions_createdAt' : 'created_at',  'permissions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

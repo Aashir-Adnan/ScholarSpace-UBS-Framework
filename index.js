@@ -55,7 +55,7 @@ async function initializeApp() {
     applyMiddleware(app);
     requireAllJSFiles(baseDirObjects);
 
-    const port = process.env.PORT || 3000;
+    const port = process.env.SERVER_PORT || 3000;
 
     
     const storage = multer.diskStorage({

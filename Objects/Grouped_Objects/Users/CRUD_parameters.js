@@ -308,40 +308,6 @@ const parameters = {
                                                           "max": "",
                                                           "selectServer": false,
                                                           "dynamicKey": "users_lastLogin"
-                                                      },
-                                                      {
-                                                          "name": "otp",
-                                                          "label": "Otp",
-                                                          "title": "",
-                                                          "type": "textField",
-                                                          "required": false,
-                                                          "hideInCreateForm": false,
-                                                          "visible": true,
-                                                          "disabled": false,
-                                                          "dependancyCheck": false,
-                                                          "isPrefilled": false,
-                                                          "source": "req.body",
-                                                          "min": "",
-                                                          "max": "",
-                                                          "selectServer": false,
-                                                          "dynamicKey": "users_otp"
-                                                      },
-                                                      {
-                                                          "name": "token",
-                                                          "label": "Token",
-                                                          "title": "",
-                                                          "type": "textField",
-                                                          "required": false,
-                                                          "hideInCreateForm": false,
-                                                          "visible": true,
-                                                          "disabled": false,
-                                                          "dependancyCheck": false,
-                                                          "isPrefilled": false,
-                                                          "source": "req.body",
-                                                          "min": "",
-                                                          "max": "",
-                                                          "selectServer": false,
-                                                          "dynamicKey": "users_token"
                                                       }
                                           ]
                                       }
@@ -506,6 +472,6 @@ const parameters = {
                               "permission": "user_roles_designations_department_view"
                           }
               ],
-              "colMapper": "{ 'users_userId' : 'user_id',  'users_email' : 'email',  'users_username' : 'username',  'users_firstName' : 'first_name',  'users_lastName' : 'last_name',  'users_phoneNo' : 'phone_no',  'users_password' : 'password',  'users_cnic' : 'cnic',  'users_gender' : 'gender',  'users_fatherName' : 'father_name',  'users_imageAttachmentId' : 'image_attachment_id',  'users_address' : 'address',  'users_dateOfBirth' : 'date_of_birth',  'users_bloodGroup' : 'blood_group',  'users_religion' : 'religion',  'users_lastLogin' : 'last_login',  'users_otp' : 'otp',  'users_token' : 'token',  'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'users_userId' : 'user_id',  'users_email' : 'email',  'users_username' : 'username',  'users_firstName' : 'first_name',  'users_lastName' : 'last_name',  'users_phoneNo' : 'phone_no',  'users_password' : 'password',  'users_cnic' : 'cnic',  'users_gender' : 'gender',  'users_fatherName' : 'father_name',  'users_imageAttachmentId' : 'image_attachment_id',  'users_address' : 'address',  'users_dateOfBirth' : 'date_of_birth',  'users_bloodGroup' : 'blood_group',  'users_religion' : 'religion',  'users_lastLogin' : 'last_login',  'users_status' : 'status',  'users_createdBy' : 'created_by',  'users_updatedBy' : 'updated_by',  'users_createdAt' : 'created_at',  'users_updatedAt' : 'updated_at',  'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'timeslots_timeSlotId' : 'time_slot_id',  'timeslots_startTime' : 'start_time',  'timeslots_endTime' : 'end_time',  'timeslots_day' : 'day'}"
+              "colMapper": "{ 'timeslots_timeSlotId' : 'time_slot_id',  'timeslots_startTime' : 'start_time',  'timeslots_endTime' : 'end_time',  'timeslots_day' : 'day',  'timeslots_status' : 'status',  'timeslots_createdBy' : 'created_by',  'timeslots_updatedBy' : 'updated_by',  'timeslots_createdAt' : 'created_at',  'timeslots_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

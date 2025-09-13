@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'designations_designationId' : 'designation_id',  'designations_designationName' : 'designation_name',  'designations_seniorDesignationId' : 'senior_designation_id',  'designations_status' : 'status',  'designations_createdBy' : 'created_by',  'designations_updatedBy' : 'updated_by',  'designations_createdAt' : 'created_at',  'designations_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'designations_designationId' : 'designation_id',  'designations_designationName' : 'designation_name',  'designations_seniorDesignationId' : 'senior_designation_id',  'designations_createdBy' : 'created_by',  'designations_updatedBy' : 'updated_by',  'designations_status' : 'status',  'designations_createdAt' : 'created_at',  'designations_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

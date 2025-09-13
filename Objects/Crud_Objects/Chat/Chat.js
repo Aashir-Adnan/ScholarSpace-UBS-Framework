@@ -42,8 +42,8 @@
                           queryPayload: {
                             Add: async(req, decryptedPayload) => { return "INSERT INTO chat (sub_component_id, user_role_id, message, message_time, private_chat, created_by, updated_by) VALUES ({{chat_subComponentId}}, {{chat_userRoleId}}, {{chat_message}}, {{chat_messageTime}}, {{chat_privateChat}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                             Update: async(req, decryptedPayload) => { return "UPDATE chat SET sub_component_id = {{chat_subComponentId}}, user_role_id = {{chat_userRoleId}}, message = {{chat_message}}, message_time = {{chat_messageTime}}, private_chat = {{chat_privateChat}} WHERE chat_id = {{id}}"},
-                            List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, chat.chat_id as chat_id, chat.chat_id as id, chat.chat_id as chat_chatId,chat.sub_component_id as chat_subComponentId,chat.user_role_id as chat_userRoleId,chat.message as chat_message,chat.message_time as chat_messageTime,chat.private_chat as chat_privateChat FROM chat  Where chat.status != 'inactive' "},
-                            View: async(req, decryptedPayload) => { return "SELECT chat.chat_id as chat_id, chat.chat_id as id, chat.chat_id as chat_chatId,chat.sub_component_id as chat_subComponentId,chat.user_role_id as chat_userRoleId,chat.message as chat_message,chat.message_time as chat_messageTime,chat.private_chat as chat_privateChat FROM chat  WHERE chat_id = {{id}} OR chat_id IS NULL"},
+                            List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, chat.chat_id as chat_id, chat.chat_id as id, chat.chat_id as chat_chatId,chat.sub_component_id as chat_subComponentId,chat.user_role_id as chat_userRoleId,chat.message as chat_message,chat.message_time as chat_messageTime,chat.private_chat as chat_privateChat,chat.status as chat_status,chat.created_by as chat_createdBy,chat.updated_by as chat_updatedBy,chat.created_at as chat_createdAt,chat.updated_at as chat_updatedAt FROM chat  Where chat.status != 'inactive' "},
+                            View: async(req, decryptedPayload) => { return "SELECT chat.chat_id as chat_id, chat.chat_id as id, chat.chat_id as chat_chatId,chat.sub_component_id as chat_subComponentId,chat.user_role_id as chat_userRoleId,chat.message as chat_message,chat.message_time as chat_messageTime,chat.private_chat as chat_privateChat,chat.status as chat_status,chat.created_by as chat_createdBy,chat.updated_by as chat_updatedBy,chat.created_at as chat_createdAt,chat.updated_at as chat_updatedAt FROM chat  WHERE chat_id = {{id}} OR chat_id IS NULL"},
                             Delete: async(req, decryptedPayload) => { return"UPDATE chat SET status = 'inactive' WHERE chat_id = {{id}}"},           
                             database: "mainDb"
 
@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: { Add: "add_chat", View: "view_chat", Update: "update_chat", Delete: "delete_chat", List: "list_chat" },
+                        permission: null,
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

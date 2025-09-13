@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'domains_domainId' : 'domain_id',  'domains_domainName' : 'domain_name',  'domains_domainLeaderId' : 'domain_leader_id'}"
+              "colMapper": "{ 'domains_domainId' : 'domain_id',  'domains_domainName' : 'domain_name',  'domains_domainLeaderId' : 'domain_leader_id',  'domains_status' : 'status',  'domains_createdBy' : 'created_by',  'domains_updatedBy' : 'updated_by',  'domains_createdAt' : 'created_at',  'domains_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

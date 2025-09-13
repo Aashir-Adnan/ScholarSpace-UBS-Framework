@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'employeedomain_employeeDomainId' : 'employee_domain_id',  'employeedomain_employeeId' : 'employee_id',  'employeedomain_domainId' : 'domain_id'}"
+              "colMapper": "{ 'employeedomain_employeeDomainId' : 'employee_domain_id',  'employeedomain_employeeId' : 'employee_id',  'employeedomain_domainId' : 'domain_id',  'employeedomain_status' : 'status',  'employeedomain_createdBy' : 'created_by',  'employeedomain_updatedBy' : 'updated_by',  'employeedomain_createdAt' : 'created_at',  'employeedomain_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

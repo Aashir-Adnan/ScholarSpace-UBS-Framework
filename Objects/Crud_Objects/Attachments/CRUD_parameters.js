@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'attachments_attachmentId' : 'attachment_id',  'attachments_attachmentName' : 'attachment_name',  'attachments_attachmentType' : 'attachment_type',  'attachments_attachmentSize' : 'attachment_size',  'attachments_attachmentLink' : 'attachment_link',  'attachments_status' : 'status',  'attachments_createdBy' : 'created_by',  'attachments_updatedBy' : 'updated_by',  'attachments_createdAt' : 'created_at',  'attachments_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'attachments_attachmentId' : 'attachment_id',  'attachments_attachmentName' : 'attachment_name',  'attachments_attachmentType' : 'attachment_type',  'attachments_attachmentSize' : 'attachment_size',  'attachments_attachmentLink' : 'attachment_link',  'attachments_createdBy' : 'created_by',  'attachments_updatedBy' : 'updated_by',  'attachments_status' : 'status',  'attachments_createdAt' : 'created_at',  'attachments_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'coursefeedbackform_courseFeedBackFormId' : 'course_feed_back_form_id',  'coursefeedbackform_courseId' : 'course_id',  'coursefeedbackform_feedbackFormId' : 'feedback_form_id'}"
+              "colMapper": "{ 'coursefeedbackform_courseFeedBackFormId' : 'course_feed_back_form_id',  'coursefeedbackform_courseId' : 'course_id',  'coursefeedbackform_feedbackFormId' : 'feedback_form_id',  'coursefeedbackform_status' : 'status',  'coursefeedbackform_createdBy' : 'created_by',  'coursefeedbackform_updatedBy' : 'updated_by',  'coursefeedbackform_createdAt' : 'created_at',  'coursefeedbackform_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

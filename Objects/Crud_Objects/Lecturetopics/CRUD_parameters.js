@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'lecturetopics_lecturesTopicId' : 'lectures_topic_id',  'lecturetopics_subComponentId' : 'sub_component_id',  'lecturetopics_topicName' : 'topic_name',  'lecturetopics_description' : 'description',  'lecturetopics_bookId' : 'book_id'}"
+              "colMapper": "{ 'lecturetopics_lecturesTopicId' : 'lectures_topic_id',  'lecturetopics_subComponentId' : 'sub_component_id',  'lecturetopics_topicName' : 'topic_name',  'lecturetopics_description' : 'description',  'lecturetopics_bookId' : 'book_id',  'lecturetopics_status' : 'status',  'lecturetopics_createdBy' : 'created_by',  'lecturetopics_updatedBy' : 'updated_by',  'lecturetopics_createdAt' : 'created_at',  'lecturetopics_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

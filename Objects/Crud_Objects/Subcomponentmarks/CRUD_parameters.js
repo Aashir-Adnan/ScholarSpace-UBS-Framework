@@ -139,6 +139,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'subcomponentmarks_subComponentMarkId' : 'sub_component_mark_id',  'subcomponentmarks_subComponentId' : 'sub_component_id',  'subcomponentmarks_enrollmentId' : 'enrollment_id',  'subcomponentmarks_obtainedMarks' : 'obtained_marks',  'subcomponentmarks_outOfMarks' : 'out_of_marks'}"
+              "colMapper": "{ 'subcomponentmarks_subComponentMarkId' : 'sub_component_mark_id',  'subcomponentmarks_subComponentId' : 'sub_component_id',  'subcomponentmarks_enrollmentId' : 'enrollment_id',  'subcomponentmarks_obtainedMarks' : 'obtained_marks',  'subcomponentmarks_outOfMarks' : 'out_of_marks',  'subcomponentmarks_status' : 'status',  'subcomponentmarks_createdBy' : 'created_by',  'subcomponentmarks_updatedBy' : 'updated_by',  'subcomponentmarks_createdAt' : 'created_at',  'subcomponentmarks_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

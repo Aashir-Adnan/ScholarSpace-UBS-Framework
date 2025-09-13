@@ -458,40 +458,6 @@ const parameters = {
                                                           "max": "",
                                                           "selectServer": false,
                                                           "dynamicKey": "users_lastLogin"
-                                                      },
-                                                      {
-                                                          "name": "otp",
-                                                          "label": "Otp",
-                                                          "title": "",
-                                                          "type": "textField",
-                                                          "required": false,
-                                                          "hideInCreateForm": false,
-                                                          "visible": true,
-                                                          "disabled": false,
-                                                          "dependancyCheck": false,
-                                                          "isPrefilled": false,
-                                                          "source": "req.body",
-                                                          "min": "",
-                                                          "max": "",
-                                                          "selectServer": false,
-                                                          "dynamicKey": "users_otp"
-                                                      },
-                                                      {
-                                                          "name": "token",
-                                                          "label": "Token",
-                                                          "title": "",
-                                                          "type": "textField",
-                                                          "required": false,
-                                                          "hideInCreateForm": false,
-                                                          "visible": true,
-                                                          "disabled": false,
-                                                          "dependancyCheck": false,
-                                                          "isPrefilled": false,
-                                                          "source": "req.body",
-                                                          "min": "",
-                                                          "max": "",
-                                                          "selectServer": false,
-                                                          "dynamicKey": "users_token"
                                                       }
                                           ]
                                       }
@@ -721,6 +687,6 @@ const parameters = {
                               "permission": "user_device_notifications_view"
                           }
               ],
-              "colMapper": "{ 'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at',  'users_userId' : 'user_id',  'users_email' : 'email',  'users_username' : 'username',  'users_firstName' : 'first_name',  'users_lastName' : 'last_name',  'users_phoneNo' : 'phone_no',  'users_password' : 'password',  'users_cnic' : 'cnic',  'users_gender' : 'gender',  'users_fatherName' : 'father_name',  'users_imageAttachmentId' : 'image_attachment_id',  'users_address' : 'address',  'users_dateOfBirth' : 'date_of_birth',  'users_bloodGroup' : 'blood_group',  'users_religion' : 'religion',  'users_lastLogin' : 'last_login',  'users_otp' : 'otp',  'users_token' : 'token',  'deviceOtp_deviceOtpId' : 'device_otp_id',  'deviceOtp_userDeviceId' : 'user_device_id',  'deviceOtp_otp' : 'otp',  'deviceOtp_otpFailureCount' : 'otp_failure_count',  'deviceOtp_createdBy' : 'created_by',  'deviceOtp_updatedBy' : 'updated_by',  'deviceOtp_status' : 'status',  'deviceOtp_createdAt' : 'created_at',  'deviceOtp_updatedAt' : 'updated_at',  'userDeviceNotifications_userDeviceNotificationId' : 'user_device_notification_id',  'userDeviceNotifications_userDeviceId' : 'user_device_id',  'userDeviceNotifications_notificationId' : 'notification_id',  'userDeviceNotifications_createdBy' : 'created_by',  'userDeviceNotifications_updatedBy' : 'updated_by',  'userDeviceNotifications_status' : 'status',  'userDeviceNotifications_createdAt' : 'created_at',  'userDeviceNotifications_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at',  'users_userId' : 'user_id',  'users_email' : 'email',  'users_username' : 'username',  'users_firstName' : 'first_name',  'users_lastName' : 'last_name',  'users_phoneNo' : 'phone_no',  'users_password' : 'password',  'users_cnic' : 'cnic',  'users_gender' : 'gender',  'users_fatherName' : 'father_name',  'users_imageAttachmentId' : 'image_attachment_id',  'users_address' : 'address',  'users_dateOfBirth' : 'date_of_birth',  'users_bloodGroup' : 'blood_group',  'users_religion' : 'religion',  'users_lastLogin' : 'last_login',  'users_status' : 'status',  'users_createdBy' : 'created_by',  'users_updatedBy' : 'updated_by',  'users_createdAt' : 'created_at',  'users_updatedAt' : 'updated_at',  'deviceOtp_deviceOtpId' : 'device_otp_id',  'deviceOtp_userDeviceId' : 'user_device_id',  'deviceOtp_otp' : 'otp',  'deviceOtp_otpFailureCount' : 'otp_failure_count',  'deviceOtp_createdBy' : 'created_by',  'deviceOtp_updatedBy' : 'updated_by',  'deviceOtp_status' : 'status',  'deviceOtp_createdAt' : 'created_at',  'deviceOtp_updatedAt' : 'updated_at',  'userDeviceNotifications_userDeviceNotificationId' : 'user_device_notification_id',  'userDeviceNotifications_userDeviceId' : 'user_device_id',  'userDeviceNotifications_notificationId' : 'notification_id',  'userDeviceNotifications_createdBy' : 'created_by',  'userDeviceNotifications_updatedBy' : 'updated_by',  'userDeviceNotifications_status' : 'status',  'userDeviceNotifications_createdAt' : 'created_at',  'userDeviceNotifications_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

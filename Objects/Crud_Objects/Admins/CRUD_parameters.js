@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'admins_adminId' : 'admin_id',  'admins_adminType' : 'admin_type',  'admins_userRoleId' : 'user_role_id'}"
+              "colMapper": "{ 'admins_adminId' : 'admin_id',  'admins_adminType' : 'admin_type',  'admins_userRoleId' : 'user_role_id',  'admins_status' : 'status',  'admins_createdBy' : 'created_by',  'admins_updatedBy' : 'updated_by',  'admins_createdAt' : 'created_at',  'admins_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

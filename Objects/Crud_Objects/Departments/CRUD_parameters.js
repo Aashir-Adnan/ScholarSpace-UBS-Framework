@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'departments_departmentId' : 'department_id',  'departments_departmentName' : 'department_name',  'departments_employeeId' : 'employee_id'}"
+              "colMapper": "{ 'departments_departmentId' : 'department_id',  'departments_departmentName' : 'department_name',  'departments_employeeId' : 'employee_id',  'departments_status' : 'status',  'departments_createdBy' : 'created_by',  'departments_updatedBy' : 'updated_by',  'departments_createdAt' : 'created_at',  'departments_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

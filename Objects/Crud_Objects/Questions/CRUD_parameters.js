@@ -175,6 +175,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id'}"
+              "colMapper": "{ 'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

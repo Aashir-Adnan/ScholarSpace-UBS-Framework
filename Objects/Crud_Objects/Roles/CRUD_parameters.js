@@ -85,6 +85,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'roles_roleId' : 'role_id',  'roles_roleName' : 'role_name'}"
+              "colMapper": "{ 'roles_roleId' : 'role_id',  'roles_roleName' : 'role_name',  'roles_status' : 'status',  'roles_createdBy' : 'created_by',  'roles_updatedBy' : 'updated_by',  'roles_createdAt' : 'created_at',  'roles_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'employeepreferedtimeslots_employeePreferedTimeSlotsId' : 'employee_prefered_time_slots_id',  'employeepreferedtimeslots_employeeId' : 'employee_id',  'employeepreferedtimeslots_timeSlotId' : 'time_slot_id'}"
+              "colMapper": "{ 'employeepreferedtimeslots_employeePreferedTimeSlotsId' : 'employee_prefered_time_slots_id',  'employeepreferedtimeslots_employeeId' : 'employee_id',  'employeepreferedtimeslots_timeSlotId' : 'time_slot_id',  'employeepreferedtimeslots_status' : 'status',  'employeepreferedtimeslots_createdBy' : 'created_by',  'employeepreferedtimeslots_updatedBy' : 'updated_by',  'employeepreferedtimeslots_createdAt' : 'created_at',  'employeepreferedtimeslots_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

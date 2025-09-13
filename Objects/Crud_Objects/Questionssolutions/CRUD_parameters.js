@@ -67,6 +67,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'questionssolutions_questionsHelpGuideId' : 'questions_help_guide_id'}"
+              "colMapper": "{ 'questionssolutions_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolutions_status' : 'status',  'questionssolutions_createdBy' : 'created_by',  'questionssolutions_updatedBy' : 'updated_by',  'questionssolutions_createdAt' : 'created_at',  'questionssolutions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

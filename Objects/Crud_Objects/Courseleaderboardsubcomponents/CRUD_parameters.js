@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'courseleaderboardsubcomponents_courseLeaderboardSubcomponentId' : 'course_leaderboard_subcomponent_id',  'courseleaderboardsubcomponents_courseLeaderboardId' : 'course_leaderboard_id',  'courseleaderboardsubcomponents_subComponentId' : 'sub_component_id',  'courseleaderboardsubcomponents_subcomponentPercentage' : 'subcomponent_percentage'}"
+              "colMapper": "{ 'courseleaderboardsubcomponents_courseLeaderboardSubcomponentId' : 'course_leaderboard_subcomponent_id',  'courseleaderboardsubcomponents_courseLeaderboardId' : 'course_leaderboard_id',  'courseleaderboardsubcomponents_subComponentId' : 'sub_component_id',  'courseleaderboardsubcomponents_subcomponentPercentage' : 'subcomponent_percentage',  'courseleaderboardsubcomponents_status' : 'status',  'courseleaderboardsubcomponents_createdBy' : 'created_by',  'courseleaderboardsubcomponents_updatedBy' : 'updated_by',  'courseleaderboardsubcomponents_createdAt' : 'created_at',  'courseleaderboardsubcomponents_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

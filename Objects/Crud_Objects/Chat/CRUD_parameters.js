@@ -157,6 +157,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'chat_chatId' : 'chat_id',  'chat_subComponentId' : 'sub_component_id',  'chat_userRoleId' : 'user_role_id',  'chat_message' : 'message',  'chat_messageTime' : 'message_time',  'chat_privateChat' : 'private_chat'}"
+              "colMapper": "{ 'chat_chatId' : 'chat_id',  'chat_subComponentId' : 'sub_component_id',  'chat_userRoleId' : 'user_role_id',  'chat_message' : 'message',  'chat_messageTime' : 'message_time',  'chat_privateChat' : 'private_chat',  'chat_status' : 'status',  'chat_createdBy' : 'created_by',  'chat_updatedBy' : 'updated_by',  'chat_createdAt' : 'created_at',  'chat_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

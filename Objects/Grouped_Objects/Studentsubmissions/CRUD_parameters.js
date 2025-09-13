@@ -101,6 +101,6 @@ const parameters = {
                               "permission": "studentsubmissions_view"
                           }
               ],
-              "colMapper": "{ 'studentsubmissions_studentSubmissionId' : 'student_submission_id',  'studentsubmissions_subComponentId' : 'sub_component_id',  'studentsubmissions_enrollmentId' : 'enrollment_id'}"
+              "colMapper": "{ 'studentsubmissions_studentSubmissionId' : 'student_submission_id',  'studentsubmissions_subComponentId' : 'sub_component_id',  'studentsubmissions_enrollmentId' : 'enrollment_id',  'studentsubmissions_status' : 'status',  'studentsubmissions_createdBy' : 'created_by',  'studentsubmissions_updatedBy' : 'updated_by',  'studentsubmissions_createdAt' : 'created_at',  'studentsubmissions_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

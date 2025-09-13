@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'platform_versions_platformVersionId' : 'platform_version_id',  'platform_versions_versionId' : 'version_id',  'platform_versions_platformId' : 'platform_id',  'platform_versions_encryptionKey' : 'encryption_key',  'platform_versions_status' : 'status',  'platform_versions_createdBy' : 'created_by',  'platform_versions_updatedBy' : 'updated_by',  'platform_versions_createdAt' : 'created_at',  'platform_versions_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'platform_versions_platformVersionId' : 'platform_version_id',  'platform_versions_versionId' : 'version_id',  'platform_versions_platformId' : 'platform_id',  'platform_versions_encryptionKey' : 'encryption_key',  'platform_versions_createdBy' : 'created_by',  'platform_versions_updatedBy' : 'updated_by',  'platform_versions_status' : 'status',  'platform_versions_createdAt' : 'created_at',  'platform_versions_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

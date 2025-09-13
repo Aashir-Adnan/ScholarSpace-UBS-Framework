@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'studentsemesters_studentSemesterId' : 'student_semester_id',  'studentsemesters_studentUserId' : 'student_user_id',  'studentsemesters_semesterId' : 'semester_id'}"
+              "colMapper": "{ 'studentsemesters_studentSemesterId' : 'student_semester_id',  'studentsemesters_studentUserId' : 'student_user_id',  'studentsemesters_semesterId' : 'semester_id',  'studentsemesters_status' : 'status',  'studentsemesters_createdBy' : 'created_by',  'studentsemesters_updatedBy' : 'updated_by',  'studentsemesters_createdAt' : 'created_at',  'studentsemesters_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

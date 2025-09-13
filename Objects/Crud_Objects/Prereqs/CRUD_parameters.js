@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'prereqs_preReqsId' : 'pre_reqs_id',  'prereqs_plannedCourseId' : 'planned_course_id',  'prereqs_preReqCourseId' : 'pre_req_course_id'}"
+              "colMapper": "{ 'prereqs_preReqsId' : 'pre_reqs_id',  'prereqs_plannedCourseId' : 'planned_course_id',  'prereqs_preReqCourseId' : 'pre_req_course_id',  'prereqs_status' : 'status',  'prereqs_createdBy' : 'created_by',  'prereqs_updatedBy' : 'updated_by',  'prereqs_createdAt' : 'created_at',  'prereqs_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

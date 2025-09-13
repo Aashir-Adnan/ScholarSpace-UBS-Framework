@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: { Add: "add_device_otp", View: "view_device_otp", Update: "update_device_otp", Delete: "delete_device_otp", List: "list_device_otp" },
+                        permission: null,
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },

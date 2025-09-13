@@ -42,8 +42,8 @@
                           queryPayload: {
                             Add: async(req, decryptedPayload) => { return "INSERT INTO clomappingplo (cloid, clointensity_name, ploid, created_by, updated_by) VALUES ({{clomappingplo_cloid}}, {{clomappingplo_clointensityName}}, {{clomappingplo_ploid}}, {{actionPerformerURDD}}, {{actionPerformerURDD}})"},
                             Update: async(req, decryptedPayload) => { return "UPDATE clomappingplo SET cloid = {{clomappingplo_cloid}}, clointensity_name = {{clomappingplo_clointensityName}}, ploid = {{clomappingplo_ploid}} WHERE clomapping_ploid = {{id}}"},
-                            List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, clomappingplo.clomapping_ploid as clomappingplo_id, clomappingplo.clomapping_ploid as id, clomappingplo.clomapping_ploid as clomappingplo_clomappingPloid,clomappingplo.cloid as clomappingplo_cloid,clomappingplo.clointensity_name as clomappingplo_clointensityName,clomappingplo.ploid as clomappingplo_ploid FROM clomappingplo  Where clomappingplo.status != 'inactive' "},
-                            View: async(req, decryptedPayload) => { return "SELECT clomappingplo.clomapping_ploid as clomappingplo_id, clomappingplo.clomapping_ploid as id, clomappingplo.clomapping_ploid as clomappingplo_clomappingPloid,clomappingplo.cloid as clomappingplo_cloid,clomappingplo.clointensity_name as clomappingplo_clointensityName,clomappingplo.ploid as clomappingplo_ploid FROM clomappingplo  WHERE clomapping_ploid = {{id}} OR clomapping_ploid IS NULL"},
+                            List: async(req, decryptedPayload) => { return "SELECT COUNT(*) OVER () AS table_count, clomappingplo.clomapping_ploid as clomappingplo_id, clomappingplo.clomapping_ploid as id, clomappingplo.clomapping_ploid as clomappingplo_clomappingPloid,clomappingplo.cloid as clomappingplo_cloid,clomappingplo.clointensity_name as clomappingplo_clointensityName,clomappingplo.ploid as clomappingplo_ploid,clomappingplo.status as clomappingplo_status,clomappingplo.created_by as clomappingplo_createdBy,clomappingplo.updated_by as clomappingplo_updatedBy,clomappingplo.created_at as clomappingplo_createdAt,clomappingplo.updated_at as clomappingplo_updatedAt FROM clomappingplo  Where clomappingplo.status != 'inactive' "},
+                            View: async(req, decryptedPayload) => { return "SELECT clomappingplo.clomapping_ploid as clomappingplo_id, clomappingplo.clomapping_ploid as id, clomappingplo.clomapping_ploid as clomappingplo_clomappingPloid,clomappingplo.cloid as clomappingplo_cloid,clomappingplo.clointensity_name as clomappingplo_clointensityName,clomappingplo.ploid as clomappingplo_ploid,clomappingplo.status as clomappingplo_status,clomappingplo.created_by as clomappingplo_createdBy,clomappingplo.updated_by as clomappingplo_updatedBy,clomappingplo.created_at as clomappingplo_createdAt,clomappingplo.updated_at as clomappingplo_updatedAt FROM clomappingplo  WHERE clomapping_ploid = {{id}} OR clomapping_ploid IS NULL"},
                             Delete: async(req, decryptedPayload) => { return"UPDATE clomappingplo SET status = 'inactive' WHERE clomapping_ploid = {{id}}"},           
                             database: "mainDb"
 
@@ -59,7 +59,7 @@
                       },
                       requestMetaData: {
                         requestMethod: { Add: "POST", View: "GET", Update: "PUT", Delete: "DELETE", List: "GET" },
-                        permission: { Add: "add_clomappingplo", View: "view_clomappingplo", Update: "update_clomappingplo", Delete: "delete_clomappingplo", List: "list_clomappingplo" },
+                        permission: null,
                         providedPermissions: false,
                         pagination: { pageSize: 10 },
                       },
