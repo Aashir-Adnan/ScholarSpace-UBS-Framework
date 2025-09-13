@@ -259,7 +259,7 @@ export const parameters = {
                                                       "isMultiple" : false,
                                                       "hideInCreateForm": false,
                                                       "hideInViewForm": false,
-                                                      "fetchSubmitUrl": "/get/file/url/local?step=1",
+                                                      "fetchSubmitUrl": "/get/file/url/s3?step=1",
                                                       "getFileUrl": "/get/file?step=1&token=",
                                                       "visible": true,
                                                       "disabled": false,
