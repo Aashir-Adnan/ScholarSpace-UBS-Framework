@@ -131,29 +131,6 @@
             }
             ,
             {
-                "name": "endTime",
-                "label": "End Time",
-                "title": "",
-                "type": "textField",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "subcomponents_endTime",
-                "alias" : "subcomponents.end_time",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "totalMarks",
                 "label": "Total Marks",
                 "title": "",
@@ -330,6 +307,25 @@
               "validations": [],
               "selectServer": false,
               "dynamicKey": "subcomponents_startTime"
+          }
+          ,
+          {
+              "name": "endTime",
+              "label": "End Time",
+              "title": "",
+              "type": "dateTime",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "subcomponents_endTime"
           }  
           
                 ,

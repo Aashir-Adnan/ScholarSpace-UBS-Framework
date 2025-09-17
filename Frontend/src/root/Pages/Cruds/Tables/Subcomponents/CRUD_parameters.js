@@ -83,28 +83,6 @@ export const parameters = {
                                                 },
                                                 ,
                                                 {
-                                                    "name": "endTime",
-                                                    "label": "End Time",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "subcomponents_endTime",
-                                                    "alias" : "subcomponents.end_time",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "totalMarks",
                                                     "label": "Total Marks",
                                                     "title": "",
@@ -237,6 +215,25 @@ export const parameters = {
                                                   "validations": [],
                                                   "selectServer": false,
                                                   "dynamicKey": "subcomponents_startTime"
+                                              },
+                                                ,
+                                              {
+                                                  "name": "endTime",
+                                                  "label": "End Time",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "subcomponents_endTime"
                                               }
                                                 ]
                                               }
