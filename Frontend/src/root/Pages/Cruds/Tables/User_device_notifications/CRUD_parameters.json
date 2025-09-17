@@ -36,53 +36,7 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
-        
-            ,
-            {
-                "name": "userDeviceId",
-                "label": "User Device Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/user_devices/dropdown?version=1.0",
-                "dynamicKey": "userDeviceNotifications_userDeviceId",
-                "alias" : "user_device_notifications.user_device_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "notificationId",
-                "label": "Notification Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/notifications/dropdown?version=1.0",
-                "dynamicKey": "userDeviceNotifications_notificationId",
-                "alias" : "user_device_notifications.notification_id",
-                "options": []
-
-            }  
+          
         
             ,
             {

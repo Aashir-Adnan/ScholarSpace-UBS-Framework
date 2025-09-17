@@ -39,52 +39,6 @@
         
             ,
             {
-                "name": "semesterId",
-                "label": "Semester Id",
-                "title": "",
-                "type": "select",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/semesters/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_semesterId",
-                "alias" : "plannedcourses.semester_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "domainId",
-                "label": "Domain Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/domains/dropdown?version=1.0",
-                "dynamicKey": "plannedcourses_domainId",
-                "alias" : "plannedcourses.domain_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "courseName",
                 "label": "Course Name",
                 "title": "",

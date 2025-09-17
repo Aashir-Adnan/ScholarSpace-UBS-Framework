@@ -109,7 +109,45 @@
           
             
         
-          
+        
+          ,
+          {
+              "name": "startTime",
+              "label": "Start Time",
+              "title": "",
+              "type": "time",
+                "required": true,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "timeslots_startTime"
+          }
+          ,
+          {
+              "name": "endTime",
+              "label": "End Time",
+              "title": "",
+              "type": "time",
+                "required": true,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "timeslots_endTime"
+          }  
           
                 ,
                 {

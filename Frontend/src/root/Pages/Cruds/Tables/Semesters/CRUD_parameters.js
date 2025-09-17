@@ -41,29 +41,6 @@
         
             ,
             {
-                "name": "programId",
-                "label": "Program Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/programs/dropdown?version=1.0",
-                "dynamicKey": "semesters_programId",
-                "alias" : "semesters.program_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "semesterNum",
                 "label": "Semester Num",
                 "title": "",
@@ -162,7 +139,7 @@
               "name": "startDate",
               "label": "Start Date",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,
@@ -181,7 +158,7 @@
               "name": "endDate",
               "label": "End Date",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,

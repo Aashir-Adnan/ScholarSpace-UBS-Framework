@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "courseId",
-                "label": "Course Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/courses/dropdown?version=1.0",
-                "dynamicKey": "classcomponent_courseId",
-                "alias" : "classcomponent.course_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "componentType",
                 "label": "Component Type",
                 "title": "",

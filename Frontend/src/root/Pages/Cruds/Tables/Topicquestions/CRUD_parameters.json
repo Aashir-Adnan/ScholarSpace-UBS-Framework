@@ -184,7 +184,7 @@
               "name": "createdAtDate",
               "label": "Created At Date",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,
@@ -200,10 +200,29 @@
           }
           ,
           {
+              "name": "createdAtTime",
+              "label": "Created At Time",
+              "title": "",
+              "type": "time",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "topicquestions_createdAtTime"
+          }
+          ,
+          {
               "name": "updatedAtDate",
               "label": "Updated At Date",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,
@@ -216,6 +235,25 @@
               "validations": [],
               "selectServer": false,
               "dynamicKey": "topicquestions_updatedAtDate"
+          }
+          ,
+          {
+              "name": "updatedAtTime",
+              "label": "Updated At Time",
+              "title": "",
+              "type": "time",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "topicquestions_updatedAtTime"
           }  
           
                 ,

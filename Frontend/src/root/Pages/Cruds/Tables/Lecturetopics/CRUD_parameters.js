@@ -41,29 +41,6 @@
         
             ,
             {
-                "name": "subComponentId",
-                "label": "Sub Component Id",
-                "title": "",
-                "type": "select",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/subcomponents/dropdown?version=1.0",
-                "dynamicKey": "lecturetopics_subComponentId",
-                "alias" : "lecturetopics.sub_component_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "topicName",
                 "label": "Topic Name",
                 "title": "",
@@ -105,29 +82,6 @@
                 "selectServerUrl":"/null/dropdown?version=1.0",
                 "dynamicKey": "lecturetopics_description",
                 "alias" : "lecturetopics.description",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "bookId",
-                "label": "Book Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/books/dropdown?version=1.0",
-                "dynamicKey": "lecturetopics_bookId",
-                "alias" : "lecturetopics.book_id",
                 "options": []
 
             }  

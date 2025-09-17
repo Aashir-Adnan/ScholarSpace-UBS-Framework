@@ -39,52 +39,6 @@
         
             ,
             {
-                "name": "enrollementId",
-                "label": "Enrollement Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/enrollements/dropdown?version=1.0",
-                "dynamicKey": "feedbacks_enrollementId",
-                "alias" : "feedbacks.enrollement_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "feedbackQuestionId",
-                "label": "Feedback Question Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/feedbackquestions/dropdown?version=1.0",
-                "dynamicKey": "feedbacks_feedbackQuestionId",
-                "alias" : "feedbacks.feedback_question_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "feedbackText",
                 "label": "Feedback Text",
                 "title": "",

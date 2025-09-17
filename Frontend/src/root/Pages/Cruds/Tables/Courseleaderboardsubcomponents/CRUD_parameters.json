@@ -39,52 +39,6 @@
         
             ,
             {
-                "name": "courseLeaderboardId",
-                "label": "Course Leaderboard Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/courseleaderboards/dropdown?version=1.0",
-                "dynamicKey": "courseleaderboardsubcomponents_courseLeaderboardId",
-                "alias" : "courseleaderboardsubcomponents.course_leaderboard_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "subComponentId",
-                "label": "Sub Component Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/subcomponents/dropdown?version=1.0",
-                "dynamicKey": "courseleaderboardsubcomponents_subComponentId",
-                "alias" : "courseleaderboardsubcomponents.sub_component_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "subcomponentPercentage",
                 "label": "Subcomponent Percentage",
                 "title": "",

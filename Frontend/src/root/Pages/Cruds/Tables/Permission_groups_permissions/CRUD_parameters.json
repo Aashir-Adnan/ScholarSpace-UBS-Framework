@@ -36,53 +36,7 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
-        
-            ,
-            {
-                "name": "groupId",
-                "label": "Group Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/permission_groups/dropdown?version=1.0",
-                "dynamicKey": "permissionGroupsPermissions_groupId",
-                "alias" : "permission_groups_permissions.group_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "permissionId",
-                "label": "Permission Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/permissions/dropdown?version=1.0",
-                "dynamicKey": "permissionGroupsPermissions_permissionId",
-                "alias" : "permission_groups_permissions.permission_id",
-                "options": []
-
-            }  
+          
         
             ,
             {

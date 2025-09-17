@@ -41,52 +41,6 @@
         
             ,
             {
-                "name": "subComponentId",
-                "label": "Sub Component Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/subcomponents/dropdown?version=1.0",
-                "dynamicKey": "subcomponentmarks_subComponentId",
-                "alias" : "subcomponentmarks.sub_component_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "enrollmentId",
-                "label": "Enrollment Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/enrollements/dropdown?version=1.0",
-                "dynamicKey": "subcomponentmarks_enrollmentId",
-                "alias" : "subcomponentmarks.enrollment_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "obtainedMarks",
                 "label": "Obtained Marks",
                 "title": "",

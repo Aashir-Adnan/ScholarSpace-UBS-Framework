@@ -41,29 +41,6 @@
         
             ,
             {
-                "name": "userDeviceId",
-                "label": "User Device Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/user_devices/dropdown?version=1.0",
-                "dynamicKey": "deviceOtp_userDeviceId",
-                "alias" : "device_otp.user_device_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "otp",
                 "label": "Otp",
                 "title": "",

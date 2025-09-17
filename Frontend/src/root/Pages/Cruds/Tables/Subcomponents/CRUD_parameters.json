@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "componentId",
-                "label": "Component Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/classcomponent/dropdown?version=1.0",
-                "dynamicKey": "subcomponents_componentId",
-                "alias" : "subcomponents.component_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "subComponentNum",
                 "label": "Sub Component Num",
                 "title": "",
@@ -103,29 +80,6 @@
                 "selectServerUrl":"/null/dropdown?version=1.0",
                 "dynamicKey": "subcomponents_text",
                 "alias" : "subcomponents.text",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "urddId",
-                "label": "Urdd Id",
-                "title": "",
-                "type": "select",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/user_roles_designations_department/dropdown?version=1.0",
-                "dynamicKey": "subcomponents_urddId",
-                "alias" : "subcomponents.urdd_id",
                 "options": []
 
             }
@@ -275,7 +229,7 @@
               "name": "date",
               "label": "Date",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,
@@ -294,7 +248,7 @@
               "name": "startTime",
               "label": "Start Time",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,
@@ -313,7 +267,7 @@
               "name": "endTime",
               "label": "End Time",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,

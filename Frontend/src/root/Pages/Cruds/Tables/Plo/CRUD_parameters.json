@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "programId",
-                "label": "Program Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/programs/dropdown?version=1.0",
-                "dynamicKey": "plo_programId",
-                "alias" : "plo.program_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "ploname",
                 "label": "Ploname",
                 "title": "",

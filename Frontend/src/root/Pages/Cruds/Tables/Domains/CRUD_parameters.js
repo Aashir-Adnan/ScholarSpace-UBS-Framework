@@ -61,29 +61,6 @@
                 "alias" : "domains.domain_name",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "domainLeaderId",
-                "label": "Domain Leader Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/employees/dropdown?version=1.0",
-                "dynamicKey": "domains_domainLeaderId",
-                "alias" : "domains.domain_leader_id",
-                "options": []
-
             }  
           
             

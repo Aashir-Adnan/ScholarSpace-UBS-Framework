@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "courseId",
-                "label": "Course Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/courses/dropdown?version=1.0",
-                "dynamicKey": "books_courseId",
-                "alias" : "books.course_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "bookIbn",
                 "label": "Book Ibn",
                 "title": "",

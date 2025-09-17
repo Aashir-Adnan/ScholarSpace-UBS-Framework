@@ -41,52 +41,6 @@
         
             ,
             {
-                "name": "departmentId",
-                "label": "Department Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/departments/dropdown?version=1.0",
-                "dynamicKey": "programs_departmentId",
-                "alias" : "programs.department_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "domainId",
-                "label": "Domain Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/domains/dropdown?version=1.0",
-                "dynamicKey": "programs_domainId",
-                "alias" : "programs.domain_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "programName",
                 "label": "Program Name",
                 "title": "",

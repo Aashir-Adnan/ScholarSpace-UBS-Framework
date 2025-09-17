@@ -59,29 +59,6 @@
                 "alias" : "departments.department_name",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "employeeId",
-                "label": "Employee Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/employees/dropdown?version=1.0",
-                "dynamicKey": "departments_employeeId",
-                "alias" : "departments.employee_id",
-                "options": []
-
             }  
           
             

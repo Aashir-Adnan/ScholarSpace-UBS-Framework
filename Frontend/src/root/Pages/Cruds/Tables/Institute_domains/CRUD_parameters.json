@@ -36,53 +36,7 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
-        
-            ,
-            {
-                "name": "instituteId",
-                "label": "Institute Id",
-                "title": "",
-                "type": "select",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/institutes/dropdown?version=1.0",
-                "dynamicKey": "instituteDomains_instituteId",
-                "alias" : "institute_domains.institute_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "domainId",
-                "label": "Domain Id",
-                "title": "",
-                "type": "select",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/domains/dropdown?version=1.0",
-                "dynamicKey": "instituteDomains_domainId",
-                "alias" : "institute_domains.domain_id",
-                "options": []
-
-            }  
+          
         
             ,
             {

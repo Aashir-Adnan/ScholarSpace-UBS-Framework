@@ -39,52 +39,6 @@
         
             ,
             {
-                "name": "versionId",
-                "label": "Version Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/versions/dropdown?version=1.0",
-                "dynamicKey": "platformVersions_versionId",
-                "alias" : "platform_versions.version_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "platformId",
-                "label": "Platform Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/platforms/dropdown?version=1.0",
-                "dynamicKey": "platformVersions_platformId",
-                "alias" : "platform_versions.platform_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "encryptionKey",
                 "label": "Encryption Key",
                 "title": "",

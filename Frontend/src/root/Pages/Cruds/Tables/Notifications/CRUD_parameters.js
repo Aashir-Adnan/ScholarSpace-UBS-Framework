@@ -84,29 +84,6 @@
                 "alias" : "notifications.notification_message",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "sentToUserRoleDesignationDepartmentId",
-                "label": "Sent To User Role Designation Department Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/user_roles_designations_department/dropdown?version=1.0",
-                "dynamicKey": "notifications_sentToUserRoleDesignationDepartmentId",
-                "alias" : "notifications.sent_to_user_role_designation_department_id",
-                "options": []
-
             }  
           
             

@@ -41,29 +41,6 @@
         
             ,
             {
-                "name": "enrollementId",
-                "label": "Enrollement Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/enrollements/dropdown?version=1.0",
-                "dynamicKey": "lecturesattendance_enrollementId",
-                "alias" : "lecturesattendance.enrollement_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "isPresent",
                 "label": "Is Present",
                 "title": "",
@@ -82,29 +59,6 @@
                 "selectServerUrl":"/null/dropdown?version=1.0",
                 "dynamicKey": "lecturesattendance_isPresent",
                 "alias" : "lecturesattendance.is_present",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "subComponentId",
-                "label": "Sub Component Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/subcomponents/dropdown?version=1.0",
-                "dynamicKey": "lecturesattendance_subComponentId",
-                "alias" : "lecturesattendance.sub_component_id",
                 "options": []
 
             }  
@@ -185,7 +139,7 @@
               "name": "date",
               "label": "Date",
               "title": "",
-              "type": "dateTime",
+              "type": "datetime",
                 "required": false,
               "hideInCreateForm": false,
               "visible": true,

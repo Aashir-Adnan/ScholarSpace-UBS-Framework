@@ -41,52 +41,6 @@
         
             ,
             {
-                "name": "urddId",
-                "label": "Urdd Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/user_roles_designations_department/dropdown?version=1.0",
-                "dynamicKey": "students_urddId",
-                "alias" : "students.urdd_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "programId",
-                "label": "Program Id",
-                "title": "",
-                "type": "select",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": true,
-                "selectServerUrl":"/programs/dropdown?version=1.0",
-                "dynamicKey": "students_programId",
-                "alias" : "students.program_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "batch",
                 "label": "Batch",
                 "title": "",

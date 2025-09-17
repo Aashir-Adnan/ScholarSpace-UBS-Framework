@@ -201,7 +201,26 @@
           
             
         
-          
+        
+          ,
+          {
+              "name": "tokenExpiry",
+              "label": "Token Expiry",
+              "title": "",
+              "type": "time",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "registereddevices_tokenExpiry"
+          }  
           
                 ,
                 {

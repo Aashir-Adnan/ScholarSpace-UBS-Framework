@@ -155,7 +155,26 @@
           
             
         
-          
+        
+          ,
+          {
+              "name": "messageTime",
+              "label": "Message Time",
+              "title": "",
+              "type": "time",
+                "required": false,
+              "hideInCreateForm": false,
+              "visible": true,
+              "disabled": false,
+              "dependancyCheck": false,
+              "isPrefilled": false,
+              "source": "req.body",
+              "min": "",
+              "max": "",
+              "validations": [],
+              "selectServer": false,
+              "dynamicKey": "chat_messageTime"
+          }  
           
                 ,
                 {
