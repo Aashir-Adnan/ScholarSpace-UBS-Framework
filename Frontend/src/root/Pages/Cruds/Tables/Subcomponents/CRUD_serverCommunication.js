@@ -84,7 +84,7 @@ import { parameters } from "./CRUD_parameters.js";
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "subcomponents_subComponentId", "subcomponents_componentId", "subcomponents_subComponentNum", "subcomponents_text", "subcomponents_userRoleId", "subcomponents_date", "subcomponents_startTime", "subcomponents_endTime", "subcomponents_totalMarks", "subcomponents_weightage", "subcomponents_isPublic", "subcomponents_status", "subcomponents_createdBy", "subcomponents_updatedBy", "subcomponents_createdAt", "subcomponents_updatedAt"
+                            "subcomponents_subComponentId", "subcomponents_componentId", "subcomponents_subComponentNum", "subcomponents_text", "subcomponents_urddId", "subcomponents_date", "subcomponents_startTime", "subcomponents_endTime", "subcomponents_totalMarks", "subcomponents_weightage", "subcomponents_isPublic", "subcomponents_status", "subcomponents_createdBy", "subcomponents_updatedBy", "subcomponents_createdAt", "subcomponents_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

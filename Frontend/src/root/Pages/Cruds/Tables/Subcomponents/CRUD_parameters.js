@@ -39,28 +39,6 @@ export const parameters = {
                                             
                                                 ,
                                                 {
-                                                    "name": "componentId",
-                                                    "label": "Component Id",
-                                                    "title": "",
-                                                    "type": "number",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "subcomponents_componentId",
-                                                    "alias" : "subcomponents.component_id",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "subComponentNum",
                                                     "label": "Sub Component Num",
                                                     "title": "",
@@ -100,28 +78,6 @@ export const parameters = {
                                                     "selectServer": false,
                                                     "dynamicKey": "subcomponents_text",
                                                     "alias" : "subcomponents.text",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
-                                                    "name": "userRoleId",
-                                                    "label": "User Role Id",
-                                                    "title": "",
-                                                    "type": "number",
-                                                    "required": true,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "subcomponents_userRoleId",
-                                                    "alias" : "subcomponents.user_role_id",
                                                     "options": "[]"
   
                                                 },
@@ -285,6 +241,52 @@ export const parameters = {
                                                 ]
                                               }
                                             
+                                                    ,
+                                                    {
+                                                        "name": "componentId",
+                                                        "label": "Component Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": false,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "subcomponents_componentId",
+                                                        "selectServerUrl": "/classcomponent/dropdown?version=1.0",
+                                                        "alias" : "subcomponents.component_id"
+                                                    }
+                                                    ,
+                                                    ,
+                                                    {
+                                                        "name": "urddId",
+                                                        "label": "Urdd Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": true,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "subcomponents_urddId",
+                                                        "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                                                        "alias" : "subcomponents.urdd_id"
+                                                    }
+                                                    
                                            
                                                ]}
     
@@ -660,6 +662,266 @@ export const parameters = {
                                 ]
                             },
                             "permission": "view_user_roles_designations_department"
+                        },
+                        {
+                            "title": "classcomponent Info",
+                            "parameters": {
+                                "fields": [
+                                    {
+                                        "name": "classcomponent",
+                                        "type": "section",
+                                        "hideInCreateForm": false,
+                                        "visible": false,
+                                        "required": false,
+                                        "disabled": false,
+                                        "validations": "",
+                                        "dependancyCheck": false,
+                                        "isPrefilled": false,
+                                        "source": "req.body",
+                                        "title": "Subcomponents",
+                                        "childFields": [
+                                            {
+                                              "name": "id",
+                                              "label": "id",
+                                              "title": "",
+                                              "type": "textField",
+                                              "required": false,
+                                              "hideInCreateForm": true,
+                                              "hideInViewForm" : true,
+                                              "visible": true,
+                                              "disabled": false,
+                                              "dependancyCheck": false,
+                                              "isPrefilled": false,
+                                              "source": "req.query",
+                                              "min": "",
+                                              "max": "",
+                                              "selectServer": false,
+                                              "dynamicKey": "id"
+                                            },
+                                            
+                                                ,
+                                                {
+                                                    "name": "componentType",
+                                                    "label": "Component Type",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_componentType",
+                                                    "alias" : "classcomponent.component_type",
+                                                    "options": "[]"
+  
+                                                },
+                                                ,
+                                                {
+                                                    "name": "componentName",
+                                                    "label": "Component Name",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_componentName",
+                                                    "alias" : "classcomponent.component_name",
+                                                    "options": "[]"
+  
+                                                },
+                                                ,
+                                                {
+                                                    "name": "weightage",
+                                                    "label": "Weightage",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_weightage",
+                                                    "alias" : "classcomponent.weightage",
+                                                    "options": "[]"
+  
+                                                },
+                                                ,
+                                                {
+                                                    "name": "componentPolicy",
+                                                    "label": "Component Policy",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_componentPolicy",
+                                                    "alias" : "classcomponent.component_policy",
+                                                    "options": "[]"
+  
+                                                }
+                                            
+                                            ,
+                                                {
+                                                  "type": "tableOfFields",
+                                                  "name": "classcomponent",
+                                                  "label": "Add Classcomponent",
+                                                  "hideInCreateForm": true,
+                                                 "selectServerUrl":"/grouped/cruds/subcomponents?version=1.0",
+                                                  "hideInViewForm": false,
+                                                  "title": "Select Classcomponent",
+                                                  "dependancyCheck": false,
+                                                  "childFields": [
+                                                  {
+                                                  "name": "classcomponent", 
+                                                  "type": "section",
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "required": false,
+                                                  "disabled": false,
+                                                  "validations": "",
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "title": "Classcomponent",
+                                                  "childFields":[
+                                                
+                                                  
+
+
+
+ 
+                                                ]
+                                              }
+                                            
+                                                    ,
+                                                    {
+                                                        "name": "courseId",
+                                                        "label": "Course Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": false,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "classcomponent_courseId",
+                                                        "selectServerUrl": "/courses/dropdown?version=1.0",
+                                                        "alias" : "classcomponent.course_id"
+                                                    }
+                                                    
+                                           
+                                               ]}
+    
+                                            
+                                                ,
+                                                {
+                                                    "name": "createdAt",
+                                                    "label": "Created At",
+                                                    "title": "",
+                                                    "type": "dateTime",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "hideInViewForm" : true,
+                                                    "visible": false,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_createdAt",
+                                                    "alias" : "classcomponent.created_at"
+                                                },
+                                                ,
+                                                {
+                                                    "name": "updatedAt",
+                                                    "label": "Updated At",
+                                                    "title": "",
+                                                    "type": "dateTime",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "hideInViewForm" : true,
+                                                    "visible": false,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_updatedAt",
+                                                    "alias" : "classcomponent.updated_at"
+                                                }
+                                              
+                                                  ,
+                                                {
+                                                    "name": "status",
+                                                    "label": "Status",
+                                                    "title": "",
+                                                    "type": "select",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "visible": false,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "classcomponent_status",
+                                                    options:[
+                                                        {value:'inactive',label:'inactive'},
+                                                        {value:'active',label:'active'}
+                                                    ],
+                                                    "alias" : "classcomponent.status"
+                                                }
+                                                 
+    
+                                        ]
+                                    }
+                                ]
+                            },
+                            "permission": "view_classcomponent"
                         },
                         {
                             "title": "courseleaderboardsubcomponents Info",
@@ -2108,5 +2370,5 @@ export const parameters = {
                             "permission": "view_subcomponentmarks"
                         }
                   ],
-                  "colMapper": { 'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_userRoleId' : 'user_role_id',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'courseleaderboardsubcomponents_courseLeaderboardSubcomponentId' : 'course_leaderboard_subcomponent_id',  'courseleaderboardsubcomponents_courseLeaderboardId' : 'course_leaderboard_id',  'courseleaderboardsubcomponents_subComponentId' : 'sub_component_id',  'courseleaderboardsubcomponents_subcomponentPercentage' : 'subcomponent_percentage',  'courseleaderboardsubcomponents_status' : 'status',  'courseleaderboardsubcomponents_createdBy' : 'created_by',  'courseleaderboardsubcomponents_updatedBy' : 'updated_by',  'courseleaderboardsubcomponents_createdAt' : 'created_at',  'courseleaderboardsubcomponents_updatedAt' : 'updated_at',  'lecturesattendance_attendanceId' : 'attendance_id',  'lecturesattendance_enrollementId' : 'enrollement_id',  'lecturesattendance_date' : 'date',  'lecturesattendance_isPresent' : 'is_present',  'lecturesattendance_subComponentId' : 'sub_component_id',  'lecturesattendance_status' : 'status',  'lecturesattendance_createdBy' : 'created_by',  'lecturesattendance_updatedBy' : 'updated_by',  'lecturesattendance_createdAt' : 'created_at',  'lecturesattendance_updatedAt' : 'updated_at',  'lecturetopics_lecturesTopicId' : 'lectures_topic_id',  'lecturetopics_subComponentId' : 'sub_component_id',  'lecturetopics_topicName' : 'topic_name',  'lecturetopics_description' : 'description',  'lecturetopics_bookId' : 'book_id',  'lecturetopics_status' : 'status',  'lecturetopics_createdBy' : 'created_by',  'lecturetopics_updatedBy' : 'updated_by',  'lecturetopics_createdAt' : 'created_at',  'lecturetopics_updatedAt' : 'updated_at',  'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at',  'subcomponentmarks_subComponentMarkId' : 'sub_component_mark_id',  'subcomponentmarks_subComponentId' : 'sub_component_id',  'subcomponentmarks_enrollmentId' : 'enrollment_id',  'subcomponentmarks_obtainedMarks' : 'obtained_marks',  'subcomponentmarks_outOfMarks' : 'out_of_marks',  'subcomponentmarks_status' : 'status',  'subcomponentmarks_createdBy' : 'created_by',  'subcomponentmarks_updatedBy' : 'updated_by',  'subcomponentmarks_createdAt' : 'created_at',  'subcomponentmarks_updatedAt' : 'updated_at'}
+                  "colMapper": { 'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_urddId' : 'urdd_id',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'classcomponent_componentId' : 'component_id',  'classcomponent_courseId' : 'course_id',  'classcomponent_componentType' : 'component_type',  'classcomponent_componentName' : 'component_name',  'classcomponent_weightage' : 'weightage',  'classcomponent_componentPolicy' : 'component_policy',  'classcomponent_status' : 'status',  'classcomponent_createdBy' : 'created_by',  'classcomponent_updatedBy' : 'updated_by',  'classcomponent_createdAt' : 'created_at',  'classcomponent_updatedAt' : 'updated_at',  'courseleaderboardsubcomponents_courseLeaderboardSubcomponentId' : 'course_leaderboard_subcomponent_id',  'courseleaderboardsubcomponents_courseLeaderboardId' : 'course_leaderboard_id',  'courseleaderboardsubcomponents_subComponentId' : 'sub_component_id',  'courseleaderboardsubcomponents_subcomponentPercentage' : 'subcomponent_percentage',  'courseleaderboardsubcomponents_status' : 'status',  'courseleaderboardsubcomponents_createdBy' : 'created_by',  'courseleaderboardsubcomponents_updatedBy' : 'updated_by',  'courseleaderboardsubcomponents_createdAt' : 'created_at',  'courseleaderboardsubcomponents_updatedAt' : 'updated_at',  'lecturesattendance_attendanceId' : 'attendance_id',  'lecturesattendance_enrollementId' : 'enrollement_id',  'lecturesattendance_date' : 'date',  'lecturesattendance_isPresent' : 'is_present',  'lecturesattendance_subComponentId' : 'sub_component_id',  'lecturesattendance_status' : 'status',  'lecturesattendance_createdBy' : 'created_by',  'lecturesattendance_updatedBy' : 'updated_by',  'lecturesattendance_createdAt' : 'created_at',  'lecturesattendance_updatedAt' : 'updated_at',  'lecturetopics_lecturesTopicId' : 'lectures_topic_id',  'lecturetopics_subComponentId' : 'sub_component_id',  'lecturetopics_topicName' : 'topic_name',  'lecturetopics_description' : 'description',  'lecturetopics_bookId' : 'book_id',  'lecturetopics_status' : 'status',  'lecturetopics_createdBy' : 'created_by',  'lecturetopics_updatedBy' : 'updated_by',  'lecturetopics_createdAt' : 'created_at',  'lecturetopics_updatedAt' : 'updated_at',  'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at',  'subcomponentmarks_subComponentMarkId' : 'sub_component_mark_id',  'subcomponentmarks_subComponentId' : 'sub_component_id',  'subcomponentmarks_enrollmentId' : 'enrollment_id',  'subcomponentmarks_obtainedMarks' : 'obtained_marks',  'subcomponentmarks_outOfMarks' : 'out_of_marks',  'subcomponentmarks_status' : 'status',  'subcomponentmarks_createdBy' : 'created_by',  'subcomponentmarks_updatedBy' : 'updated_by',  'subcomponentmarks_createdAt' : 'created_at',  'subcomponentmarks_updatedAt' : 'updated_at'}
               };

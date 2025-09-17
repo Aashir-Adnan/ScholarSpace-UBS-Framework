@@ -42,7 +42,7 @@
                 "name": "componentId",
                 "label": "Component Id",
                 "title": "",
-                "type": "number",
+                "type": "select",
                 "required": false,
                 "hideInCreateForm": false,
                 "visible": true,
@@ -53,8 +53,8 @@
                 "min": "",
                 "max": "",
                 "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
+                "selectServer": true,
+                "selectServerUrl":"/classcomponent/dropdown?version=1.0",
                 "dynamicKey": "subcomponents_componentId",
                 "alias" : "subcomponents.component_id",
                 "options": []
@@ -108,10 +108,10 @@
             }
             ,
             {
-                "name": "userRoleId",
-                "label": "User Role Id",
+                "name": "urddId",
+                "label": "Urdd Id",
                 "title": "",
-                "type": "number",
+                "type": "select",
                 "required": true,
                 "hideInCreateForm": false,
                 "visible": true,
@@ -122,10 +122,10 @@
                 "min": "",
                 "max": "",
                 "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "subcomponents_userRoleId",
-                "alias" : "subcomponents.user_role_id",
+                "selectServer": true,
+                "selectServerUrl":"/user_roles_designations_department/dropdown?version=1.0",
+                "dynamicKey": "subcomponents_urddId",
+                "alias" : "subcomponents.urdd_id",
                 "options": []
 
             }
@@ -221,9 +221,77 @@
                 "options": []
 
             }  
-          
+        
+            ,
+            {
+                "name": "componentName",
+                "label": "Component Name",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": true,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "dynamicKey": "classcomponent_componentName",
+                "alias" : "classcomponent.component_name",
+                "options": [ ""]
+
+            }  
             
         
+                ,
+                {
+                    "name": "componentId",
+                    "label": "Component Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "subcomponents_componentId",
+                    "selectServerUrl": "/classcomponent/dropdown?version=1.0",
+                    "alias" : "subcomponents.component_id"
+                }
+                
+                ,
+                {
+                    "name": "urddId",
+                    "label": "Urdd Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "subcomponents_urddId",
+                    "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                    "alias" : "subcomponents.urdd_id"
+                }
+                
         
           ,
           {
@@ -345,6 +413,6 @@
               ]
               }
           ],
-          "colMapper": "{subcomponents.sub_component_id as subcomponents_subComponentId,subcomponents.component_id as subcomponents_componentId,subcomponents.sub_component_num as subcomponents_subComponentNum,subcomponents.text as subcomponents_text,subcomponents.user_role_id as subcomponents_userRoleId,subcomponents.date as subcomponents_date,subcomponents.start_time as subcomponents_startTime,subcomponents.end_time as subcomponents_endTime,subcomponents.total_marks as subcomponents_totalMarks,subcomponents.weightage as subcomponents_weightage,subcomponents.is_public as subcomponents_isPublic,subcomponents.status as subcomponents_status,subcomponents.created_by as subcomponents_createdBy,subcomponents.updated_by as subcomponents_updatedBy,subcomponents.created_at as subcomponents_createdAt,subcomponents.updated_at as subcomponents_updatedAt}"
+          "colMapper": "{subcomponents.sub_component_id as subcomponents_subComponentId,subcomponents.component_id as subcomponents_componentId,subcomponents.sub_component_num as subcomponents_subComponentNum,subcomponents.text as subcomponents_text,subcomponents.urdd_id as subcomponents_urddId,subcomponents.date as subcomponents_date,subcomponents.start_time as subcomponents_startTime,subcomponents.end_time as subcomponents_endTime,subcomponents.total_marks as subcomponents_totalMarks,subcomponents.weightage as subcomponents_weightage,subcomponents.is_public as subcomponents_isPublic,subcomponents.status as subcomponents_status,subcomponents.created_by as subcomponents_createdBy,subcomponents.updated_by as subcomponents_updatedBy,subcomponents.created_at as subcomponents_createdAt,subcomponents.updated_at as subcomponents_updatedAt}"
           }
         

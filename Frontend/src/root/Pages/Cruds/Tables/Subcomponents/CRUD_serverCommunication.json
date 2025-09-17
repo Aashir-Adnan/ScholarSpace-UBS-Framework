@@ -1,7 +1,7 @@
 {
             "data": {
             "features": {
-                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"status","label":"Status","alias":"subcomponents.status","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)","options":[{"value":"inactive","label":"inactive"},{"value":"active","label":"active"}]},
+                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"componentId","label":"Component Id","alias":"subcomponents.componentId","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)","options":[]},
                 "parameters": "parameters",
                 "rowActions": {
                 "actions": [
@@ -91,7 +91,7 @@
                     },
                   "options": {
                       "filterBy": [
-                          "subcomponents_subComponentId", "subcomponents_componentId", "subcomponents_subComponentNum", "subcomponents_text", "subcomponents_userRoleId", "subcomponents_date", "subcomponents_startTime", "subcomponents_endTime", "subcomponents_totalMarks", "subcomponents_weightage", "subcomponents_isPublic", "subcomponents_status", "subcomponents_createdBy", "subcomponents_updatedBy", "subcomponents_createdAt", "subcomponents_updatedAt"
+                          "subcomponents_subComponentId", "subcomponents_componentId", "subcomponents_subComponentNum", "subcomponents_text", "subcomponents_urddId", "subcomponents_date", "subcomponents_startTime", "subcomponents_endTime", "subcomponents_totalMarks", "subcomponents_weightage", "subcomponents_isPublic", "subcomponents_status", "subcomponents_createdBy", "subcomponents_updatedBy", "subcomponents_createdAt", "subcomponents_updatedAt"
                       ],
                       "statusOptions": ["active", "inactive"]
                   },

@@ -42,7 +42,7 @@
                 "name": "courseId",
                 "label": "Course Id",
                 "title": "",
-                "type": "number",
+                "type": "select",
                 "required": false,
                 "hideInCreateForm": false,
                 "visible": true,
@@ -53,8 +53,8 @@
                 "min": "",
                 "max": "",
                 "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
+                "selectServer": true,
+                "selectServerUrl":"/courses/dropdown?version=1.0",
                 "dynamicKey": "classcomponent_courseId",
                 "alias" : "classcomponent.course_id",
                 "options": []
@@ -155,6 +155,29 @@
           
             
         
+                ,
+                {
+                    "name": "courseId",
+                    "label": "Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "classcomponent_courseId",
+                    "selectServerUrl": "/courses/dropdown?version=1.0",
+                    "alias" : "classcomponent.course_id"
+                }
+                
           
           
                 ,

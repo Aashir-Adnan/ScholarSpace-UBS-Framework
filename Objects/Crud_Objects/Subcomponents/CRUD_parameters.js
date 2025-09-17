@@ -109,8 +109,8 @@ const parameters = {
                                   "alias" : "subcomponents.text",
                                   },
                                   {
-                                  "name": "user_role_id",
-                                  "label": "User Role Id",
+                                  "name": "urdd_id",
+                                  "label": "Urdd Id",
                                   "title": "",
                                   "type": "textField",
                                   "required": false,
@@ -123,8 +123,8 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "subcomponents_userRoleId",
-                                  "alias" : "subcomponents.user_role_id",
+                                  "dynamicKey": "subcomponents_urddId",
+                                  "alias" : "subcomponents.urdd_id",
                                   },
                                   {
                                   "name": "date",
@@ -247,6 +247,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_userRoleId' : 'user_role_id',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_urddId' : 'urdd_id',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;
