@@ -56,7 +56,8 @@ import PersonIcon from '@mui/icons-material/Person';
         "Questionevaluations": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Questions": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Questionssolution": <GroupIcon sx={{color: "#FF6347"}}/>,
-        "Questionssolutions": <GroupIcon sx={{color: "#FF6347"}}/>,
+        "Questions Solution Options": <GroupIcon sx={{color: "#FF6347"}}/>,
+        "Question Answers Submitted": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Registereddevices": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Roles": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Roles Designations Department": <GroupIcon sx={{color: "#FF6347"}}/>,
@@ -755,16 +756,31 @@ import PersonIcon from '@mui/icons-material/Person';
                 ]
               },
               {
-                title: "Questionssolutions Management",
-                icon: iconMapping["Questionssolutions"],
-                path: "/Questionssolutions-managements/Questionssolutions",
-                permission: ["view_questionssolutions"],
+                title: "Questions Solution Options Management",
+                icon: iconMapping["Questions Solution Options"],
+                path: "/QuestionsSolutionOptions-managements/Questions_solution_options",
+                permission: ["view_questions_solution_options"],
                 subNav: [
                   
                       {
-                        title: "Questionssolutions",
-                        path: "/Questionssolutions-managements/Questionssolutions",
-                        permission: ["view_questionssolutions"]
+                        title: "Questions Solution Options",
+                        path: "/QuestionsSolutionOptions-managements/Questions_solution_options",
+                        permission: ["view_questions_solution_options"]
+                      }
+                    
+                ]
+              },
+              {
+                title: "Question Answers Submitted Management",
+                icon: iconMapping["Question Answers Submitted"],
+                path: "/QuestionAnswersSubmitted-managements/Question_answers_submitted",
+                permission: ["view_question_answers_submitted"],
+                subNav: [
+                  
+                      {
+                        title: "Question Answers Submitted",
+                        path: "/QuestionAnswersSubmitted-managements/Question_answers_submitted",
+                        permission: ["view_question_answers_submitted"]
                       }
                     
                 ]
