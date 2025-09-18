@@ -1,0 +1,74 @@
+const { executeQuery } = require('../../../Database/queryExecution.js');
+const path = require('path')
+require('dotenv').config({ path: path.join(__dirname, '../../../.env') });
+
+
+async function executeStudentDataQueries(req, decryptedPayload) {
+    try {
+        const fetchUserDataQuery = `
+            SELECT u.*, a.attachment_link as user_image 
+            FROM users u  
+            LEFT JOIN attachments a ON u.image_attachment_id = a.attachment_id
+            JOIN user_roles_designations_departments urdd ON u.user_id = urdd.user_id
+            WHERE urdd.urdd_id = ${decryptedPayload.actionPerformerURDD}';`
+        const userResult = await executeQuery( fetchUserDataQuery, []);
+        if (userResult.length ==0 ){
+            throw new Error("No user found with the provided URDD ID");
+        }
+        let userId = userResult[0].user_id;
+        let fetchStudentDataQuery = `
+            SELECT s.batch AS batch_year, s.reg_num AS student_id, sem.semester_num AS current_semester, p.program_name AS program, sem.start_date AS semester_start_date, sem.end_date AS semester_end_date,  CONCAT(YEAR(sem.start_date), '-', YEAR(sem.end_date)) AS semester_year, sem.semester_name AS semester_name
+            FROM students s
+            JOIN user_roles_designations_departments urdd ON s.urdd_id = urdd.user_roles_designations_departments_id
+            JOIN studentsemesters ss ON s.student_user_id = ss.student_user_id
+            JOIN semeseters sem ON ss.semester_id = sem.semester_id
+            JOIN programs p ON sem.program_id = p.program_id
+            WHERE s.urdd_id = ${decryptedPayload.actionPerformerURDD} AND ss.status = 'active'`
+        let studentDataQueryResult = await executeQuery( fetchStudentDataQuery, []);
+
+
+        let availablePrograms = await executeQuery(
+            `SELECT DISTINCT p.program_id AS program_id, p.program_name AS program FROM programs p WHERE p.program_year >= YEAR(CURDATE())`, []);
+
+
+        let semesters = await executeQuery(
+            ` SELECT DISTINCT ss.student_semester_id ,s.reg_num AS student_id, sem.semester_num AS current_semester, p.program_name AS program, sem.start_date AS semester_start_date, sem.end_date AS semester_end_date,  CONCAT(YEAR(sem.start_date), '-', YEAR(sem.end_date)) AS semester_year, sem.semester_name AS semester_name, ss.CGPA, ss.SGPA, ss.credits_acquired
+            FROM students s
+            JOIN user_roles_designations_departments urdd ON s.urdd_id = urdd.user_roles_designations_departments_id
+            JOIN studentsemesters ss ON s.student_user_id = ss.student_user_id
+            JOIN semeseters sem ON ss.semester_id = sem.semester_id
+            JOIN programs p ON sem.program_id = p.program_id
+            WHERE s.urdd_id = ${decryptedPayload.actionPerformerURDD}`, []);
+
+        for (let sem of semesters) {
+            sem.courses = await executeQuery(
+                `SELECT c.course_code, pc.course_name, e.grade, pc.credit_hours, e.status
+                FROM enrollements e
+                JOIN courses c ON e.course_id = c.course_id
+                JOIN plannedcourses pc ON c.planned_course_id = pc.planned_course_id
+                WHERE e.student_semester_id = ?`,
+                [sem.student_semester_id]
+            )
+        }
+
+        let returnObject = {
+            user_profile: userResult[0],
+            student_details: studentDataQueryResult[0] || {},
+            available_programs: availablePrograms,
+            current_semester_performance: {
+                semester : studentDataQueryResult[0] || {}
+            },
+            semester_history: semesters
+        };
+
+            
+    } catch (error) {
+
+        throw error;
+    }
+}
+
+module.exports = {
+
+    executeStudentDataQueries 
+};
