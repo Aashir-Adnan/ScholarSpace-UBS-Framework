@@ -62,29 +62,6 @@
             }
             ,
             {
-                "name": "userRoleId",
-                "label": "User Role Id",
-                "title": "",
-                "type": "number",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "chat_userRoleId",
-                "alias" : "chat.user_role_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "message",
                 "label": "Message",
                 "title": "",
@@ -155,6 +132,29 @@
           
             
         
+                ,
+                {
+                    "name": "urddId",
+                    "label": "Urdd Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "chat_urddId",
+                    "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                    "alias" : "chat.urdd_id"
+                }
+                
         
           ,
           {
@@ -257,6 +257,6 @@
               ]
               }
           ],
-          "colMapper": "{chat.chat_id as chat_chatId,chat.sub_component_id as chat_subComponentId,chat.user_role_id as chat_userRoleId,chat.message as chat_message,chat.message_time as chat_messageTime,chat.private_chat as chat_privateChat,chat.status as chat_status,chat.created_by as chat_createdBy,chat.updated_by as chat_updatedBy,chat.created_at as chat_createdAt,chat.updated_at as chat_updatedAt}"
+          "colMapper": "{chat.chat_id as chat_chatId,chat.sub_component_id as chat_subComponentId,chat.urdd_id as chat_urddId,chat.message as chat_message,chat.message_time as chat_messageTime,chat.private_chat as chat_privateChat,chat.status as chat_status,chat.created_by as chat_createdBy,chat.updated_by as chat_updatedBy,chat.created_at as chat_createdAt,chat.updated_at as chat_updatedAt}"
           }
         

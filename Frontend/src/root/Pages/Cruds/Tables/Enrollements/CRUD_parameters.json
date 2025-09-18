@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "studentSemesterId",
-                "label": "Student Semester Id",
-                "title": "",
-                "type": "number",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "enrollements_studentSemesterId",
-                "alias" : "enrollements.student_semester_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "grade",
                 "label": "Grade",
                 "title": "",
@@ -109,6 +86,29 @@
           
             
         
+                ,
+                {
+                    "name": "studentSemesterId",
+                    "label": "Student Semester Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "enrollements_studentSemesterId",
+                    "selectServerUrl": "/studentsemesters/dropdown?version=1.0",
+                    "alias" : "enrollements.student_semester_id"
+                }
+                
                 ,
                 {
                     "name": "courseId",

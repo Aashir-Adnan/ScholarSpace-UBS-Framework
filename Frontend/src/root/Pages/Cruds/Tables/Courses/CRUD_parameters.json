@@ -59,6 +59,29 @@
                 "alias" : "courses.course_sub_domain_prefix",
                 "options": []
 
+            }
+            ,
+            {
+                "name": "courseCode",
+                "label": "Course Code",
+                "title": "",
+                "type": "textField",
+                "required": true,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "courses_courseCode",
+                "alias" : "courses.course_code",
+                "options": []
+
             }  
         
             ,
@@ -260,6 +283,6 @@
               ]
               }
           ],
-          "colMapper": "{courses.course_id as courses_courseId,courses.course_sub_domain_prefix as courses_courseSubDomainPrefix,courses.planned_course_id as courses_plannedCourseId,courses.cloid as courses_cloid,courses.teacher_employee_id as courses_teacherEmployeeId,courses.tassist_employee_id as courses_tassistEmployeeId,courses.status as courses_status,courses.created_by as courses_createdBy,courses.updated_by as courses_updatedBy,courses.created_at as courses_createdAt,courses.updated_at as courses_updatedAt}"
+          "colMapper": "{courses.course_id as courses_courseId,courses.course_sub_domain_prefix as courses_courseSubDomainPrefix,courses.planned_course_id as courses_plannedCourseId,courses.cloid as courses_cloid,courses.course_code as courses_courseCode,courses.teacher_employee_id as courses_teacherEmployeeId,courses.tassist_employee_id as courses_tassistEmployeeId,courses.status as courses_status,courses.created_by as courses_createdBy,courses.updated_by as courses_updatedBy,courses.created_at as courses_createdAt,courses.updated_at as courses_updatedAt}"
           }
         

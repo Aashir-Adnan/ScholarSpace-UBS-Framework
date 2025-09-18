@@ -82,6 +82,98 @@
                 "alias" : "studentsemesters.semester_id",
                 "options": []
 
+            }
+            ,
+            {
+                "name": "cGPA",
+                "label": "CGPA",
+                "title": "",
+                "type": "number",
+                "required": true,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "studentsemesters_cGPA",
+                "alias" : "studentsemesters.CGPA",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "sGPA",
+                "label": "SGPA",
+                "title": "",
+                "type": "number",
+                "required": true,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "studentsemesters_sGPA",
+                "alias" : "studentsemesters.SGPA",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "creditsAcquired",
+                "label": "Credits Acquired",
+                "title": "",
+                "type": "number",
+                "required": true,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "studentsemesters_creditsAcquired",
+                "alias" : "studentsemesters.credits_acquired",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "attendanceDelta",
+                "label": "Attendance Delta",
+                "title": "",
+                "type": "number",
+                "required": true,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "studentsemesters_attendanceDelta",
+                "alias" : "studentsemesters.attendance_delta",
+                "options": []
+
             }  
           
             
@@ -169,6 +261,6 @@
               ]
               }
           ],
-          "colMapper": "{studentsemesters.student_semester_id as studentsemesters_studentSemesterId,studentsemesters.student_user_id as studentsemesters_studentUserId,studentsemesters.semester_id as studentsemesters_semesterId,studentsemesters.status as studentsemesters_status,studentsemesters.created_by as studentsemesters_createdBy,studentsemesters.updated_by as studentsemesters_updatedBy,studentsemesters.created_at as studentsemesters_createdAt,studentsemesters.updated_at as studentsemesters_updatedAt}"
+          "colMapper": "{studentsemesters.student_semester_id as studentsemesters_studentSemesterId,studentsemesters.student_user_id as studentsemesters_studentUserId,studentsemesters.semester_id as studentsemesters_semesterId,studentsemesters.CGPA as studentsemesters_CGPA,studentsemesters.SGPA as studentsemesters_SGPA,studentsemesters.credits_acquired as studentsemesters_creditsAcquired,studentsemesters.attendance_delta as studentsemesters_attendanceDelta,studentsemesters.status as studentsemesters_status,studentsemesters.created_by as studentsemesters_createdBy,studentsemesters.updated_by as studentsemesters_updatedBy,studentsemesters.created_at as studentsemesters_createdAt,studentsemesters.updated_at as studentsemesters_updatedAt}"
           }
         

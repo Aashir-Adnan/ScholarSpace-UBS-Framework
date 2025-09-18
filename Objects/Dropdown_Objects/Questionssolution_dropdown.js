@@ -35,7 +35,7 @@ global.QuestionssolutionDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT questionssolution.questions_help_guide_id as value, CONCAT_WS(' ', LEFT(questions.description, 10)) AS label FROM questionssolution LEFT JOIN questions ON questionssolution.question_id = questions.question_id where questionssolution.status!='inactive'",
+                          "queryPayload": "SELECT questionssolution.questions_help_guide_id as value, CONCAT_WS(' ', LEFT(questions.description, 10), LEFT(attachments.attachment_name, 10)) AS label FROM questionssolution LEFT JOIN questions ON questionssolution.question_id = questions.question_id LEFT JOIN attachments ON questionssolution.attachment_id = attachments.attachment_id where questionssolution.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

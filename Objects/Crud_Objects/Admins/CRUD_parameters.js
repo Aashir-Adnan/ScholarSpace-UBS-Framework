@@ -73,8 +73,8 @@ const parameters = {
                                   "alias" : "admins.admin_type",
                                   },
                                   {
-                                  "name": "user_role_id",
-                                  "label": "User Role Id",
+                                  "name": "urdd_id",
+                                  "label": "Urdd Id",
                                   "title": "",
                                   "type": "textField",
                                   "required": false,
@@ -87,8 +87,8 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "admins_userRoleId",
-                                  "alias" : "admins.user_role_id",
+                                  "dynamicKey": "admins_urddId",
+                                  "alias" : "admins.urdd_id",
                                   },
                                   
                           ]
@@ -103,6 +103,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'admins_adminId' : 'admin_id',  'admins_adminType' : 'admin_type',  'admins_userRoleId' : 'user_role_id',  'admins_status' : 'status',  'admins_createdBy' : 'created_by',  'admins_updatedBy' : 'updated_by',  'admins_createdAt' : 'created_at',  'admins_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'admins_adminId' : 'admin_id',  'admins_adminType' : 'admin_type',  'admins_urddId' : 'urdd_id',  'admins_status' : 'status',  'admins_createdBy' : 'created_by',  'admins_updatedBy' : 'updated_by',  'admins_createdAt' : 'created_at',  'admins_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

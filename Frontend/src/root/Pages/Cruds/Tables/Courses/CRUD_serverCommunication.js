@@ -86,7 +86,7 @@
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "courses_courseId", "courses_courseSubDomainPrefix", "courses_plannedCourseId", "courses_cloid", "courses_teacherEmployeeId", "courses_tassistEmployeeId", "courses_status", "courses_createdBy", "courses_updatedBy", "courses_createdAt", "courses_updatedAt"
+                            "courses_courseId", "courses_courseSubDomainPrefix", "courses_plannedCourseId", "courses_cloid", "courses_courseCode", "courses_teacherEmployeeId", "courses_tassistEmployeeId", "courses_status", "courses_createdBy", "courses_updatedBy", "courses_createdAt", "courses_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

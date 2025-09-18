@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "cloid",
-                "label": "Cloid",
-                "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "clomappingplo_cloid",
-                "alias" : "clomappingplo.cloid",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "clointensityName",
                 "label": "Clointensity Name",
                 "title": "",
@@ -82,33 +59,56 @@
                 "alias" : "clomappingplo.clointensity_name",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "ploid",
-                "label": "Ploid",
-                "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "clomappingplo_ploid",
-                "alias" : "clomappingplo.ploid",
-                "options": []
-
             }  
           
             
         
+                ,
+                {
+                    "name": "cloid",
+                    "label": "Cloid",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "clomappingplo_cloid",
+                    "selectServerUrl": "/clo/dropdown?version=1.0",
+                    "alias" : "clomappingplo.cloid"
+                }
+                
+                ,
+                {
+                    "name": "ploid",
+                    "label": "Ploid",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "clomappingplo_ploid",
+                    "selectServerUrl": "/plo/dropdown?version=1.0",
+                    "alias" : "clomappingplo.ploid"
+                }
+                
           
           
                 ,

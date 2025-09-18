@@ -36,15 +36,16 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
+          
         
             ,
             {
-                "name": "courseId",
-                "label": "Course Id",
+                "name": "formName",
+                "label": "Form Name",
                 "title": "",
-                "type": "number",
-                "required": true,
-                "hideInCreateForm": false,
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": true,
                 "visible": true,
                 "disabled": false,
                 "dependancyCheck": false,
@@ -54,38 +55,59 @@
                 "max": "",
                 "validations": [],
                 "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "coursefeedbackform_courseId",
-                "alias" : "coursefeedbackform.course_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "feedbackFormId",
-                "label": "Feedback Form Id",
-                "title": "",
-                "type": "number",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "coursefeedbackform_feedbackFormId",
-                "alias" : "coursefeedbackform.feedback_form_id",
-                "options": []
+                "dynamicKey": "feedbackform_formName",
+                "alias" : "feedbackform.form_name",
+                "options": [ ""]
 
             }  
-          
             
         
+                ,
+                {
+                    "name": "courseId",
+                    "label": "Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "coursefeedbackform_courseId",
+                    "selectServerUrl": "/courses/dropdown?version=1.0",
+                    "alias" : "coursefeedbackform.course_id"
+                }
+                
+                ,
+                {
+                    "name": "feedbackFormId",
+                    "label": "Feedback Form Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "coursefeedbackform_feedbackFormId",
+                    "selectServerUrl": "/feedbackform/dropdown?version=1.0",
+                    "alias" : "coursefeedbackform.feedback_form_id"
+                }
+                
           
           
                 ,

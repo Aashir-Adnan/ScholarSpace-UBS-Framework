@@ -61,28 +61,6 @@ export const parameters = {
                                                 },
                                                 ,
                                                 {
-                                                    "name": "userRoleId",
-                                                    "label": "User Role Id",
-                                                    "title": "",
-                                                    "type": "number",
-                                                    "required": true,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "chat_userRoleId",
-                                                    "alias" : "chat.user_role_id",
-                                                    "options": "[]"
-  
-                                                },
-                                                ,
-                                                {
                                                     "name": "message",
                                                     "label": "Message",
                                                     "title": "",
@@ -181,6 +159,29 @@ export const parameters = {
                                                 ]
                                               }
                                             
+                                                    ,
+                                                    {
+                                                        "name": "urddId",
+                                                        "label": "Urdd Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": true,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "chat_urddId",
+                                                        "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                                                        "alias" : "chat.urdd_id"
+                                                    }
+                                                    
                                            
                                                ]}
     
@@ -558,5 +559,5 @@ export const parameters = {
                             "permission": "view_user_roles_designations_department"
                         }
                   ],
-                  "colMapper": { 'chat_chatId' : 'chat_id',  'chat_subComponentId' : 'sub_component_id',  'chat_userRoleId' : 'user_role_id',  'chat_message' : 'message',  'chat_messageTime' : 'message_time',  'chat_privateChat' : 'private_chat',  'chat_status' : 'status',  'chat_createdBy' : 'created_by',  'chat_updatedBy' : 'updated_by',  'chat_createdAt' : 'created_at',  'chat_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at'}
+                  "colMapper": { 'chat_chatId' : 'chat_id',  'chat_subComponentId' : 'sub_component_id',  'chat_urddId' : 'urdd_id',  'chat_message' : 'message',  'chat_messageTime' : 'message_time',  'chat_privateChat' : 'private_chat',  'chat_status' : 'status',  'chat_createdBy' : 'created_by',  'chat_updatedBy' : 'updated_by',  'chat_createdAt' : 'created_at',  'chat_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at'}
               };

@@ -39,52 +39,6 @@
         
             ,
             {
-                "name": "courseId",
-                "label": "Course Id",
-                "title": "",
-                "type": "number",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "coursetimetablesschedule_courseId",
-                "alias" : "coursetimetablesschedule.course_id",
-                "options": []
-
-            }
-            ,
-            {
-                "name": "employeePreferedTimeSlotsId",
-                "label": "Employee Prefered Time Slots Id",
-                "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "coursetimetablesschedule_employeePreferedTimeSlotsId",
-                "alias" : "coursetimetablesschedule.employee_prefered_time_slots_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "timeSlotId",
                 "label": "Time Slot Id",
                 "title": "",
@@ -132,6 +86,52 @@
           
             
         
+                ,
+                {
+                    "name": "courseId",
+                    "label": "Course Id",
+                    "title": "",
+                    "type": "select",
+                    "required": true,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "coursetimetablesschedule_courseId",
+                    "selectServerUrl": "/courses/dropdown?version=1.0",
+                    "alias" : "coursetimetablesschedule.course_id"
+                }
+                
+                ,
+                {
+                    "name": "employeePreferedTimeSlotsId",
+                    "label": "Employee Prefered Time Slots Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "coursetimetablesschedule_employeePreferedTimeSlotsId",
+                    "selectServerUrl": "/employeepreferedtimeslots/dropdown?version=1.0",
+                    "alias" : "coursetimetablesschedule.employee_prefered_time_slots_id"
+                }
+                
           
           
                 ,

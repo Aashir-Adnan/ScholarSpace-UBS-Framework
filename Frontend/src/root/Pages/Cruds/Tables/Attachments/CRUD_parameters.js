@@ -649,7 +649,225 @@ export const parameters = {
                                 ]
                             },
                             "permission": "view_plannedcourses"
+                        },
+                        {
+                            "title": "questionssolution Info",
+                            "parameters": {
+                                "fields": [
+                                    {
+                                        "name": "questionssolution",
+                                        "type": "section",
+                                        "hideInCreateForm": false,
+                                        "visible": false,
+                                        "required": false,
+                                        "disabled": false,
+                                        "validations": "",
+                                        "dependancyCheck": false,
+                                        "isPrefilled": false,
+                                        "source": "req.body",
+                                        "title": "Attachments",
+                                        "childFields": [
+                                            {
+                                              "name": "id",
+                                              "label": "id",
+                                              "title": "",
+                                              "type": "textField",
+                                              "required": false,
+                                              "hideInCreateForm": true,
+                                              "hideInViewForm" : true,
+                                              "visible": true,
+                                              "disabled": false,
+                                              "dependancyCheck": false,
+                                              "isPrefilled": false,
+                                              "source": "req.query",
+                                              "min": "",
+                                              "max": "",
+                                              "selectServer": false,
+                                              "dynamicKey": "id"
+                                            },
+                                            
+                                            
+                                            ,
+                                                {
+                                                  "type": "tableOfFields",
+                                                  "name": "questionssolution",
+                                                  "label": "Add Questionssolution",
+                                                  "hideInCreateForm": false,
+                                                 "selectServerUrl":"/grouped/cruds/user_roles_designations_department?version=1.0",
+                                                  "hideInViewForm": false,
+                                                  "title": "Select Questionssolution",
+                                                  "dependancyCheck": false,
+                                                  "childFields": [
+                                                  {
+                                                  "name": "questionssolution", 
+                                                  "type": "section",
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "required": false,
+                                                  "disabled": false,
+                                                  "validations": "",
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "title": "Questionssolution",
+                                                  "childFields":[
+                                                
+                                                  
+                                                    ,
+                                                    {
+                                                        "name": "questionId",
+                                                        "label": "Question Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": false,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "questionssolution_questionId",
+                                                        "selectServerUrl": "/questions/dropdown?version=1.0",
+                                                        "alias" : "questionssolution.question_id"
+                                                    },
+                                                     {
+                                                        "name": "questionsName",
+                                                        "label": "QuestionsName",
+                                                        "title": "",
+                                                        "type": "textField",
+                                                    "required": false,
+                                                        "hideInCreateForm": true,
+                                                        "hideInViewForm": true,
+                                                        "visible": true,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "questionssolution_questionsName",
+                                                        "selectServerUrl": "/questions/dropdown?version=1.0",
+                                                        "alias" : "questionssolution.questionsName"
+                                                    }
+                                                    ,
+                                                    ,
+                                                    {
+                                                      "name": "attachmentId",
+                                                      "label": "Attachment",
+                                                      "title": "",
+                                                      "type": "file",
+                                                      "required": false,
+                                                      "isMultiple" : false,
+                                                      "hideInCreateForm": false,
+                                                      "hideInViewForm": false,
+                                                      "fetchSubmitUrl": "/get/file/url/s3?step=1",
+                                                      "getFileUrl": "/get/file?step=1&token=",
+                                                      "visible": true,
+                                                      "disabled": false,
+                                                      "dependancyCheck": false,
+                                                      "isPrefilled": false,
+                                                      "source": "req.body",
+                                                      "min": "",
+                                                      "max": "",
+                                                      "validations": [],
+                                                      "dynamicKey" : "questionssolution_attachmentId",
+                                                      "selectServer": false,
+                                                      "alias" : "questionssolution.attachmentId"
+                                                    }
+                                                    
+
+
+
+ 
+                                                ]
+                                              }
+                                            
+                                           
+                                               ]}
+    
+                                            
+                                                ,
+                                                {
+                                                    "name": "createdAt",
+                                                    "label": "Created At",
+                                                    "title": "",
+                                                    "type": "dateTime",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "hideInViewForm" : true,
+                                                    "visible": false,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "questionssolution_createdAt",
+                                                    "alias" : "questionssolution.created_at"
+                                                },
+                                                ,
+                                                {
+                                                    "name": "updatedAt",
+                                                    "label": "Updated At",
+                                                    "title": "",
+                                                    "type": "dateTime",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "hideInViewForm" : true,
+                                                    "visible": false,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "questionssolution_updatedAt",
+                                                    "alias" : "questionssolution.updated_at"
+                                                }
+                                              
+                                                  ,
+                                                {
+                                                    "name": "status",
+                                                    "label": "Status",
+                                                    "title": "",
+                                                    "type": "select",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "visible": false,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "questionssolution_status",
+                                                    options:[
+                                                        {value:'inactive',label:'inactive'},
+                                                        {value:'active',label:'active'}
+                                                    ],
+                                                    "alias" : "questionssolution.status"
+                                                }
+                                                 
+    
+                                        ]
+                                    }
+                                ]
+                            },
+                            "permission": "view_questionssolution"
                         }
                   ],
-                  "colMapper": { 'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDescription' : 'course_description',  'plannedcourses_courseObjective' : 'course_objective',  'plannedcourses_image' : 'image',  'plannedcourses_status' : 'status',  'plannedcourses_createdBy' : 'created_by',  'plannedcourses_updatedBy' : 'updated_by',  'plannedcourses_createdAt' : 'created_at',  'plannedcourses_updatedAt' : 'updated_at'}
+                  "colMapper": { 'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDescription' : 'course_description',  'plannedcourses_courseObjective' : 'course_objective',  'plannedcourses_image' : 'image',  'plannedcourses_status' : 'status',  'plannedcourses_createdBy' : 'created_by',  'plannedcourses_updatedBy' : 'updated_by',  'plannedcourses_createdAt' : 'created_at',  'plannedcourses_updatedAt' : 'updated_at',  'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id',  'questionssolution_status' : 'status',  'questionssolution_createdBy' : 'created_by',  'questionssolution_updatedBy' : 'updated_by',  'questionssolution_createdAt' : 'created_at',  'questionssolution_updatedAt' : 'updated_at'}
               };

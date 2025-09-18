@@ -59,33 +59,33 @@
                 "alias" : "designations.designation_name",
                 "options": []
 
-            }
-            ,
-            {
-                "name": "seniorDesignationId",
-                "label": "Senior Designation Id",
-                "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "designations_seniorDesignationId",
-                "alias" : "designations.senior_designation_id",
-                "options": []
-
             }  
           
             
         
+                ,
+                {
+                    "name": "seniorDesignationId",
+                    "label": "Senior Designation Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "designations_seniorDesignationId",
+                    "selectServerUrl": "/designations/dropdown?version=1.0",
+                    "alias" : "designations.senior_designation_id"
+                }
+                
           
           
                 ,

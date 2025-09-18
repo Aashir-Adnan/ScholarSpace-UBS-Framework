@@ -55,8 +55,8 @@ const parameters = {
                                 },
                               
                                   {
-                                  "name": "user_role_id",
-                                  "label": "User Role Id",
+                                  "name": "urdd_id",
+                                  "label": "Urdd Id",
                                   "title": "",
                                   "type": "textField",
                                   "required": false,
@@ -69,8 +69,8 @@ const parameters = {
                                   "min": "",
                                   "max": "",
                                   "selectServer": false,
-                                  "dynamicKey": "alumni_userRoleId",
-                                  "alias" : "alumni.user_role_id",
+                                  "dynamicKey": "alumni_urddId",
+                                  "alias" : "alumni.urdd_id",
                                   },
                                   {
                                   "name": "graduating_year",
@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'alumni_alumniId' : 'alumni_id',  'alumni_userRoleId' : 'user_role_id',  'alumni_graduatingYear' : 'graduating_year',  'alumni_employementDetail' : 'employement_detail',  'alumni_status' : 'status',  'alumni_createdBy' : 'created_by',  'alumni_updatedBy' : 'updated_by',  'alumni_createdAt' : 'created_at',  'alumni_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'alumni_alumniId' : 'alumni_id',  'alumni_urddId' : 'urdd_id',  'alumni_graduatingYear' : 'graduating_year',  'alumni_employementDetail' : 'employement_detail',  'alumni_status' : 'status',  'alumni_createdBy' : 'created_by',  'alumni_updatedBy' : 'updated_by',  'alumni_createdAt' : 'created_at',  'alumni_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

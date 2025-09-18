@@ -318,6 +318,28 @@ export const parameters = {
                                                     "alias" : "courses.course_sub_domain_prefix",
                                                     "options": "[]"
   
+                                                },
+                                                ,
+                                                {
+                                                    "name": "courseCode",
+                                                    "label": "Course Code",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": true,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "courses_courseCode",
+                                                    "alias" : "courses.course_code",
+                                                    "options": "[]"
+  
                                                 }
                                             
                                             ,
@@ -1268,5 +1290,5 @@ export const parameters = {
                             "permission": "view_subcomponents"
                         }
                   ],
-                  "colMapper": { 'classcomponent_componentId' : 'component_id',  'classcomponent_courseId' : 'course_id',  'classcomponent_componentType' : 'component_type',  'classcomponent_componentName' : 'component_name',  'classcomponent_weightage' : 'weightage',  'classcomponent_componentPolicy' : 'component_policy',  'classcomponent_status' : 'status',  'classcomponent_createdBy' : 'created_by',  'classcomponent_updatedBy' : 'updated_by',  'classcomponent_createdAt' : 'created_at',  'classcomponent_updatedAt' : 'updated_at',  'courses_courseId' : 'course_id',  'courses_courseSubDomainPrefix' : 'course_sub_domain_prefix',  'courses_plannedCourseId' : 'planned_course_id',  'courses_cloid' : 'cloid',  'courses_teacherEmployeeId' : 'teacher_employee_id',  'courses_tassistEmployeeId' : 'tassist_employee_id',  'courses_status' : 'status',  'courses_createdBy' : 'created_by',  'courses_updatedBy' : 'updated_by',  'courses_createdAt' : 'created_at',  'courses_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_urddId' : 'urdd_id',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at'}
+                  "colMapper": { 'classcomponent_componentId' : 'component_id',  'classcomponent_courseId' : 'course_id',  'classcomponent_componentType' : 'component_type',  'classcomponent_componentName' : 'component_name',  'classcomponent_weightage' : 'weightage',  'classcomponent_componentPolicy' : 'component_policy',  'classcomponent_status' : 'status',  'classcomponent_createdBy' : 'created_by',  'classcomponent_updatedBy' : 'updated_by',  'classcomponent_createdAt' : 'created_at',  'classcomponent_updatedAt' : 'updated_at',  'courses_courseId' : 'course_id',  'courses_courseSubDomainPrefix' : 'course_sub_domain_prefix',  'courses_plannedCourseId' : 'planned_course_id',  'courses_cloid' : 'cloid',  'courses_courseCode' : 'course_code',  'courses_teacherEmployeeId' : 'teacher_employee_id',  'courses_tassistEmployeeId' : 'tassist_employee_id',  'courses_status' : 'status',  'courses_createdBy' : 'created_by',  'courses_updatedBy' : 'updated_by',  'courses_createdAt' : 'created_at',  'courses_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_urddId' : 'urdd_id',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at'}
               };

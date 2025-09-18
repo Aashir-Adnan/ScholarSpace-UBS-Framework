@@ -72,8 +72,8 @@ const parameters = {
                                                           "dynamicKey": "chat_subComponentId"
                                                       },
                                                       {
-                                                          "name": "userRoleId",
-                                                          "label": "User Role Id",
+                                                          "name": "urddId",
+                                                          "label": "Urdd Id",
                                                           "title": "",
                                                           "type": "textField",
                                                           "required": false,
@@ -86,7 +86,7 @@ const parameters = {
                                                           "min": "",
                                                           "max": "",
                                                           "selectServer": false,
-                                                          "dynamicKey": "chat_userRoleId"
+                                                          "dynamicKey": "chat_urddId"
                                                       },
                                                       {
                                                           "name": "message",
@@ -302,6 +302,6 @@ const parameters = {
                               "permission": "user_roles_designations_department_view"
                           }
               ],
-              "colMapper": "{ 'chat_chatId' : 'chat_id',  'chat_subComponentId' : 'sub_component_id',  'chat_userRoleId' : 'user_role_id',  'chat_message' : 'message',  'chat_messageTime' : 'message_time',  'chat_privateChat' : 'private_chat',  'chat_status' : 'status',  'chat_createdBy' : 'created_by',  'chat_updatedBy' : 'updated_by',  'chat_createdAt' : 'created_at',  'chat_updatedAt' : 'updated_at',  'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'chat_chatId' : 'chat_id',  'chat_subComponentId' : 'sub_component_id',  'chat_urddId' : 'urdd_id',  'chat_message' : 'message',  'chat_messageTime' : 'message_time',  'chat_privateChat' : 'private_chat',  'chat_status' : 'status',  'chat_createdBy' : 'created_by',  'chat_updatedBy' : 'updated_by',  'chat_createdAt' : 'created_at',  'chat_updatedAt' : 'updated_at',  'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

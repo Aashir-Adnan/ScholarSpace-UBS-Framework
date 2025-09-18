@@ -39,29 +39,6 @@
         
             ,
             {
-                "name": "userRoleId",
-                "label": "User Role Id",
-                "title": "",
-                "type": "number",
-                "required": false,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "alumni_userRoleId",
-                "alias" : "alumni.user_role_id",
-                "options": []
-
-            }
-            ,
-            {
                 "name": "graduatingYear",
                 "label": "Graduating Year",
                 "title": "",
@@ -109,6 +86,29 @@
           
             
         
+                ,
+                {
+                    "name": "urddId",
+                    "label": "Urdd Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "alumni_urddId",
+                    "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                    "alias" : "alumni.urdd_id"
+                }
+                
           
           
                 ,
@@ -192,6 +192,6 @@
               ]
               }
           ],
-          "colMapper": "{alumni.alumni_id as alumni_alumniId,alumni.user_role_id as alumni_userRoleId,alumni.graduating_year as alumni_graduatingYear,alumni.employement_detail as alumni_employementDetail,alumni.status as alumni_status,alumni.created_by as alumni_createdBy,alumni.updated_by as alumni_updatedBy,alumni.created_at as alumni_createdAt,alumni.updated_at as alumni_updatedAt}"
+          "colMapper": "{alumni.alumni_id as alumni_alumniId,alumni.urdd_id as alumni_urddId,alumni.graduating_year as alumni_graduatingYear,alumni.employement_detail as alumni_employementDetail,alumni.status as alumni_status,alumni.created_by as alumni_createdBy,alumni.updated_by as alumni_updatedBy,alumni.created_at as alumni_createdAt,alumni.updated_at as alumni_updatedAt}"
           }
         

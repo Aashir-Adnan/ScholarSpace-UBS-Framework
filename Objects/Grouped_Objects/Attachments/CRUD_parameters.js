@@ -368,8 +368,107 @@ const parameters = {
                                   }
                               ],
                               "permission": "plannedcourses_view"
+                          },
+                          {
+                              "title": "Questionssolution Grouped CRUD",
+                              "parameters": {
+                                  "fields": [
+                                      {
+                                          "name": "questionssolution",
+                                          "type": "section",
+                                          "hideInCreateForm": false,
+                                          "visible": false,
+                                          "required": false,
+                                          "disabled": false,
+                                          "validations": "",
+                                          "dependancyCheck": false,
+                                          "isPrefilled": false,
+                                          "source": "req.body",
+                                          "title": "Attachments",
+                                          "childFields": [
+                                                  {
+                                                    "name": "questionssolution_id",
+                                                    "label": "id",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": true,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.query",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "selectServer": false,
+                                                    "dynamicKey": "questionssolution_id"
+                                                  },
+                                                  {
+                                                    "name": "actionPerformerURDD",
+                                                    "label": "actionPerformerURDD",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "selectServer": false,
+                                                    "dynamicKey": "actionPerformerURDD",
+                                                    "alias" : "actionPerformerURDD",
+                                                },
+                                              
+                                                      {
+                                                          "name": "questionId",
+                                                          "label": "Question Id",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "questionssolution_questionId"
+                                                      },
+                                                      {
+                                                          "name": "attachmentId",
+                                                          "label": "Attachment Id",
+                                                          "title": "",
+                                                          "type": "textField",
+                                                          "required": false,
+                                                          "hideInCreateForm": false,
+                                                          "visible": true,
+                                                          "disabled": false,
+                                                          "dependancyCheck": false,
+                                                          "isPrefilled": false,
+                                                          "source": "req.body",
+                                                          "min": "",
+                                                          "max": "",
+                                                          "selectServer": false,
+                                                          "dynamicKey": "questionssolution_attachmentId"
+                                                      }
+                                          ]
+                                      }
+                                  ]
+                              },
+                              "buttons": [
+                                  {
+                                      "type": "submit",
+                                      "label": "Submit"
+                                  }
+                              ],
+                              "permission": "questionssolution_view"
                           }
               ],
-              "colMapper": "{ 'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at',  'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDescription' : 'course_description',  'plannedcourses_courseObjective' : 'course_objective',  'plannedcourses_image' : 'image',  'plannedcourses_status' : 'status',  'plannedcourses_createdBy' : 'created_by',  'plannedcourses_updatedBy' : 'updated_by',  'plannedcourses_createdAt' : 'created_at',  'plannedcourses_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'userRolesDesignationsDepartment_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'userRolesDesignationsDepartment_roleDesignationDepartmentId' : 'role_designation_department_id',  'userRolesDesignationsDepartment_userId' : 'user_id',  'userRolesDesignationsDepartment_specAttributes' : 'spec_attributes',  'userRolesDesignationsDepartment_startDate' : 'start_date',  'userRolesDesignationsDepartment_endDate' : 'end_date',  'userRolesDesignationsDepartment_createdBy' : 'created_by',  'userRolesDesignationsDepartment_updatedBy' : 'updated_by',  'userRolesDesignationsDepartment_status' : 'status',  'userRolesDesignationsDepartment_createdAt' : 'created_at',  'userRolesDesignationsDepartment_updatedAt' : 'updated_at',  'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDescription' : 'course_description',  'plannedcourses_courseObjective' : 'course_objective',  'plannedcourses_image' : 'image',  'plannedcourses_status' : 'status',  'plannedcourses_createdBy' : 'created_by',  'plannedcourses_updatedBy' : 'updated_by',  'plannedcourses_createdAt' : 'created_at',  'plannedcourses_updatedAt' : 'updated_at',  'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id',  'questionssolution_status' : 'status',  'questionssolution_createdBy' : 'created_by',  'questionssolution_updatedBy' : 'updated_by',  'questionssolution_createdAt' : 'created_at',  'questionssolution_updatedAt' : 'updated_at'}"
           };
           module.exports = parameters;

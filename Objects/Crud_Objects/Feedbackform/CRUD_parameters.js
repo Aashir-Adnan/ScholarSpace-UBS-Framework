@@ -121,6 +121,6 @@ const parameters = {
                   ]
                   }
               ],
-              "colMapper": "{ 'feedbackform_feedBackFormId' : 'feed_back_form_id',  'feedbackform_feedBackFormId' : 'feed_back_form_id',  'feedbackform_formName' : 'form_name',  'feedbackform_startDate' : 'start_date',  'feedbackform_endDate' : 'end_date',  'feedbackform_status' : 'status',  'feedbackform_createdBy' : 'created_by',  'feedbackform_updatedBy' : 'updated_by',  'feedbackform_createdAt' : 'created_at',  'feedbackform_updatedAt' : 'updated_at'}"
+              "colMapper": "{ 'feedbackform_feedbackFormId' : 'feedback_form_id',  'feedbackform_feedbackFormId' : 'feedback_form_id',  'feedbackform_formName' : 'form_name',  'feedbackform_startDate' : 'start_date',  'feedbackform_endDate' : 'end_date',  'feedbackform_status' : 'status',  'feedbackform_createdBy' : 'created_by',  'feedbackform_updatedBy' : 'updated_by',  'feedbackform_createdAt' : 'created_at',  'feedbackform_updatedAt' : 'updated_at'}"
               };
               module.exports = parameters;

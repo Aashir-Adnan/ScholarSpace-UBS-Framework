@@ -86,7 +86,7 @@
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "feedbackform_feedBackFormId", "feedbackform_feedBackFormId", "feedbackform_formName", "feedbackform_startDate", "feedbackform_endDate", "feedbackform_status", "feedbackform_createdBy", "feedbackform_updatedBy", "feedbackform_createdAt", "feedbackform_updatedAt"
+                            "feedbackform_feedbackFormId", "feedbackform_feedbackFormId", "feedbackform_formName", "feedbackform_startDate", "feedbackform_endDate", "feedbackform_status", "feedbackform_createdBy", "feedbackform_updatedBy", "feedbackform_createdAt", "feedbackform_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

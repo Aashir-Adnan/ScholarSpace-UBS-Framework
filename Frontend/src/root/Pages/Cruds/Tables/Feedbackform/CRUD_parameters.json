@@ -184,6 +184,6 @@
               ]
               }
           ],
-          "colMapper": "{feedbackform.feed_back_form_id as feedbackform_feedBackFormId,feedbackform.feed_back_form_id as feedbackform_feedBackFormId,feedbackform.form_name as feedbackform_formName,feedbackform.start_date as feedbackform_startDate,feedbackform.end_date as feedbackform_endDate,feedbackform.status as feedbackform_status,feedbackform.created_by as feedbackform_createdBy,feedbackform.updated_by as feedbackform_updatedBy,feedbackform.created_at as feedbackform_createdAt,feedbackform.updated_at as feedbackform_updatedAt}"
+          "colMapper": "{feedbackform.feedback_form_id as feedbackform_feedbackFormId,feedbackform.feedback_form_id as feedbackform_feedbackFormId,feedbackform.form_name as feedbackform_formName,feedbackform.start_date as feedbackform_startDate,feedbackform.end_date as feedbackform_endDate,feedbackform.status as feedbackform_status,feedbackform.created_by as feedbackform_createdBy,feedbackform.updated_by as feedbackform_updatedBy,feedbackform.created_at as feedbackform_createdAt,feedbackform.updated_at as feedbackform_updatedAt}"
           }
         

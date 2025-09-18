@@ -1,7 +1,7 @@
 {
             "data": {
             "features": {
-                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"status","label":"Status","alias":"admins.status","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)","options":[{"value":"inactive","label":"inactive"},{"value":"active","label":"active"}]},
+                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"urddId","label":"Urdd Id","alias":"admins.urddId","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)"},
                 "parameters": "parameters",
                 "rowActions": {
                 "actions": [
@@ -91,7 +91,7 @@
                     },
                   "options": {
                       "filterBy": [
-                          "admins_adminId", "admins_adminType", "admins_userRoleId", "admins_status", "admins_createdBy", "admins_updatedBy", "admins_createdAt", "admins_updatedAt"
+                          "admins_adminId", "admins_adminType", "admins_urddId", "admins_status", "admins_createdBy", "admins_updatedBy", "admins_createdAt", "admins_updatedAt"
                       ],
                       "statusOptions": ["active", "inactive"]
                   },

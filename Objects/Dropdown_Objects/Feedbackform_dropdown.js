@@ -35,7 +35,7 @@ global.FeedbackformDropdown_object = {
                       
                         preProcessFunction : [],
                         query: {
-                          "queryPayload": "SELECT LEFT(form_name, 50) as label, feed_back_form_id as value FROM feedbackform where feedbackform.status!='inactive'",
+                          "queryPayload": "SELECT LEFT(form_name, 50) as label, feedback_form_id as value FROM feedbackform where feedbackform.status!='inactive'",
                         },
                         database: "mainDb",
                         utilityFunctions: {

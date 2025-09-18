@@ -84,7 +84,7 @@ import { parameters } from "./CRUD_parameters.js";
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "chat_chatId", "chat_subComponentId", "chat_userRoleId", "chat_message", "chat_messageTime", "chat_privateChat", "chat_status", "chat_createdBy", "chat_updatedBy", "chat_createdAt", "chat_updatedAt"
+                            "chat_chatId", "chat_subComponentId", "chat_urddId", "chat_message", "chat_messageTime", "chat_privateChat", "chat_status", "chat_createdBy", "chat_updatedBy", "chat_createdAt", "chat_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

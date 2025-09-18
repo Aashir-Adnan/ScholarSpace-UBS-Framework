@@ -84,7 +84,7 @@ import { parameters } from "./CRUD_parameters.js";
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "studentsemesters_studentSemesterId", "studentsemesters_studentUserId", "studentsemesters_semesterId", "studentsemesters_status", "studentsemesters_createdBy", "studentsemesters_updatedBy", "studentsemesters_createdAt", "studentsemesters_updatedAt"
+                            "studentsemesters_studentSemesterId", "studentsemesters_studentUserId", "studentsemesters_semesterId", "studentsemesters_CGPA", "studentsemesters_SGPA", "studentsemesters_creditsAcquired", "studentsemesters_attendanceDelta", "studentsemesters_status", "studentsemesters_createdBy", "studentsemesters_updatedBy", "studentsemesters_createdAt", "studentsemesters_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

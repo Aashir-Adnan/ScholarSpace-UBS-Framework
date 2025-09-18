@@ -38,30 +38,7 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
-        
-            ,
-            {
-                "name": "attachmentId",
-                "label": "Attachment Id",
-                "title": "",
-                "type": "number",
-                "required": true,
-                "hideInCreateForm": false,
-                "visible": true,
-                "disabled": false,
-                "dependancyCheck": false,
-                "isPrefilled": false,
-                "source": "req.body",
-                "min": "",
-                "max": "",
-                "validations": [],
-                "selectServer": false,
-                "selectServerUrl":"/null/dropdown?version=1.0",
-                "dynamicKey": "questionssolution_attachmentId",
-                "alias" : "questionssolution.attachment_id",
-                "options": []
-
-            }  
+          
           
             
         
@@ -86,6 +63,31 @@
                     "dynamicKey": "questionssolution_questionId",
                     "selectServerUrl": "/questions/dropdown?version=1.0",
                     "alias" : "questionssolution.question_id"
+                }
+                
+                ,
+                {
+                  "name": "attachmentId",
+                  "label": "Attachment",
+                  "title": "",
+                  "type": "file",
+                  "required": false,
+                  "isMultiple" : false,
+                  "hideInCreateForm": false,
+                  "hideInViewForm": false,
+                  "fetchSubmitUrl": "/get/file/url/s3?step=1",
+                  "getFileUrl": "/get/file?step=1&token=",
+                  "visible": true,
+                  "disabled": false,
+                  "dependancyCheck": false,
+                  "isPrefilled": false,
+                  "source": "req.body",
+                  "min": "",
+                  "max": "",
+                  "validations": [],
+                  "dynamicKey" : "questionssolution_attachmentId",
+                  "selectServer": false,
+                  "alias" : "questionssolution.attachmentId"
                 }
                 
           
