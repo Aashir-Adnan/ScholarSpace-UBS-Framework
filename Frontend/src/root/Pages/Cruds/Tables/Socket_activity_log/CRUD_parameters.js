@@ -2,6 +2,178 @@ export const parameters = {
                   "steps": [
                     
                         {
+                            "title": "socket_activity_log Info",
+                            "parameters": {
+                                "fields": [
+                                    {
+                                        "name": "socketActivityLog",
+                                        "type": "section",
+                                        "hideInCreateForm": false,
+                                        "visible": false,
+                                        "required": false,
+                                        "disabled": false,
+                                        "validations": "",
+                                        "dependancyCheck": false,
+                                        "isPrefilled": false,
+                                        "source": "req.body",
+                                        "title": "Socket Activity Log",
+                                        "childFields": [
+                                            {
+                                              "name": "id",
+                                              "label": "id",
+                                              "title": "",
+                                              "type": "textField",
+                                              "required": false,
+                                              "hideInCreateForm": true,
+                                              "hideInViewForm" : true,
+                                              "visible": true,
+                                              "disabled": false,
+                                              "dependancyCheck": false,
+                                              "isPrefilled": false,
+                                              "source": "req.query",
+                                              "min": "",
+                                              "max": "",
+                                              "selectServer": false,
+                                              "dynamicKey": "id"
+                                            },
+                                            
+                                                ,
+                                                {
+                                                    "name": "activityDescription",
+                                                    "label": "Activity Description",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "socketActivityLog_activityDescription",
+                                                    "alias" : "socket_activity_log.activity_description",
+                                                    "options": "[]"
+  
+                                                },
+                                                ,
+                                                {
+                                                    "name": "createdOn",
+                                                    "label": "Created On",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": true,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "socketActivityLog_createdOn",
+                                                    "alias" : "socket_activity_log.created_on",
+                                                    "options": "[]"
+  
+                                                }
+                                            
+                                            ,
+                                                {
+                                                  "type": "tableOfFields",
+                                                  "name": "socketActivityLog",
+                                                  "label": "Add Socket Activity Log",
+                                                  "hideInCreateForm": true,
+                                                 "selectServerUrl":"/grouped/cruds/socket_activity_log?version=1.0",
+                                                  "hideInViewForm": false,
+                                                  "title": "Select Socket Activity Log",
+                                                  "dependancyCheck": false,
+                                                  "childFields": [
+                                                  {
+                                                  "name": "socketActivityLog", 
+                                                  "type": "section",
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "required": false,
+                                                  "disabled": false,
+                                                  "validations": "",
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "title": "Socket Activity Log",
+                                                  "childFields":[
+                                                
+                                                  
+
+
+
+ 
+                                                ]
+                                              }
+                                            
+                                                    ,
+                                                    {
+                                                        "name": "urddId",
+                                                        "label": "Urdd Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": false,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "socketActivityLog_urddId",
+                                                        "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                                                        "alias" : "socket_activity_log.urdd_id"
+                                                    }
+                                                    ,
+                                                    ,
+                                                    {
+                                                        "name": "subComponentId",
+                                                        "label": "Sub Component Id",
+                                                        "title": "",
+                                                        "type": "select",
+                                                    "required": false,
+                                                        "hideInCreateForm": false,
+                                                        "hideInViewForm": true,
+                                                        "visible": false,
+                                                        "disabled": false,
+                                                        "dependancyCheck": false,
+                                                        "isPrefilled": false,
+                                                        "source": "req.body",
+                                                        "min": "",
+                                                        "max": "",
+                                                        "validations": [],
+                                                        "selectServer": true,
+                                                        "dynamicKey": "socketActivityLog_subComponentId",
+                                                        "selectServerUrl": "/subcomponents/dropdown?version=1.0",
+                                                        "alias" : "socket_activity_log.sub_component_id"
+                                                    }
+                                                    
+                                           
+                                               ]}
+    
+                                            
+                                              
+    
+                                        ]
+                                    }
+                                ]
+                            },
+                            "permission": "view_socket_activity_log"
+                        },
+                        {
                             "title": "user_roles_designations_department Info",
                             "parameters": {
                                 "fields": [
@@ -16,7 +188,7 @@ export const parameters = {
                                         "dependancyCheck": false,
                                         "isPrefilled": false,
                                         "source": "req.body",
-                                        "title": "Attachments",
+                                        "title": "Socket Activity Log",
                                         "childFields": [
                                             {
                                               "name": "id",
@@ -66,7 +238,7 @@ export const parameters = {
                                                   "name": "userRolesDesignationsDepartment",
                                                   "label": "Add User Roles Designations Department",
                                                   "hideInCreateForm": false,
-                                                 "selectServerUrl":"/grouped/cruds/user_roles_designations_department?version=1.0",
+                                                 "selectServerUrl":"/grouped/cruds/socket_activity_log?version=1.0",
                                                   "hideInViewForm": false,
                                                   "title": "Select User Roles Designations Department",
                                                   "dependancyCheck": false,
@@ -299,11 +471,11 @@ export const parameters = {
                             "permission": "view_user_roles_designations_department"
                         },
                         {
-                            "title": "plannedcourses Info",
+                            "title": "subcomponents Info",
                             "parameters": {
                                 "fields": [
                                     {
-                                        "name": "plannedcourses",
+                                        "name": "subcomponents",
                                         "type": "section",
                                         "hideInCreateForm": false,
                                         "visible": false,
@@ -313,7 +485,7 @@ export const parameters = {
                                         "dependancyCheck": false,
                                         "isPrefilled": false,
                                         "source": "req.body",
-                                        "title": "Attachments",
+                                        "title": "Socket Activity Log",
                                         "childFields": [
                                             {
                                               "name": "id",
@@ -336,8 +508,8 @@ export const parameters = {
                                             
                                                 ,
                                                 {
-                                                    "name": "courseName",
-                                                    "label": "Course Name",
+                                                    "name": "subComponentNum",
+                                                    "label": "Sub Component Num",
                                                     "title": "",
                                                     "type": "textField",
                                                     "required": false,
@@ -351,15 +523,15 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_courseName",
-                                                    "alias" : "plannedcourses.course_name",
+                                                    "dynamicKey": "subcomponents_subComponentNum",
+                                                    "alias" : "subcomponents.sub_component_num",
                                                     "options": "[]"
   
                                                 },
                                                 ,
                                                 {
-                                                    "name": "creditHours",
-                                                    "label": "Credit Hours",
+                                                    "name": "text",
+                                                    "label": "Text",
                                                     "title": "",
                                                     "type": "textField",
                                                     "required": false,
@@ -373,15 +545,15 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_creditHours",
-                                                    "alias" : "plannedcourses.credit_hours",
+                                                    "dynamicKey": "subcomponents_text",
+                                                    "alias" : "subcomponents.text",
                                                     "options": "[]"
   
                                                 },
                                                 ,
                                                 {
-                                                    "name": "type",
-                                                    "label": "Type",
+                                                    "name": "totalMarks",
+                                                    "label": "Total Marks",
                                                     "title": "",
                                                     "type": "textField",
                                                     "required": false,
@@ -395,15 +567,15 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_type",
-                                                    "alias" : "plannedcourses.type",
+                                                    "dynamicKey": "subcomponents_totalMarks",
+                                                    "alias" : "subcomponents.total_marks",
                                                     "options": "[]"
   
                                                 },
                                                 ,
                                                 {
-                                                    "name": "requiredLectures",
-                                                    "label": "Required Lectures",
+                                                    "name": "weightage",
+                                                    "label": "Weightage",
                                                     "title": "",
                                                     "type": "textField",
                                                     "required": false,
@@ -417,17 +589,17 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_requiredLectures",
-                                                    "alias" : "plannedcourses.required_lectures",
+                                                    "dynamicKey": "subcomponents_weightage",
+                                                    "alias" : "subcomponents.weightage",
                                                     "options": "[]"
   
                                                 },
                                                 ,
                                                 {
-                                                    "name": "courseDescription",
-                                                    "label": "Course Description",
+                                                    "name": "isPublic",
+                                                    "label": "Is Public",
                                                     "title": "",
-                                                    "type": "textField",
+                                                    "type": "checkbox",
                                                     "required": false,
                                                     "hideInCreateForm": false,
                                                     "visible": true,
@@ -439,15 +611,15 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_courseDescription",
-                                                    "alias" : "plannedcourses.course_description",
+                                                    "dynamicKey": "subcomponents_isPublic",
+                                                    "alias" : "subcomponents.is_public",
                                                     "options": "[]"
   
                                                 },
                                                 ,
                                                 {
-                                                    "name": "courseObjective",
-                                                    "label": "Course Objective",
+                                                    "name": "config",
+                                                    "label": "Config",
                                                     "title": "",
                                                     "type": "textField",
                                                     "required": false,
@@ -461,8 +633,8 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_courseObjective",
-                                                    "alias" : "plannedcourses.course_objective",
+                                                    "dynamicKey": "subcomponents_config",
+                                                    "alias" : "subcomponents.config",
                                                     "options": "[]"
   
                                                 }
@@ -470,16 +642,16 @@ export const parameters = {
                                             ,
                                                 {
                                                   "type": "tableOfFields",
-                                                  "name": "plannedcourses",
-                                                  "label": "Add Plannedcourses",
+                                                  "name": "subcomponents",
+                                                  "label": "Add Subcomponents",
                                                   "hideInCreateForm": true,
-                                                 "selectServerUrl":"/grouped/cruds/user_roles_designations_department?version=1.0",
+                                                 "selectServerUrl":"/grouped/cruds/socket_activity_log?version=1.0",
                                                   "hideInViewForm": false,
-                                                  "title": "Select Plannedcourses",
+                                                  "title": "Select Subcomponents",
                                                   "dependancyCheck": false,
                                                   "childFields": [
                                                   {
-                                                  "name": "plannedcourses", 
+                                                  "name": "subcomponents", 
                                                   "type": "section",
                                                   "hideInCreateForm": false,
                                                   "visible": true,
@@ -489,7 +661,7 @@ export const parameters = {
                                                   "dependancyCheck": false,
                                                   "isPrefilled": false,
                                                   "source": "req.body",
-                                                  "title": "Plannedcourses",
+                                                  "title": "Subcomponents",
                                                   "childFields":[
                                                 
                                                   
@@ -497,36 +669,70 @@ export const parameters = {
 
 
  
+                                                ,
+                                              {
+                                                  "name": "date",
+                                                  "label": "Date",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "subcomponents_date"
+                                              },
+                                                ,
+                                              {
+                                                  "name": "startTime",
+                                                  "label": "Start Time",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "subcomponents_startTime"
+                                              },
+                                                ,
+                                              {
+                                                  "name": "endTime",
+                                                  "label": "End Time",
+                                                  "title": "",
+                                                  "type": "dateTime",
+                                                    "required": false,
+                                                  "hideInCreateForm": false,
+                                                  "visible": true,
+                                                  "disabled": false,
+                                                  "dependancyCheck": false,
+                                                  "isPrefilled": false,
+                                                  "source": "req.body",
+                                                  "min": "",
+                                                  "max": "",
+                                                  "validations": [],
+                                                  "selectServer": false,
+                                                  "dynamicKey": "subcomponents_endTime"
+                                              }
                                                 ]
                                               }
                                             
                                                     ,
                                                     {
-                                                        "name": "semesterId",
-                                                        "label": "Semester Id",
-                                                        "title": "",
-                                                        "type": "select",
-                                                    "required": true,
-                                                        "hideInCreateForm": false,
-                                                        "hideInViewForm": true,
-                                                        "visible": false,
-                                                        "disabled": false,
-                                                        "dependancyCheck": false,
-                                                        "isPrefilled": false,
-                                                        "source": "req.body",
-                                                        "min": "",
-                                                        "max": "",
-                                                        "validations": [],
-                                                        "selectServer": true,
-                                                        "dynamicKey": "plannedcourses_semesterId",
-                                                        "selectServerUrl": "/semesters/dropdown?version=1.0",
-                                                        "alias" : "plannedcourses.semester_id"
-                                                    }
-                                                    ,
-                                                    ,
-                                                    {
-                                                        "name": "domainId",
-                                                        "label": "Domain Id",
+                                                        "name": "componentId",
+                                                        "label": "Component Id",
                                                         "title": "",
                                                         "type": "select",
                                                     "required": false,
@@ -541,34 +747,9 @@ export const parameters = {
                                                         "max": "",
                                                         "validations": [],
                                                         "selectServer": true,
-                                                        "dynamicKey": "plannedcourses_domainId",
-                                                        "selectServerUrl": "/domains/dropdown?version=1.0",
-                                                        "alias" : "plannedcourses.domain_id"
-                                                    }
-                                                    ,
-                                                    ,
-                                                    {
-                                                      "name": "attachmentId",
-                                                      "label": "Attachment",
-                                                      "title": "",
-                                                      "type": "file",
-                                                      "required": false,
-                                                      "isMultiple" : false,
-                                                      "hideInCreateForm": false,
-                                                      "hideInViewForm": false,
-                                                      "fetchSubmitUrl": "/get/file/url/s3?step=1",
-                                                      "getFileUrl": "/get/file?step=1&token=",
-                                                      "visible": true,
-                                                      "disabled": false,
-                                                      "dependancyCheck": false,
-                                                      "isPrefilled": false,
-                                                      "source": "req.body",
-                                                      "min": "",
-                                                      "max": "",
-                                                      "validations": [],
-                                                      "dynamicKey" : "plannedcourses_image",
-                                                      "selectServer": false,
-                                                      "alias" : "plannedcourses.image"
+                                                        "dynamicKey": "subcomponents_componentId",
+                                                        "selectServerUrl": "/classcomponent/dropdown?version=1.0",
+                                                        "alias" : "subcomponents.component_id"
                                                     }
                                                     
                                            
@@ -593,8 +774,8 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_createdAt",
-                                                    "alias" : "plannedcourses.created_at"
+                                                    "dynamicKey": "subcomponents_createdAt",
+                                                    "alias" : "subcomponents.created_at"
                                                 },
                                                 ,
                                                 {
@@ -614,8 +795,8 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_updatedAt",
-                                                    "alias" : "plannedcourses.updated_at"
+                                                    "dynamicKey": "subcomponents_updatedAt",
+                                                    "alias" : "subcomponents.updated_at"
                                                 }
                                               
                                                   ,
@@ -635,12 +816,12 @@ export const parameters = {
                                                     "max": "",
                                                     "validations": [],
                                                     "selectServer": false,
-                                                    "dynamicKey": "plannedcourses_status",
+                                                    "dynamicKey": "subcomponents_status",
                                                     options:[
                                                         {value:'inactive',label:'inactive'},
                                                         {value:'active',label:'active'}
                                                     ],
-                                                    "alias" : "plannedcourses.status"
+                                                    "alias" : "subcomponents.status"
                                                 }
                                                  
     
@@ -648,248 +829,8 @@ export const parameters = {
                                     }
                                 ]
                             },
-                            "permission": "view_plannedcourses"
-                        },
-                        {
-                            "title": "questionssolution Info",
-                            "parameters": {
-                                "fields": [
-                                    {
-                                        "name": "questionssolution",
-                                        "type": "section",
-                                        "hideInCreateForm": false,
-                                        "visible": false,
-                                        "required": false,
-                                        "disabled": false,
-                                        "validations": "",
-                                        "dependancyCheck": false,
-                                        "isPrefilled": false,
-                                        "source": "req.body",
-                                        "title": "Attachments",
-                                        "childFields": [
-                                            {
-                                              "name": "id",
-                                              "label": "id",
-                                              "title": "",
-                                              "type": "textField",
-                                              "required": false,
-                                              "hideInCreateForm": true,
-                                              "hideInViewForm" : true,
-                                              "visible": true,
-                                              "disabled": false,
-                                              "dependancyCheck": false,
-                                              "isPrefilled": false,
-                                              "source": "req.query",
-                                              "min": "",
-                                              "max": "",
-                                              "selectServer": false,
-                                              "dynamicKey": "id"
-                                            },
-                                            
-                                                ,
-                                                {
-                                                    "name": "options",
-                                                    "label": "Options",
-                                                    "title": "",
-                                                    "type": "textField",
-                                                    "required": false,
-                                                    "hideInCreateForm": false,
-                                                    "visible": true,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "questionssolution_options",
-                                                    "alias" : "questionssolution.options",
-                                                    "options": "[]"
-  
-                                                }
-                                            
-                                            ,
-                                                {
-                                                  "type": "tableOfFields",
-                                                  "name": "questionssolution",
-                                                  "label": "Add Questionssolution",
-                                                  "hideInCreateForm": false,
-                                                 "selectServerUrl":"/grouped/cruds/user_roles_designations_department?version=1.0",
-                                                  "hideInViewForm": false,
-                                                  "title": "Select Questionssolution",
-                                                  "dependancyCheck": false,
-                                                  "childFields": [
-                                                  {
-                                                  "name": "questionssolution", 
-                                                  "type": "section",
-                                                  "hideInCreateForm": false,
-                                                  "visible": true,
-                                                  "required": false,
-                                                  "disabled": false,
-                                                  "validations": "",
-                                                  "dependancyCheck": false,
-                                                  "isPrefilled": false,
-                                                  "source": "req.body",
-                                                  "title": "Questionssolution",
-                                                  "childFields":[
-                                                
-                                                  
-                                                    ,
-                                                    {
-                                                        "name": "questionId",
-                                                        "label": "Question Id",
-                                                        "title": "",
-                                                        "type": "select",
-                                                    "required": false,
-                                                        "hideInCreateForm": false,
-                                                        "hideInViewForm": true,
-                                                        "visible": false,
-                                                        "disabled": false,
-                                                        "dependancyCheck": false,
-                                                        "isPrefilled": false,
-                                                        "source": "req.body",
-                                                        "min": "",
-                                                        "max": "",
-                                                        "validations": [],
-                                                        "selectServer": true,
-                                                        "dynamicKey": "questionssolution_questionId",
-                                                        "selectServerUrl": "/questions/dropdown?version=1.0",
-                                                        "alias" : "questionssolution.question_id"
-                                                    },
-                                                     {
-                                                        "name": "questionsName",
-                                                        "label": "QuestionsName",
-                                                        "title": "",
-                                                        "type": "textField",
-                                                    "required": false,
-                                                        "hideInCreateForm": true,
-                                                        "hideInViewForm": true,
-                                                        "visible": true,
-                                                        "disabled": false,
-                                                        "dependancyCheck": false,
-                                                        "isPrefilled": false,
-                                                        "source": "req.body",
-                                                        "min": "",
-                                                        "max": "",
-                                                        "validations": [],
-                                                        "selectServer": true,
-                                                        "dynamicKey": "questionssolution_questionsName",
-                                                        "selectServerUrl": "/questions/dropdown?version=1.0",
-                                                        "alias" : "questionssolution.questionsName"
-                                                    }
-                                                    ,
-                                                    ,
-                                                    {
-                                                      "name": "attachmentId",
-                                                      "label": "Attachment",
-                                                      "title": "",
-                                                      "type": "file",
-                                                      "required": false,
-                                                      "isMultiple" : false,
-                                                      "hideInCreateForm": false,
-                                                      "hideInViewForm": false,
-                                                      "fetchSubmitUrl": "/get/file/url/s3?step=1",
-                                                      "getFileUrl": "/get/file?step=1&token=",
-                                                      "visible": true,
-                                                      "disabled": false,
-                                                      "dependancyCheck": false,
-                                                      "isPrefilled": false,
-                                                      "source": "req.body",
-                                                      "min": "",
-                                                      "max": "",
-                                                      "validations": [],
-                                                      "dynamicKey" : "questionssolution_attachmentId",
-                                                      "selectServer": false,
-                                                      "alias" : "questionssolution.attachmentId"
-                                                    }
-                                                    
-
-
-
- 
-                                                ]
-                                              }
-                                            
-                                           
-                                               ]}
-    
-                                            
-                                                ,
-                                                {
-                                                    "name": "createdAt",
-                                                    "label": "Created At",
-                                                    "title": "",
-                                                    "type": "dateTime",
-                                                    "required": false,
-                                                    "hideInCreateForm": true,
-                                                    "hideInViewForm" : true,
-                                                    "visible": false,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "questionssolution_createdAt",
-                                                    "alias" : "questionssolution.created_at"
-                                                },
-                                                ,
-                                                {
-                                                    "name": "updatedAt",
-                                                    "label": "Updated At",
-                                                    "title": "",
-                                                    "type": "dateTime",
-                                                    "required": false,
-                                                    "hideInCreateForm": true,
-                                                    "hideInViewForm" : true,
-                                                    "visible": false,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "questionssolution_updatedAt",
-                                                    "alias" : "questionssolution.updated_at"
-                                                }
-                                              
-                                                  ,
-                                                {
-                                                    "name": "status",
-                                                    "label": "Status",
-                                                    "title": "",
-                                                    "type": "select",
-                                                    "required": false,
-                                                    "hideInCreateForm": true,
-                                                    "visible": false,
-                                                    "disabled": false,
-                                                    "dependancyCheck": false,
-                                                    "isPrefilled": false,
-                                                    "source": "req.body",
-                                                    "min": "",
-                                                    "max": "",
-                                                    "validations": [],
-                                                    "selectServer": false,
-                                                    "dynamicKey": "questionssolution_status",
-                                                    options:[
-                                                        {value:'inactive',label:'inactive'},
-                                                        {value:'active',label:'active'}
-                                                    ],
-                                                    "alias" : "questionssolution.status"
-                                                }
-                                                 
-    
-                                        ]
-                                    }
-                                ]
-                            },
-                            "permission": "view_questionssolution"
+                            "permission": "view_subcomponents"
                         }
                   ],
-                  "colMapper": { 'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'plannedcourses_plannedCourseId' : 'planned_course_id',  'plannedcourses_semesterId' : 'semester_id',  'plannedcourses_domainId' : 'domain_id',  'plannedcourses_courseName' : 'course_name',  'plannedcourses_creditHours' : 'credit_hours',  'plannedcourses_type' : 'type',  'plannedcourses_requiredLectures' : 'required_lectures',  'plannedcourses_courseDescription' : 'course_description',  'plannedcourses_courseObjective' : 'course_objective',  'plannedcourses_image' : 'image',  'plannedcourses_status' : 'status',  'plannedcourses_createdBy' : 'created_by',  'plannedcourses_updatedBy' : 'updated_by',  'plannedcourses_createdAt' : 'created_at',  'plannedcourses_updatedAt' : 'updated_at',  'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id',  'questionssolution_options' : 'options',  'questionssolution_status' : 'status',  'questionssolution_createdBy' : 'created_by',  'questionssolution_updatedBy' : 'updated_by',  'questionssolution_createdAt' : 'created_at',  'questionssolution_updatedAt' : 'updated_at'}
+                  "colMapper": { 'socket_activity_log_socketActivityLogId' : 'socket_activity_log_id',  'socket_activity_log_urddId' : 'urdd_id',  'socket_activity_log_subComponentId' : 'sub_component_id',  'socket_activity_log_activityDescription' : 'activity_description',  'socket_activity_log_createdOn' : 'created_on',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'subcomponents_subComponentId' : 'sub_component_id',  'subcomponents_componentId' : 'component_id',  'subcomponents_subComponentNum' : 'sub_component_num',  'subcomponents_text' : 'text',  'subcomponents_date' : 'date',  'subcomponents_startTime' : 'start_time',  'subcomponents_endTime' : 'end_time',  'subcomponents_totalMarks' : 'total_marks',  'subcomponents_weightage' : 'weightage',  'subcomponents_isPublic' : 'is_public',  'subcomponents_status' : 'status',  'subcomponents_config' : 'config',  'subcomponents_createdBy' : 'created_by',  'subcomponents_updatedBy' : 'updated_by',  'subcomponents_createdAt' : 'created_at',  'subcomponents_updatedAt' : 'updated_at'}
               };

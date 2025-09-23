@@ -1,0 +1,154 @@
+
+        {
+          "steps": [
+              {
+              "title": "socketActivityLog Info",
+              "parameters": {
+                  "fields": [
+                  {
+                      "name": "socketActivityLog",
+                      "type": "section",
+                      "hideInCreateForm": false,
+                      "visible": false,
+                      "required": false,
+                      "disabled": false,
+                      "validations": "",
+                      "dependancyCheck": false,
+                      "isPrefilled": false,
+                      "source": "req.body",
+                      "title": "Socket Activity Log",
+                      "childFields": [ 
+        {
+          "name": "id",
+          "label": "id",
+          "title": "",
+          "type": "textField",
+          "required": false,
+          "hideInCreateForm": true,
+          "hideInViewForm" : true,
+          "visible": true,
+          "disabled": false,
+          "dependancyCheck": false,
+          "isPrefilled": false,
+          "source": "req.query",
+          "min": "",
+          "max": "",
+          "selectServer": false,
+          "dynamicKey": "id"
+        }
+        
+            ,
+            {
+                "name": "activityDescription",
+                "label": "Activity Description",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "socketActivityLog_activityDescription",
+                "alias" : "socket_activity_log.activity_description",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "createdOn",
+                "label": "Created On",
+                "title": "",
+                "type": "textField",
+                "required": true,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "socketActivityLog_createdOn",
+                "alias" : "socket_activity_log.created_on",
+                "options": []
+
+            }  
+          
+            
+        
+                ,
+                {
+                    "name": "urddId",
+                    "label": "Urdd Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "socketActivityLog_urddId",
+                    "selectServerUrl": "/user_roles_designations_department/dropdown?version=1.0",
+                    "alias" : "socket_activity_log.urdd_id"
+                }
+                
+                ,
+                {
+                    "name": "subComponentId",
+                    "label": "Sub Component Id",
+                    "title": "",
+                    "type": "select",
+                    "required": false,
+                    "hideInCreateForm": false,
+                    "hideInViewForm": true,
+                    "visible": false,
+                    "disabled": false,
+                    "dependancyCheck": false,
+                    "isPrefilled": false,
+                    "source": "req.body",
+                    "min": "",
+                    "max": "",
+                    "validations": [],
+                    "selectServer": true,
+                    "dynamicKey": "socketActivityLog_subComponentId",
+                    "selectServerUrl": "/subcomponents/dropdown?version=1.0",
+                    "alias" : "socket_activity_log.sub_component_id"
+                }
+                
+          
+            
+
+          
+     
+                      ]
+                  }
+                  ]
+              },
+              "buttons": [
+                  {
+                  "type": "submit",
+                  "label": "Submit"
+                  }
+              ]
+              }
+          ],
+          "colMapper": "{socket_activity_log.socket_activity_log_id as socketActivityLog_socketActivityLogId,socket_activity_log.urdd_id as socketActivityLog_urddId,socket_activity_log.sub_component_id as socketActivityLog_subComponentId,socket_activity_log.activity_description as socketActivityLog_activityDescription,socket_activity_log.created_on as socketActivityLog_createdOn}"
+          }
+        

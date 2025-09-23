@@ -65,7 +65,7 @@ async function getFileUploadUrl_s3(protocol, host, fileType, bucket) {
         });
         const uploadUrl = await getSignedUrl(client, command, { expiresIn: 3600 });
         const token = jwt.sign({ attachmentId }, SECRET_KEY, { expiresIn: '1h' });
-        return { uploadUrl, token };
+        return { uploadUrl, token, attachmentId };
     } catch (s3Error) {
         throw new Error('Error generating presigned URL');
     }

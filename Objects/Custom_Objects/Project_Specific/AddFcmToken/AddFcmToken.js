@@ -1,6 +1,29 @@
+const projectDB = require("../../../../Database/projectDb");
+const { executeQuery } = require("../../../../Database/queryExecution.js");
+const db = require("../../../../Database/databaseAbstraction");
 
 
-global.Announcement_object = {
+async function addfcmtoken(req, decryptedPayload) {    
+
+    const objectResolverOutput = decryptedPayload["objectResolverOutput"]; 
+    console.log("check thissss:::::", objectResolverOutput);
+    fcm_token = objectResolverOutput.fcm_token;
+
+    const actionPerformerURDD = req.query.actionPerformerURDD || req.body.userId;
+    
+    const userIdQuery = `select user_id from user_roles_designations_department urdd where urdd.user_role_designation_department_id = ?`;
+    const userIdQueryResult = await executeQuery(quizInfoQuery, [actionPerformerURDD], projectDB, false);
+    if (userIdQueryResult.length == 0) {
+        throw new Error("No User Id found for user");
+    }
+    
+    const user_id = userIdQueryResult[0].user_id;
+    const fcmTokenUpdateQuery = `Update user_devices set fcm_token = ? where user_id = ?`;
+    const fcmTokenUpdateQueryResult = await executeQuery(quizInfoQuery, [fcm_token,user_id], projectDB, false);
+    return objectResolverOutput;
+      
+}
+global.Addfcmtoken_object = {
     "versions": {
         "versionData": [{
             "*": {
@@ -13,11 +36,11 @@ global.Announcement_object = {
                                 "pagination": false,
                             },
                             "communication": {
-                                // "encryption": false
-                                "encryption": {
-                                    "platformEncryption": true,
-                                    //   "accessTokenEncryption": false,
-                                }
+                                "encryption": false
+                                // "encryption": {
+                                //     "platformEncryption": true,
+                                //     //   "accessTokenEncryption": false,
+                                // }
                             },
                             "verification": {
                                 "otp": false,
@@ -29,9 +52,15 @@ global.Announcement_object = {
                                 "fields":
                                     [
                                         {
-                                            "name": "actionPerformerURDD",
+                                            "name": "ActionPerformerURDD",
                                             "validations": [],
                                             "required": false,
+                                            "source": "req.query"
+                                        },
+                                        {
+                                            "name": "fcm_token",
+                                            "validations": [],
+                                            "required": true,
                                             "source": "req.body"
                                         }
                                     ]
@@ -41,23 +70,14 @@ global.Announcement_object = {
                                 preProcessFunction: [],
                                 "query": {
                                     "queryNature": "",
-                                    "queryPayload": `
-                                    SELECT c.component_id AS id, c.component_type AS type, c.component_name AS title, sc.sub_component_id as quiz_id, sc.start_time, sc.end_time, sc.text AS description, pc.course_name AS course, sc.status, sc.updated_at
-                                    FROM subcomponents sc
-                                    JOIN classcomponent c ON sc.component_id = c.component_id
-                                    JOIN courses co ON c.course_id = co.course_id
-                                    JOIN plannedcourses pc ON co.planned_course_id = pc.planned_course_id
-                                    JOIN enrollements e ON c.course_id = e.course_id
-                                    JOIN studentsemesters ss ON e.student_semester_id = ss.student_semester_id
-                                    JOIN students s ON ss.student_user_id = s.student_user_id
-                                    WHERE s.urdd_id = {{actionPerformerURDD}} AND sc.status = 'active' AND sc.end_time >= NOW()`,
+                                    "queryPayload": null,
                                     "database": "projectDB"
                                 },
                                 "utilityFunctions": {
                                     "callbackFunction": null,
                                     "payloadFunction": []
                                 },
-                                postProcessFunction: null
+                                postProcessFunction: addfcmtoken
                             }
                             ,
                             "requestMetaData": {
@@ -78,4 +98,4 @@ global.Announcement_object = {
         }]
     }
 }
-module.exports = { Announcement_object };
+module.exports = { Addfcmtoken_object };

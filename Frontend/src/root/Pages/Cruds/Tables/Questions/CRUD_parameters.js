@@ -107,6 +107,29 @@
                 "alias" : "questions.question_marks",
                 "options": []
 
+            }
+            ,
+            {
+                "name": "config",
+                "label": "Config",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "questions_config",
+                "alias" : "questions.config",
+                "options": []
+
             }  
         
             ,
@@ -285,5 +308,5 @@
                     ]
                     }
                 ],
-                "colMapper": "{ 'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at',  'questions_topicName' : 'topic_name'}"
+                "colMapper": "{ 'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_config' : 'config',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at',  'questions_topicName' : 'topic_name'}"
                 };

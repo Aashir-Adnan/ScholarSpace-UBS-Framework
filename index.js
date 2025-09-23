@@ -4,6 +4,8 @@ const applyMiddleware = require('./ProtectionProtocols/middleware.js');
 const { requireAllJSFiles } = require('./scripts/ServerScripts/requiringScript.js');
 const path = require('path');
 const multer = require('multer')
+const http = require('http');
+const setupWebSocket = require('./WebSocket/WebSocket');
 require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
 const {
   paginateListBuckets,
@@ -115,8 +117,10 @@ async function initializeApp() {
 
     app.use('', apiRoutes());
 
+    const server = http.createServer(app);
+    const wsServer = setupWebSocket(server);
     
-    app.listen(port, () => {
+    server.listen(port, () => {
       console.log(`Server is running on port ${port}`);
       //initializeAutoRenewal();
     });

@@ -15,7 +15,7 @@ global.StudentDashboard_object = {
               "communication": {
                 "encryption": {
                   "platformEncryption": true,
-                  "accessToken": true
+                  // "accessToken": true
                 },
                 // "encryption": false
 
@@ -29,6 +29,7 @@ global.StudentDashboard_object = {
               "parameters": {
                 "fields": 
                   [
+                      
                   ]
               },
               "apiInfo": 
@@ -46,7 +47,7 @@ global.StudentDashboard_object = {
                 }
               ,
               "requestMetaData": {
-                "requestMethod": {"List" : "GET", "View" : "GET"},
+                "requestMethod": {"List" : "GET", "View" : "GET", "Add" : "POST"},
                 "permission": null,
                 "pagination": {
                   "pageSize": 10

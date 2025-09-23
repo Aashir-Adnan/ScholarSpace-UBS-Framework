@@ -1,0 +1,154 @@
+
+        {
+          "steps": [
+              {
+              "title": "quizBlockedUsers Info",
+              "parameters": {
+                  "fields": [
+                  {
+                      "name": "quizBlockedUsers",
+                      "type": "section",
+                      "hideInCreateForm": false,
+                      "visible": false,
+                      "required": false,
+                      "disabled": false,
+                      "validations": "",
+                      "dependancyCheck": false,
+                      "isPrefilled": false,
+                      "source": "req.body",
+                      "title": "Quiz Blocked Users",
+                      "childFields": [ 
+        {
+          "name": "id",
+          "label": "id",
+          "title": "",
+          "type": "textField",
+          "required": false,
+          "hideInCreateForm": true,
+          "hideInViewForm" : true,
+          "visible": true,
+          "disabled": false,
+          "dependancyCheck": false,
+          "isPrefilled": false,
+          "source": "req.query",
+          "min": "",
+          "max": "",
+          "selectServer": false,
+          "dynamicKey": "id"
+        }
+        
+            ,
+            {
+                "name": "urddId",
+                "label": "Urdd Id",
+                "title": "",
+                "type": "number",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "quizBlockedUsers_urddId",
+                "alias" : "quiz_blocked_users.urdd_id",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "subComponentId",
+                "label": "Sub Component Id",
+                "title": "",
+                "type": "number",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "quizBlockedUsers_subComponentId",
+                "alias" : "quiz_blocked_users.sub_component_id",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "questionId",
+                "label": "Question Id",
+                "title": "",
+                "type": "number",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "quizBlockedUsers_questionId",
+                "alias" : "quiz_blocked_users.question_id",
+                "options": []
+
+            }
+            ,
+            {
+                "name": "reason",
+                "label": "Reason",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "quizBlockedUsers_reason",
+                "alias" : "quiz_blocked_users.reason",
+                "options": []
+
+            }  
+          
+            
+        
+          
+            
+
+          
+     
+                      ]
+                  }
+                  ]
+              },
+              "buttons": [
+                  {
+                  "type": "submit",
+                  "label": "Submit"
+                  }
+              ]
+              }
+          ],
+          "colMapper": "{quiz_blocked_users.quiz_blocked_users_id as quizBlockedUsers_quizBlockedUsersId,quiz_blocked_users.urdd_id as quizBlockedUsers_urddId,quiz_blocked_users.sub_component_id as quizBlockedUsers_subComponentId,quiz_blocked_users.question_id as quizBlockedUsers_questionId,quiz_blocked_users.reason as quizBlockedUsers_reason}"
+          }
+        

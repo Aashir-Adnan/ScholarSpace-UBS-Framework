@@ -56,13 +56,13 @@ import PersonIcon from '@mui/icons-material/Person';
         "Questionevaluations": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Questions": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Questionssolution": <GroupIcon sx={{color: "#FF6347"}}/>,
-        "Questions Solution Options": <GroupIcon sx={{color: "#FF6347"}}/>,
-        "Question Answers Submitted": <GroupIcon sx={{color: "#FF6347"}}/>,
+        "Quiz Blocked Users": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Registereddevices": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Roles": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Roles Designations Department": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Rooms": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Semesters": <GroupIcon sx={{color: "#FF6347"}}/>,
+        "Socket Activity Log": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Students": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Studentsemesters": <GroupIcon sx={{color: "#FF6347"}}/>,
         "Studentsubmissionattachment": <GroupIcon sx={{color: "#FF6347"}}/>,
@@ -756,31 +756,16 @@ import PersonIcon from '@mui/icons-material/Person';
                 ]
               },
               {
-                title: "Questions Solution Options Management",
-                icon: iconMapping["Questions Solution Options"],
-                path: "/QuestionsSolutionOptions-managements/Questions_solution_options",
-                permission: ["view_questions_solution_options"],
+                title: "Quiz Blocked Users Management",
+                icon: iconMapping["Quiz Blocked Users"],
+                path: "/QuizBlockedUsers-managements/Quiz_blocked_users",
+                permission: ["view_quiz_blocked_users"],
                 subNav: [
                   
                       {
-                        title: "Questions Solution Options",
-                        path: "/QuestionsSolutionOptions-managements/Questions_solution_options",
-                        permission: ["view_questions_solution_options"]
-                      }
-                    
-                ]
-              },
-              {
-                title: "Question Answers Submitted Management",
-                icon: iconMapping["Question Answers Submitted"],
-                path: "/QuestionAnswersSubmitted-managements/Question_answers_submitted",
-                permission: ["view_question_answers_submitted"],
-                subNav: [
-                  
-                      {
-                        title: "Question Answers Submitted",
-                        path: "/QuestionAnswersSubmitted-managements/Question_answers_submitted",
-                        permission: ["view_question_answers_submitted"]
+                        title: "Quiz Blocked Users",
+                        path: "/QuizBlockedUsers-managements/Quiz_blocked_users",
+                        permission: ["view_quiz_blocked_users"]
                       }
                     
                 ]
@@ -856,6 +841,21 @@ import PersonIcon from '@mui/icons-material/Person';
                         title: "Semesters",
                         path: "/Semesters-managements/Semesters",
                         permission: ["view_semesters"]
+                      }
+                    
+                ]
+              },
+              {
+                title: "Socket Activity Log Management",
+                icon: iconMapping["Socket Activity Log"],
+                path: "/SocketActivityLog-managements/Socket_activity_log",
+                permission: ["view_socket_activity_log"],
+                subNav: [
+                  
+                      {
+                        title: "Socket Activity Log",
+                        path: "/SocketActivityLog-managements/Socket_activity_log",
+                        permission: ["view_socket_activity_log"]
                       }
                     
                 ]

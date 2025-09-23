@@ -38,7 +38,30 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
-          
+        
+            ,
+            {
+                "name": "options",
+                "label": "Options",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "questionssolution_options",
+                "alias" : "questionssolution.options",
+                "options": []
+
+            }  
           
             
         
@@ -173,5 +196,5 @@
                     ]
                     }
                 ],
-                "colMapper": "{ 'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id',  'questionssolution_status' : 'status',  'questionssolution_createdBy' : 'created_by',  'questionssolution_updatedBy' : 'updated_by',  'questionssolution_createdAt' : 'created_at',  'questionssolution_updatedAt' : 'updated_at'}"
+                "colMapper": "{ 'questionssolution_questionsHelpGuideId' : 'questions_help_guide_id',  'questionssolution_questionId' : 'question_id',  'questionssolution_attachmentId' : 'attachment_id',  'questionssolution_options' : 'options',  'questionssolution_status' : 'status',  'questionssolution_createdBy' : 'created_by',  'questionssolution_updatedBy' : 'updated_by',  'questionssolution_createdAt' : 'created_at',  'questionssolution_updatedAt' : 'updated_at'}"
                 };

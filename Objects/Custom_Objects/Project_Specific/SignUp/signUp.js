@@ -1,10 +1,14 @@
 const otpVerif = require("../../../../Constants/otpVerif");
 const { executeQuery } = require("../../../../Database/queryExecution");
 const { signUpVerif } = require("../../../../UtilityFunctions/PreProcessingFunctions/signUpVerif")
-async function insertEntries(req, decryptedPayload) {
-    const signUpPayload = decryptedPayload["signUpVerif"];
+const generatePayload=require("../../../../Constants/generatePayload")
+const generateToken = require('../../../../Constants/jwtUtils');
 
-    if (global.isValidDomain(signUpPayload) !== true) {
+async function insertEntries(req, decryptedPayload) {
+    const signUpPayload = decryptedPayload["signUpVerif"];  
+    console.log("decrypted payload ============================" , signUpPayload );
+    console.log(global.isValidDomain(signUpPayload))
+    if (await global.isValidDomain(signUpPayload) != true) {
         throw new Error("Domain not allowed");
     }
 
@@ -20,7 +24,7 @@ async function insertEntries(req, decryptedPayload) {
         user_id = (
             await executeQuery(
                 `INSERT INTO users (email, username, first_name, last_name, created_by, updated_by) 
-                 VALUES (?, ?, ?, ?, ?, 1, 1)`,
+                 VALUES (?, ?, ?, ?, 1, 1)`,
                 [
                     signUpPayload.email,
                     signUpPayload.name,
@@ -50,14 +54,14 @@ async function insertEntries(req, decryptedPayload) {
     )[0].department_id;
 
     let rdd = await executeQuery(
-        `SELECT rdd_id FROM roles_designations_department 
+        `SELECT role_designation_department_id  FROM roles_designations_department 
          WHERE role_id = ? AND designation_id = ? AND department_id = ?`,
         [role_id, designation_id, department_id]
     );
 
     let rdd_id;
     if (rdd.length > 0) {
-        rdd_id = rdd[0].rdd_id;
+        rdd_id = rdd[0].role_designation_department_id;
     } else {
         rdd_id = (
             await executeQuery(
@@ -70,14 +74,14 @@ async function insertEntries(req, decryptedPayload) {
 
 
     let urdd = await executeQuery(
-        `SELECT urdd_id FROM user_roles_designations_department 
+        `SELECT user_role_designation_department_id  FROM user_roles_designations_department 
          WHERE user_id = ? AND role_designation_department_id = ?`,
         [user_id, rdd_id]
     );
 
     let urdd_id;
     if (urdd.length > 0) {
-        urdd_id = urdd[0].urdd_id;
+        urdd_id = urdd[0].user_role_designation_department_id;
     } else {
         urdd_id = (
             await executeQuery(
@@ -92,16 +96,20 @@ async function insertEntries(req, decryptedPayload) {
 }
 
 async function returnAccessToken(req, decryptedPayload) {
+    let deviceId; 
+    let device_name = decryptedPayload["device_name"];
+    let urdd_id = decryptedPayload["insertEntries"];
     const userQuery = `
         SELECT u.*, a.attachment_link as user_image 
         FROM users u  
         LEFT JOIN attachments a ON u.image_attachment_id = a.attachment_id
         JOIN user_roles_designations_department urdd ON u.user_id = urdd.user_id
         WHERE urdd.user_role_designation_department_id = ?`;
-    const userResult = await executeQuery(userQuery, [decryptedPayload.insertEntries.urdd_id]);
+    console.log(decryptedPayload.insertId);
+    const userResult = await executeQuery(userQuery, [decryptedPayload.insertEntries]);
 
     if (userResult.length === 0) {
-        throw new Error("User not found with email " + email);
+        throw new Error("User not found with email ");
     }
 
     const userId = userResult[0].user_id;
@@ -120,35 +128,13 @@ async function returnAccessToken(req, decryptedPayload) {
             VALUES (?, ?, ?, ?, ?)
         `;
         
-        const insertDeviceResult = await executeQuery(insertDeviceQuery, [userId, null,  device_name, 1, device_name + " " + os_version]);
+        // const insertDeviceResult = await executeQuery(insertDeviceQuery, [userId, null,  device_name, 1, device_name + " " + os_version]);
+        const insertDeviceResult = await executeQuery(insertDeviceQuery, [userId, null,  device_name, 1, device_name]);
+
         deviceId = insertDeviceResult.insertId;
 
-        const otpQuery = `  
-          INSERT INTO device_otp (user_device_id, otp, otp_failure_count)
-          VALUES (?,?,?)
-        `;
-        
-        otpResult = await executeQuery(otpQuery, [deviceId, OTP, 0]);
-    } else {
-        deviceId = deviceResult[0]?.user_device_id;
-        const checkDeviceOtp =  `SELECT * FROM device_otp WHERE user_device_id = ?`
-        let checkResults = await executeQuery(checkDeviceOtp, [deviceId]);
-        if (checkResults.length == 0){
-          const insertDevice = `
-            INSERT INTO device_otp (user_device_id, otp, otp_failure_count) VALUES (?,?,?)
-          `
-          await executeQuery(insertDevice, [deviceId, null, 0]);
-        }
-        const otpQuery = `
-          UPDATE device_otp
-          SET otp = ?
-          WHERE user_device_id = ?
-        `;
-        
-        otpResult = await executeQuery(otpQuery, [OTP, deviceId]);
-
-    }
-    const deviceId =  1; 
+      
+    } 
 
     const userDeviceDataQuery = `
         SELECT ud.*
@@ -252,7 +238,7 @@ async function returnAccessToken(req, decryptedPayload) {
         WHERE u.user_id = ?;
     `
     const compound_user = await executeQuery(compoundUserDataQuery, [userId])
-    const payload = await generatePayload(userId, deviceId, OTP);
+    const payload = await generatePayload(userId, deviceId, null);
     const token = await generateToken(payload, process.env.SECRET_KEY);
 
     const groupedPermissions = user_roles_designations_department.reduce((acc, urdd) => {
@@ -265,7 +251,7 @@ async function returnAccessToken(req, decryptedPayload) {
     }, {});
     
 
-    const returnObject = {
+    return returnObject = {
         user_id: userResult[0]?.user_id,
         user: userResult[0],
         device_name: device_name,
@@ -278,6 +264,7 @@ async function returnAccessToken(req, decryptedPayload) {
         collective_user_permissions: collective_user_permission,
         user_departments : user_department,
         user_designations : user_designation,
+        urdd_id: urdd_id,
     };
 }
 
@@ -321,11 +308,7 @@ global.SignUp_object = {
                                             "required": true,
                                             "source": "req.body"
                                         },
-                                        {
-                                            "name": "phone_no",
-                                            "required": true,
-                                            "source": "req.body",
-                                        },
+                                      
                                     ]
                             },
                             "apiInfo":
@@ -352,8 +335,8 @@ global.SignUp_object = {
                             }
                         },
                         "response": {
-                            "successMessage": "Configuration generated successfully!",
-                            "errorMessage": "There was an error generating the configuration."
+                            "successMessage": "Signup successfull!",
+                            "errorMessage": "There was an error signing up user."
                         }
                     }
                 ]

@@ -1,18 +1,18 @@
 {
             "data": {
             "features": {
-                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"componentId","label":"Component Id","alias":"subcomponents.componentId","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)"},
+                "tabs": {"permission":"filter_${table.toLowerCase()}_by_tabs","name":"urddId","label":"Urdd Id","alias":"socket_activity_log.urddId","serverCommunication":{"parameters":"parameters","apiUrl":"","apiActionType":"","requestType":"","reduxActionType":""},"onAction":"(e) => console.log('Tab Action', e)"},
                 "parameters": "parameters",
                 "rowActions": {
                 "actions": [
                     {
                       "name": "Edit",
                       "color": "blue",
-                      "permission": "update_subcomponents",
+                      "permission": "update_socket_activity_log",
                       "form": {
                         "parameters":"parameters",
                          
-                          "apiUrl": "/crud/subcomponents?version=1.0",
+                          "apiUrl": "/crud/socket_activity_log?version=1.0",
                         "requestType": "PUT",
                         "mode":"edit"
                       }
@@ -20,20 +20,20 @@
                     {
                       "name": "Delete",
                       "color": "red",
-                      "permission": "delete_subcomponents",
+                      "permission": "delete_socket_activity_log",
                       "serverCommunication": {
                         "parameters":"parameters",
-                        "apiUrl":"/crud/subcomponents?version=1.0",
+                        "apiUrl":"/crud/socket_activity_log?version=1.0",
                         "requestType": "DELETE"
                       }
                     },
                     {
                       "name": "View",
                       "color": "grey",
-                      "permission": "view_subcomponents",
+                      "permission": "view_socket_activity_log",
                       "form": {
                         "parameters":"parameters",
-                        "apiUrl": "/crud/subcomponents?version=1.0",
+                        "apiUrl": "/crud/socket_activity_log?version=1.0",
                         "requestType": "GET",
                         "mode":"view"
                       }
@@ -42,11 +42,11 @@
                 },
                 "bulkAction": {
                   "add": {
-                    "permission":"add_subcomponents",
+                    "permission":"add_socket_activity_log",
                     "form": {
                       "parameters":"parameters",
                       
-                      "apiUrl": "/crud/subcomponents?version=1.0",
+                      "apiUrl": "/crud/socket_activity_log?version=1.0",
                       "requestType": "POST",
                       "mode":"create"
                     }
@@ -66,7 +66,7 @@
                   }
                 },
                 "export": {
-                  "permission": "export_subcomponents",
+                  "permission": "export_socket_activity_log",
                       "serverCommunication": {
                       "parameters":"parameters",
                       "apiUrl": "",
@@ -81,7 +81,7 @@
                   }
                 },
                 "filter": {
-                  "permission": "filter_subcomponents",
+                  "permission": "filter_socket_activity_log",
                       "serverCommunication": {
                       "parameters":"parameters",
                       "apiUrl": "",
@@ -91,14 +91,14 @@
                     },
                   "options": {
                       "filterBy": [
-                          "subcomponents_subComponentId", "subcomponents_componentId", "subcomponents_subComponentNum", "subcomponents_text", "subcomponents_date", "subcomponents_startTime", "subcomponents_endTime", "subcomponents_totalMarks", "subcomponents_weightage", "subcomponents_isPublic", "subcomponents_status", "subcomponents_config", "subcomponents_createdBy", "subcomponents_updatedBy", "subcomponents_createdAt", "subcomponents_updatedAt"
+                          "socket_activity_log_socketActivityLogId", "socket_activity_log_urddId", "socket_activity_log_subComponentId", "socket_activity_log_activityDescription", "socket_activity_log_createdOn"
                       ],
                       "statusOptions": ["active", "inactive"]
                   },
                   "excludeFilter": []
                 },
                 "sort": {
-                  "permission": "sort_subcomponents",
+                  "permission": "sort_socket_activity_log",
                       "serverCommunication": {
                       "parameters":"parameters",
                       "apiUrl": "",
@@ -114,17 +114,17 @@
                   "excludeSort": []
                 },
                 "list": {
-                  "permission":"list_subcomponents",
+                  "permission":"list_socket_activity_log",
                       "serverCommunication": {
                       "parameters":"parameters",
-                      "apiUrl":  "/crud/subcomponents?version=1.0",
+                      "apiUrl":  "/crud/socket_activity_log?version=1.0",
                       "apiActionType": "",
                       "requestType": "GET",
                       "reduxActionType": ""
                     }
                   },
                   "search": {
-                  "permission": "search_subcomponents",
+                  "permission": "search_socket_activity_log",
                   "excludeSearch": ["image"],
                       "serverCommunication": {
                       "parameters":"parameters",
@@ -145,10 +145,10 @@
                   "permission": true,
                     "serverCommunication": {
                       "parameters":"parameters",
-                      "apiUrl": "/crud/subcomponents?version=1.0",
-                      "apiActionType": "subcomponents_view",
+                      "apiUrl": "/crud/socket_activity_log?version=1.0",
+                      "apiActionType": "socket_activity_log_view",
                       "requestType": "GET",
-                      "reduxActionType": "subcomponents_view"
+                      "reduxActionType": "socket_activity_log_view"
                     },
                   "options": {
                       "pageSize": 10,

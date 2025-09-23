@@ -86,7 +86,7 @@
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "questionssolution_questionsHelpGuideId", "questionssolution_questionId", "questionssolution_attachmentId", "questionssolution_status", "questionssolution_createdBy", "questionssolution_updatedBy", "questionssolution_createdAt", "questionssolution_updatedAt"
+                            "questionssolution_questionsHelpGuideId", "questionssolution_questionId", "questionssolution_attachmentId", "questionssolution_options", "questionssolution_status", "questionssolution_createdBy", "questionssolution_updatedBy", "questionssolution_createdAt", "questionssolution_updatedAt"
                         ],
                         statusOptions: ["active", "inactive"],
                     },

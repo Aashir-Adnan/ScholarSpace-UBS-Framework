@@ -1242,6 +1242,28 @@ export const parameters = {
                                                     "alias" : "questions.question_marks",
                                                     "options": "[]"
   
+                                                },
+                                                ,
+                                                {
+                                                    "name": "config",
+                                                    "label": "Config",
+                                                    "title": "",
+                                                    "type": "textField",
+                                                    "required": false,
+                                                    "hideInCreateForm": false,
+                                                    "visible": true,
+                                                    "disabled": false,
+                                                    "dependancyCheck": false,
+                                                    "isPrefilled": false,
+                                                    "source": "req.body",
+                                                    "min": "",
+                                                    "max": "",
+                                                    "validations": [],
+                                                    "selectServer": false,
+                                                    "dynamicKey": "questions_config",
+                                                    "alias" : "questions.config",
+                                                    "options": "[]"
+  
                                                 }
                                             
                                             ,
@@ -1489,5 +1511,5 @@ export const parameters = {
                             "permission": "view_questions"
                         }
                   ],
-                  "colMapper": { 'clo_cloid' : 'cloid',  'clo_clonum' : 'clonum',  'clo_clodomainName' : 'clodomain_name',  'clo_description' : 'description',  'clo_status' : 'status',  'clo_createdBy' : 'created_by',  'clo_updatedBy' : 'updated_by',  'clo_createdAt' : 'created_at',  'clo_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'clomappingplo_clomappingPloid' : 'clomapping_ploid',  'clomappingplo_cloid' : 'cloid',  'clomappingplo_clointensityName' : 'clointensity_name',  'clomappingplo_ploid' : 'ploid',  'clomappingplo_status' : 'status',  'clomappingplo_createdBy' : 'created_by',  'clomappingplo_updatedBy' : 'updated_by',  'clomappingplo_createdAt' : 'created_at',  'clomappingplo_updatedAt' : 'updated_at',  'courses_courseId' : 'course_id',  'courses_courseSubDomainPrefix' : 'course_sub_domain_prefix',  'courses_plannedCourseId' : 'planned_course_id',  'courses_cloid' : 'cloid',  'courses_courseCode' : 'course_code',  'courses_teacherEmployeeId' : 'teacher_employee_id',  'courses_tassistEmployeeId' : 'tassist_employee_id',  'courses_status' : 'status',  'courses_createdBy' : 'created_by',  'courses_updatedBy' : 'updated_by',  'courses_createdAt' : 'created_at',  'courses_updatedAt' : 'updated_at',  'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at'}
+                  "colMapper": { 'clo_cloid' : 'cloid',  'clo_clonum' : 'clonum',  'clo_clodomainName' : 'clodomain_name',  'clo_description' : 'description',  'clo_status' : 'status',  'clo_createdBy' : 'created_by',  'clo_updatedBy' : 'updated_by',  'clo_createdAt' : 'created_at',  'clo_updatedAt' : 'updated_at',  'user_roles_designations_department_userRoleDesignationDepartmentId' : 'user_role_designation_department_id',  'user_roles_designations_department_roleDesignationDepartmentId' : 'role_designation_department_id',  'user_roles_designations_department_userId' : 'user_id',  'user_roles_designations_department_specAttributes' : 'spec_attributes',  'user_roles_designations_department_startDate' : 'start_date',  'user_roles_designations_department_endDate' : 'end_date',  'user_roles_designations_department_createdBy' : 'created_by',  'user_roles_designations_department_updatedBy' : 'updated_by',  'user_roles_designations_department_status' : 'status',  'user_roles_designations_department_createdAt' : 'created_at',  'user_roles_designations_department_updatedAt' : 'updated_at',  'clomappingplo_clomappingPloid' : 'clomapping_ploid',  'clomappingplo_cloid' : 'cloid',  'clomappingplo_clointensityName' : 'clointensity_name',  'clomappingplo_ploid' : 'ploid',  'clomappingplo_status' : 'status',  'clomappingplo_createdBy' : 'created_by',  'clomappingplo_updatedBy' : 'updated_by',  'clomappingplo_createdAt' : 'created_at',  'clomappingplo_updatedAt' : 'updated_at',  'courses_courseId' : 'course_id',  'courses_courseSubDomainPrefix' : 'course_sub_domain_prefix',  'courses_plannedCourseId' : 'planned_course_id',  'courses_cloid' : 'cloid',  'courses_courseCode' : 'course_code',  'courses_teacherEmployeeId' : 'teacher_employee_id',  'courses_tassistEmployeeId' : 'tassist_employee_id',  'courses_status' : 'status',  'courses_createdBy' : 'created_by',  'courses_updatedBy' : 'updated_by',  'courses_createdAt' : 'created_at',  'courses_updatedAt' : 'updated_at',  'questions_questionId' : 'question_id',  'questions_cloid' : 'cloid',  'questions_subComponentId' : 'sub_component_id',  'questions_questionNum' : 'question_num',  'questions_description' : 'description',  'questions_questionMarks' : 'question_marks',  'questions_lecturesTopicId' : 'lectures_topic_id',  'questions_status' : 'status',  'questions_config' : 'config',  'questions_createdBy' : 'created_by',  'questions_updatedBy' : 'updated_by',  'questions_createdAt' : 'created_at',  'questions_updatedAt' : 'updated_at'}
               };

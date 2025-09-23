@@ -1,6 +1,4 @@
-/* Frontend Objects for table: questions */
-        
-            import { parameters } from "./CRUD_parameters.js";
+import { parameters } from "./CRUD_parameters.js";
             import generateFormProps  from "../../../../Components/DataLayout/constants/generateFormProps.js";
             import  serverCommunicationHelper from "../../../../Components/DataLayout/constants/serverCommunicationHelper.js";
             export const listing_crud_props = {
@@ -12,11 +10,11 @@
                         {
                         name: "Edit",
                         color: "blue",
-                        permission: 'update_questions',
+                        permission: 'update_quiz_blocked_users',
                         onAction: () => console.log("Button pressed Edit"),
-                        form: questions generateFormProps({
+                        form: generateFormProps({
                             parameters: parameters,
-                            apiUrl: "/crud/questions?version=1.0",
+                            apiUrl: "/grouped/cruds/quiz_blocked_users?version=1.0",
                             requestType: "PUT",
                             mode:"edit"
                         }),
@@ -24,10 +22,10 @@
                         {
                         name: "Delete",
                         color: "red",
-                        permission: 'delete_questions',
+                        permission: 'delete_quiz_blocked_users',
                         serverCommunication: serverCommunicationHelper({
                             parameters: parameters,
-                            apiUrl:"/crud/questions?version=1.0",
+                            apiUrl: "/grouped/cruds/quiz_blocked_users?version=1.0",
                             requestType: "DELETE",
                         }),
                         onAction: () => console.log("Button pressed Delete"),
@@ -35,11 +33,11 @@
                         {
                         name: "View",
                         color: "grey",
-                        permission: 'view_questions',
+                        permission: 'view_quiz_blocked_users',
                         onAction: () => console.log("Button pressed View"),
                         form: generateFormProps({
                             parameters: parameters,
-                            apiUrl: "/crud/questions?version=1.0",
+                            apiUrl: "/grouped/cruds/quiz_blocked_users?version=1.0",
                             requestType: "GET",
                             mode:"view"
                         }),
@@ -48,18 +46,18 @@
                     },
                     bulkAction: {
                     add: {
-                        permission:'add_questions',
+                        permission:'add_quiz_blocked_users',
                         form: generateFormProps({
                         parameters: parameters,
-                        apiUrl: "/crud/questions?version=1.0",
+                        apiUrl: "/grouped/cruds/quiz_blocked_users?version=1.0",
                         requestType: "POST",
                         mode:"create"
                         }),
                     },
                     },
-  
+
                     export: {
-                      permission: 'export_questions',
+                      permission: 'export_quiz_blocked_users',
                       serverCommunication: serverCommunicationHelper({
                           parameters: parameters,
                           apiUrl: "",
@@ -69,13 +67,13 @@
                     }),
                     onAction: (e) => console.log("Export Action", e),
                     options: {
-                        formats: ["CSV", "PDF"],
+                        formats: ["CSV", "PDF", "Excel"],
                         includeHeaders: true,
                         icon: "",
                     },
                     },
                     filter: {
-                    permission: 'filter_questions',
+                    permission: 'filter_quiz_blocked_users',
                     serverCommunication: serverCommunicationHelper({
                         parameters: parameters,
                         apiUrl: "",
@@ -86,14 +84,14 @@
                     onAction: (e) => console.log("Filter Action", e),
                     options: {
                         filterBy: [
-                            "questions_questionId", "questions_cloid", "questions_subComponentId", "questions_questionNum", "questions_description", "questions_questionMarks", "questions_lecturesTopicId", "questions_status", "questions_config", "questions_createdBy", "questions_updatedBy", "questions_createdAt", "questions_updatedAt"
+                            "quiz_blocked_users_quizBlockedUsersId", "quiz_blocked_users_urddId", "quiz_blocked_users_subComponentId", "quiz_blocked_users_questionId", "quiz_blocked_users_reason"
                         ],
                         statusOptions: ["active", "inactive"],
                     },
                     excludeFilter: [],
                     },
                     sort: {
-                    permission: 'sort_questions',
+                    permission: 'sort_quiz_blocked_users',
                     serverCommunication: serverCommunicationHelper({
                         parameters: parameters,
                         apiUrl: "",
@@ -110,17 +108,17 @@
                     excludeSort: [],
                     },
                     list: {
-                    permission:'list_questions',
+                    permission:'list_quiz_blocked_users',
                     serverCommunication: serverCommunicationHelper({
                         parameters: parameters,
-                        apiUrl:  "/crud/questions?version=1.0",
+                        apiUrl: "/grouped/cruds/quiz_blocked_users?version=1.0",
                         apiActionType: "",
                         requestType: "GET",
                         reduxActionType: "",
                     }),
                     },
                     search: {
-                    permission: 'search_questions',
+                    permission: 'search_quiz_blocked_users',
                     excludeSearch: ["image"],
                     serverCommunication: serverCommunicationHelper({
                         parameters: parameters,
@@ -137,22 +135,22 @@
                     actionButtonEnable: true,
                     },
                     pagination: {
-                    parameters: null,
-                    permission: true,
-                    serverCommunication: serverCommunicationHelper({
-                        parameters: parameters,
-                        apiUrl: "/crud/questions?version=1.0",
-                        apiActionType: "questions_view",
-                        requestType: "GET",
-                        reduxActionType: "questions_view",
-                    }),
-                    options: {
-                        pageSize: 10,
-                        pageSizeOptions: [4, 5, 10, 20, { label: "All", value: -1 }],
-                    },
-                    onAction: (e) => {
-                        console.log("Pagination Action", e);
-                    },
+                      parameters: null,
+                      permission: false,
+                      serverCommunication: serverCommunicationHelper({
+                          parameters: parameters,
+                          apiUrl: "/crud/quiz_blocked_users?version=1.0",
+                          apiActionType: "quiz_blocked_users_view",
+                          requestType: "GET",
+                          reduxActionType: "quiz_blocked_users_view",
+                      }),
+                      options: {
+                          pageSize: 10,
+                          pageSizeOptions: [10, 20, 30 , 50, { label: "All", value: -1 }],
+                      },
+                      onAction: (e) => {
+                          console.log("Pagination Action", e);
+                      },
                     },
                 },
                 },
@@ -175,60 +173,60 @@
                     parameters: { enable: true, operationalMode: "local" },
                 },
                 },
-          appearance: {
-                light: {
-                  grid: {
-                    image: {
-                      borderColor: "#7479ed",
-                    },
-                    actionButtons: {
-                      color: "#7b7a8c",
-                    },
-                    button: {
-                      buttonColor: "#818093",
-                      buttonVarient: "contained",
-                      buttonTextColor: "#ffffff",
-                    },
-                    header: {
-                      headColor: "#e5e5e5",
-                      headTextColor: "#260143",
-                    },
-                    cardFont: {
-                      headingSize: 15,
-                      headingWeight: 650,
-                      textSize: 13,
-                      textWeight: 500,
-                      heading: "#260143",
-                      color: "#5a5897",
-                    },
-                  },
-                },
-                dark: {
-                  grid: {
-                    image: {
-                      borderColor: "#6C63FF",
-                    },
-                    actionButtons: {
-                      color: "#a5a4c4",
-                    },
-                    button: {
-                      buttonColor: "#6C63FF",
-                      buttonVarient: "contained",
-                      buttonTextColor: "#ffffff",
-                    },
-                    header: {
-                      headColor: "#2d2d3d",
-                      headTextColor: "#c7c6ff",
-                    },
-                    cardFont: {
-                      headingSize: 15,
-                      headingWeight: 650,
-                      textSize: 13,
-                      textWeight: 500,
-                      heading: "#ffffff",
-                      color: "#c7c6ff",
-                    },
-                  },
-                }
-              }
+  appearance: {
+        light: {
+          grid: {
+            image: {
+              borderColor: "#7479ed",
+            },
+            actionButtons: {
+              color: "#7b7a8c",
+            },
+            button: {
+              buttonColor: "#818093",
+              buttonVarient: "contained",
+              buttonTextColor: "#ffffff",
+            },
+            header: {
+              headColor: "#e5e5e5",
+              headTextColor: "#260143",
+            },
+            cardFont: {
+              headingSize: 15,
+              headingWeight: 650,
+              textSize: 13,
+              textWeight: 500,
+              heading: "#260143",
+              color: "#5a5897",
+            },
+          },
+        },
+        dark: {
+          grid: {
+            image: {
+              borderColor: "#6C63FF",
+            },
+            actionButtons: {
+              color: "#a5a4c4",
+            },
+            button: {
+              buttonColor: "#6C63FF",
+              buttonVarient: "contained",
+              buttonTextColor: "#ffffff",
+            },
+            header: {
+              headColor: "#2d2d3d",
+              headTextColor: "#c7c6ff",
+            },
+            cardFont: {
+              headingSize: 15,
+              headingWeight: 650,
+              textSize: 13,
+              textWeight: 500,
+              heading: "#ffffff",
+              color: "#c7c6ff",
+            },
+          },
+        }
+      }
             };

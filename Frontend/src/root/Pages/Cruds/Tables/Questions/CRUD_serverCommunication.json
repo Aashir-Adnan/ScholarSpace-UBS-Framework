@@ -91,7 +91,7 @@
                     },
                   "options": {
                       "filterBy": [
-                          "questions_questionId", "questions_cloid", "questions_subComponentId", "questions_questionNum", "questions_description", "questions_questionMarks", "questions_lecturesTopicId", "questions_status", "questions_createdBy", "questions_updatedBy", "questions_createdAt", "questions_updatedAt"
+                          "questions_questionId", "questions_cloid", "questions_subComponentId", "questions_questionNum", "questions_description", "questions_questionMarks", "questions_lecturesTopicId", "questions_status", "questions_config", "questions_createdBy", "questions_updatedBy", "questions_createdAt", "questions_updatedAt"
                       ],
                       "statusOptions": ["active", "inactive"]
                   },

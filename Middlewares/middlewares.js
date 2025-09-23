@@ -28,6 +28,7 @@ const middlewareHandler = async (req, res, next) => {
     let payload = {},
       PlatformName,
       PlatformVersion;
+    let updatedToken;
     let platformIP = req.ip;
     console.log("PLATFORM IP : ", platformIP); //for localhost it will be ::1
 
@@ -132,7 +133,7 @@ const middlewareHandler = async (req, res, next) => {
         console.log("TOKEN RESULTS : ", tokenResults);
         ({ userId, deviceId,decodedToken } = tokenResults);
 
-        const updatedToken = await generateToken(decodedToken, process.env.SECRET_KEY);
+        updatedToken = await generateToken(decodedToken, process.env.SECRET_KEY);
         payload.accessToken = updatedToken;
 
 
@@ -284,6 +285,7 @@ const middlewareHandler = async (req, res, next) => {
         return;
       }
       if (data.apiInfo.utilityFunctions.payloadFunction.length > 0) {
+        console.log("Payload Check: ", decryptedPayload)
         for (const util of data.apiInfo.utilityFunctions.payloadFunction) {
           try {
             const functionName = util.name;
@@ -307,6 +309,10 @@ const middlewareHandler = async (req, res, next) => {
       if (data.apiInfo?.postProcessFunction) {
         const postProcessFunc = data.apiInfo.postProcessFunction;
         payload = await postProcessFunc(req, decryptedPayload);
+        
+        if(updatedToken) {
+          payload.accessToken = updatedToken;
+        }
       } else {
         payload.return = objectResolverOutput?.results;
         payload.total_count = objectResolverOutput?.total_count;
@@ -338,6 +344,7 @@ const middlewareHandler = async (req, res, next) => {
     console.log(
       "============================================================================================"
     );
+    console.log("responseeeeeeeeeeeeeeeeeeeeeee is:",payload);
   } catch (error) {
     console.log(error);
     await LogError(res, 500, "Middleware Handler", error.message, null);

@@ -105,6 +105,29 @@
                 "alias" : "questions.question_marks",
                 "options": []
 
+            }
+            ,
+            {
+                "name": "config",
+                "label": "Config",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "questions_config",
+                "alias" : "questions.config",
+                "options": []
+
             }  
         
             ,
@@ -283,6 +306,6 @@
               ]
               }
           ],
-          "colMapper": "{questions.question_id as questions_questionId,questions.cloid as questions_cloid,questions.sub_component_id as questions_subComponentId,questions.question_num as questions_questionNum,questions.description as questions_description,questions.question_marks as questions_questionMarks,questions.lectures_topic_id as questions_lecturesTopicId,questions.status as questions_status,questions.created_by as questions_createdBy,questions.updated_by as questions_updatedBy,questions.created_at as questions_createdAt,questions.updated_at as questions_updatedAt}"
+          "colMapper": "{questions.question_id as questions_questionId,questions.cloid as questions_cloid,questions.sub_component_id as questions_subComponentId,questions.question_num as questions_questionNum,questions.description as questions_description,questions.question_marks as questions_questionMarks,questions.lectures_topic_id as questions_lecturesTopicId,questions.status as questions_status,questions.config as questions_config,questions.created_by as questions_createdBy,questions.updated_by as questions_updatedBy,questions.created_at as questions_createdAt,questions.updated_at as questions_updatedAt}"
           }
         

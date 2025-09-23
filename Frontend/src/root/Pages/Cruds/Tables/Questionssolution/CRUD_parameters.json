@@ -36,7 +36,30 @@
           "selectServer": false,
           "dynamicKey": "id"
         }
-          
+        
+            ,
+            {
+                "name": "options",
+                "label": "Options",
+                "title": "",
+                "type": "textField",
+                "required": false,
+                "hideInCreateForm": false,
+                "visible": true,
+                "disabled": false,
+                "dependancyCheck": false,
+                "isPrefilled": false,
+                "source": "req.body",
+                "min": "",
+                "max": "",
+                "validations": [],
+                "selectServer": false,
+                "selectServerUrl":"/null/dropdown?version=1.0",
+                "dynamicKey": "questionssolution_options",
+                "alias" : "questionssolution.options",
+                "options": []
+
+            }  
           
             
         
@@ -171,6 +194,6 @@
               ]
               }
           ],
-          "colMapper": "{questionssolution.questions_help_guide_id as questionssolution_questionsHelpGuideId,questionssolution.question_id as questionssolution_questionId,questionssolution.attachment_id as questionssolution_attachmentId,questionssolution.status as questionssolution_status,questionssolution.created_by as questionssolution_createdBy,questionssolution.updated_by as questionssolution_updatedBy,questionssolution.created_at as questionssolution_createdAt,questionssolution.updated_at as questionssolution_updatedAt}"
+          "colMapper": "{questionssolution.questions_help_guide_id as questionssolution_questionsHelpGuideId,questionssolution.question_id as questionssolution_questionId,questionssolution.attachment_id as questionssolution_attachmentId,questionssolution.options as questionssolution_options,questionssolution.status as questionssolution_status,questionssolution.created_by as questionssolution_createdBy,questionssolution.updated_by as questionssolution_updatedBy,questionssolution.created_at as questionssolution_createdAt,questionssolution.updated_at as questionssolution_updatedAt}"
           }
         
