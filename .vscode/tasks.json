@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "init-file",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "echo 'global.SignUp_object = {\n    \"versions\": {\n        \"versionData\": [{\n            \"*\": {\n                \"steps\": [\n                    {\n                        \"config\": {\n                            \"features\": {\n                                \"multistep\": true,\n                                \"parameters\": true,\n                                \"pagination\": false,\n                            },\n                            \"communication\": {\n                                \"encryption\": false\n                            },\n                            \"verification\": {\n                                \"otp\": false,\n                                \"accessToken\": false\n                            }\n                        },\n                        \"data\": {\n                            \"parameters\": {\n                                \"fields\": [\n                                    {\n                                        \"name\": \"idToken\",\n                                        \"validations\": [],\n                                        \"required\": false,\n                                        \"source\": \"req.body\"\n                                    },\n                                    {\n                                        \"name\": \"device_name\",\n                                        \"validations\": [],\n                                        \"required\": true,\n                                        \"source\": \"req.body\"\n                                    }\n                                ]\n                            },\n                            \"apiInfo\": {\n                                preProcessFunction: [signUpVerif, insertEntries],\n                                \"query\": {\n                                    \"queryNature\": \"\",\n                                    \"queryPayload\": null,\n                                    \"database\": \"projectDB\"\n                                },\n                                \"utilityFunctions\": {\n                                    \"callbackFunction\": null,\n                                    \"payloadFunction\": []\n                                },\n                                postProcessFunction: returnAccessToken\n                            },\n                            \"requestMetaData\": {\n                                \"requestMethod\": \"POST\",\n                                \"permission\": null,\n                                \"pagination\": {\n                                    \"pageSize\": 10\n                                }\n                            }\n                        },\n                        \"response\": {\n                            \"successMessage\": \"Signup successfull!\",\n                            \"errorMessage\": \"There was an error signing up user.\"\n                        }\n                    }\n                ]\n            },\n        }]\n    }\n}\nmodule.exports = { SignUp_object };' > ${input:filename}"
+      ],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "filename",
+      "type": "promptString",
+      "description": "Enter the filename to create (e.g. myfile.js)"
+    }
+  ]
+}

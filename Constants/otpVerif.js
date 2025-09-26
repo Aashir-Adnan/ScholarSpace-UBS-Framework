@@ -6,6 +6,21 @@ const generateToken = require('./jwtUtils');
 // Removed direct projectDB usage to avoid manual connection management
 const { executeQuery } = require("../Database/queryExecution");
 
+
+const getUserPermissionDetails = require("./UtilityData/LoginStep2/getUserPermissionDetails"); 
+const handleGetRolesByUserIdRequest = require("./UtilityData/LoginStep2/getRoleByUserId");
+const GetUsersData = require('./UtilityData/LoginStep2/getUserData');
+const GetUserRoleData = require('./UtilityData/LoginStep2/getUserRoleData');
+const getStudentData = require('./UtilityData/LoginStep2/getStudentData');
+const getStudentSemesterId = require('./UtilityData/LoginStep2/getStudentSemesterId')
+const getTeacherData = require('./UtilityData/LoginStep2/getTeacherData');
+const getTAData = require('./UtilityData/LoginStep2/getTAData');
+const getRolLNumber = require("./UtilityData/LoginStep2/getRollNumber")
+const getStudentUserId = require('./UtilityData/LoginStep2/getStudentUserId')
+const getEmployeeData = require("./UtilityData/LoginStep2/getEmployeeData");
+const handleGeStudentDashboardRequestRequest = require("./UtilityData/LoginStep2/getStudentDashboard");
+const getCourseSubDomain=require("./UtilityData/LoginStep2/getCourseSubDomain")
+
 async function isValidAccessToken( accessToken, decryptedPayload) {
     const query = `
     SELECT 
@@ -116,7 +131,11 @@ async function verifyOTP(OTP, decryptedPayload, updatedFlag = 1) {
     `;
     const user_roles_designations_department = await executeQuery(userRolesDesignationsDepartmentDataQuery, [userId])
 
+    let urdd_id = user_roles_designations_department.length > 0 ? user_roles_designations_department[0].user_role_designation_department_id : null;
 
+    if (!urdd_id) {
+        throw new Error("No role assigned to the user. Please contact administrator.");
+    }
     const userPermissionDataQuery = `
         SELECT *
         FROM users u
@@ -202,7 +221,26 @@ async function verifyOTP(OTP, decryptedPayload, updatedFlag = 1) {
     }, {});
     
 
-    // Build return object
+    decryptedPayload.user_id = userId;
+    decryptedPayload.user_role_designation_department_id = urdd_id;
+    
+    const userPermissionDetails = await getUserPermissionDetails(req, decryptedPayload);
+    const RoleId = await handleGetRolesByUserIdRequest(req, decryptedPayload);
+    const selectedRoleId = RoleId?.find(role => role?.RoleName === (decryptedPayload.role));
+    const userData = await GetUsersData(req, decryptedPayload);
+    const userRoleData = await GetUserRoleData(req, decryptedPayload);
+    const selectedUserRoleId = userRoleData.find(role => role?.RoleId === selectedRoleId?.RoleId);
+    const extractedUserRoleId = selectedUserRoleId?.UserRoleId ? selectedUserRoleId?.UserRoleId : selectedUserRoleId?.UserroleId;
+    const studentData = await getStudentData(req, decryptedPayload);
+    const teacherData = await getTeacherData(req, decryptedPayload);
+    const rollNumber = await getRolLNumber(req, decryptedPayload);
+    const studentUserId = await getStudentUserId(req, decryptedPayload);
+    const studentSemesterId = await getStudentSemesterId(req, decryptedPayload);
+    const taData = await getTAData(req, decryptedPayload);
+    const EmployeeData = await getEmployeeData(req, decryptedPayload);
+    const EarliestDeadline = await handleGeStudentDashboardRequestRequest(req, decryptedPayload);
+    const Navigation = await getCourseSubDomain(req, decryptedPayload);
+    
     const returnObject = {
         user_id: userResult[0]?.user_id,
         user: userResult[0],
@@ -216,6 +254,20 @@ async function verifyOTP(OTP, decryptedPayload, updatedFlag = 1) {
         collective_user_permissions: collective_user_permission,
         user_departments : user_department,
         user_designations : user_designation,
+        permissionTypes: userPermissionDetails.permissionTypes,
+        roleData: RoleId,
+        userData: userData,
+        userRoleDesignationDepartmentData: userRoleData,
+        studentData: studentData,
+        rollNumber: rollNumber,
+        studentUserId: studentUserId,
+        teacherData: teacherData,
+        taData: taData,
+        EmployeeData: EmployeeData,
+        studentSemesterId: studentSemesterId,
+        selectedUserRoleDesignationDepartmentId: extractedUserRoleId,
+        earliestDeadline: EarliestDeadline,
+        Navigation: Navigation
     };
 
     return returnObject;
