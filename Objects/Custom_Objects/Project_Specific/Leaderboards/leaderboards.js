@@ -40,7 +40,7 @@ async function getCourseLeaderboards(req, decryptedPayload) {
     return query;
 }
 
-global.Leaderboard_object = {
+global.getCourseLeaderboard_object = {
     "versions": {
         "versionData": [
             {
@@ -136,4 +136,4 @@ global.Leaderboard_object = {
     }
 };
 
-module.exports = { GetCourseLeaderBoard_object };
+module.exports = { getCourseLeaderboard_object };

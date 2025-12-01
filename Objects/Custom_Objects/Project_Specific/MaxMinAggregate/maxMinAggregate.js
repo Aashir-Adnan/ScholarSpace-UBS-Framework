@@ -115,7 +115,7 @@ global.GetMaxMinAggregate_object = {
                                     "database": "projectDB"
                                 },
 
-                                "postProcessFunction": async (req, decryptedPayload, results) => {
+                                "postProcessFunction": async (req, decryptedPayload) => {
                                     const enrollement_id = req.query.enrollement_id;
                                     const results = decryptedPayload.results;
                                     const weightages = decryptedPayload.weightages;
